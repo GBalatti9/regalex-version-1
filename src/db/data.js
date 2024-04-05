@@ -266,226 +266,225 @@ export const options = [
     { id: '116', idQuestion: 'Q19', text: 'Mate',          idNextQuestion: 'Q27', img: './tomar-mate.jpg'  },
     { id: '117', idQuestion: 'Q19', text: 'Otra',          idNextQuestion: 'Q35', write: true  },
     
-    // CORREGIR IDS!!
-
     // --QUESTION 20--
-    { id: '117', idQuestion: 'Q20', text: 'Cerveza artesanal',  idNextQuestion: 'Q28', multipleChoice: false  },
-    { id: '118', idQuestion: 'Q20', text: 'Cerveza industrial', idNextQuestion: 'Q29', multipleChoice: false  },
-
+    { id: '118', idQuestion: 'Q20', text: 'Cerveza artesanal',  idNextQuestion: 'Q28', multipleChoice: false  },
+    { id: '119', idQuestion: 'Q20', text: 'Cerveza industrial', idNextQuestion: 'Q29', multipleChoice: false  },
+    
     // --QUESTION 21--
-    { id: '119', idQuestion: 'Q21', text: 'Tinto',  idNextQuestion: 'Q30', multipleChoice: false },
-    { id: '120', idQuestion: 'Q21', text: 'Blanco', idNextQuestion: 'Q31', multipleChoice: false },
-    { id: '121', idQuestion: 'Q21', text: 'Rosado', idNextQuestion: 'Q32', multipleChoice: false },
-
+    { id: '120', idQuestion: 'Q21', text: 'Tinto',  idNextQuestion: 'Q30', multipleChoice: false },
+    { id: '121', idQuestion: 'Q21', text: 'Blanco', idNextQuestion: 'Q31', multipleChoice: false },
+    { id: '122', idQuestion: 'Q21', text: 'Rosado', idNextQuestion: 'Q32', multipleChoice: false },
+    
     // --QUESTION 22--
-    { id: '122', idQuestion: 'Q22', text: 'De autor',   idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-    { id: '123', idQuestion: 'Q22', text: 'Industrial', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '123', idQuestion: 'Q22', text: 'De autor',   idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '124', idQuestion: 'Q22', text: 'Industrial', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
     
     // --QUESTION 23--
-    { id: '124', idQuestion: 'Q23', text: 'Sí', idNextQuestion: 'Q34', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
-    { id: '125', idQuestion: 'Q23', text: 'No', idNextQuestion: 'Q34', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },    
+    { id: '125', idQuestion: 'Q23', text: 'Sí', idNextQuestion: 'Q34', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
+    { id: '126', idQuestion: 'Q23', text: 'No', idNextQuestion: 'Q34', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },    
 
     // --QUESTION 24--
-    { id: '126', idQuestion: 'Q24', text: 'Sí', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
-    { id: '127', idQuestion: 'Q24', text: 'No', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
+    { id: '127', idQuestion: 'Q24', text: 'Sí', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
+    { id: '128', idQuestion: 'Q24', text: 'No', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
 
     // --QUESTION 25--
-    { id: '128', idQuestion: 'Q25', text: 'Solo me gusta consumirlo',          idNextQuestion: 'Q33', subSection: true, multipleChoice: false },
-    { id: '129', idQuestion: 'Q25', text: 'No sé mucho, me gustaría aprender', idNextQuestion: 'Q33', subSection: true, multipleChoice: false },
-    { id: '130', idQuestion: 'Q25', text: 'Sé algo, quiero profundizar',       idNextQuestion: 'Q33', subSection: true, multipleChoice: false },
-    { id: '131', idQuestion: 'Q25', text: 'Soy fanático y tengo conocimiento', idNextQuestion: 'Q33', subSection: true, multipleChoice: false },
+    { id: '129', idQuestion: 'Q25', text: 'Solo me gusta consumirlo',          idNextQuestion: 'Q33', subSection: true, multipleChoice: false },
+    { id: '130', idQuestion: 'Q25', text: 'No sé mucho, me gustaría aprender', idNextQuestion: 'Q33', subSection: true, multipleChoice: false },
+    { id: '131', idQuestion: 'Q25', text: 'Sé algo, quiero profundizar',       idNextQuestion: 'Q33', subSection: true, multipleChoice: false },
+    { id: '132', idQuestion: 'Q25', text: 'Soy fanático y tengo conocimiento', idNextQuestion: 'Q33', subSection: true, multipleChoice: false },
 
     // --QUESTION 26--
-    { id: '132', idQuestion: 'Q26', text: 'Verde', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
-    { id: '133', idQuestion: 'Q26', text: 'Boldo', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
-    { id: '134', idQuestion: 'Q26', text: 'Negro', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
-    { id: '135', idQuestion: 'Q26', text: 'Otro',  idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
-
+    { id: '133', idQuestion: 'Q26', text: 'Verde', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
+    { id: '134', idQuestion: 'Q26', text: 'Boldo', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
+    { id: '135', idQuestion: 'Q26', text: 'Negro', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
+    { id: '136', idQuestion: 'Q26', text: 'Otro',  idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
+    
     // --QUESTION 27--
-    { id: '136', idQuestion: 'Q27', text: 'Sí', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-    { id: '137', idQuestion: 'Q27', text: 'No', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-
+    { id: '137', idQuestion: 'Q27', text: 'Sí', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '138', idQuestion: 'Q27', text: 'No', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    
     // --QUESTION 28--
-    { id: '138', idQuestion: 'Q28', text: 'IPA',     idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
-    { id: '139', idQuestion: 'Q28', text: 'APA',     idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
-    { id: '140', idQuestion: 'Q28', text: 'Amber',   idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
-    { id: '141', idQuestion: 'Q28', text: 'Stout',   idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
-    { id: '142', idQuestion: 'Q28', text: 'Scotish', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
-    { id: '143', idQuestion: 'Q28', text: 'Honey',   idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
-
+    { id: '139', idQuestion: 'Q28', text: 'IPA',     idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
+    { id: '140', idQuestion: 'Q28', text: 'APA',     idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
+    { id: '141', idQuestion: 'Q28', text: 'Amber',   idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
+    { id: '142', idQuestion: 'Q28', text: 'Stout',   idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
+    { id: '143', idQuestion: 'Q28', text: 'Scotish', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
+    { id: '144', idQuestion: 'Q28', text: 'Honey',   idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
+    
     // --QUESTION 29--
-    { id: '144', idQuestion: 'Q29', text: 'Quilmes',       idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true   },
-    { id: '145', idQuestion: 'Q29', text: 'Brahama',       idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true   },
-    { id: '146', idQuestion: 'Q29', text: 'Corona',        idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true   },
-    { id: '147', idQuestion: 'Q29', text: 'Stella Artois', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true   },
-    { id: '148', idQuestion: 'Q29', text: 'Heineken',      idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true   },
-
+    { id: '145', idQuestion: 'Q29', text: 'Quilmes',       idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true   },
+    { id: '146', idQuestion: 'Q29', text: 'Brahama',       idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true   },
+    { id: '147', idQuestion: 'Q29', text: 'Corona',        idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true   },
+    { id: '148', idQuestion: 'Q29', text: 'Stella Artois', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true   },
+    { id: '149', idQuestion: 'Q29', text: 'Heineken',      idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true   },
+    
     // --QUESTION 30--
-    { id: '149', idQuestion: 'Q30', text: 'Malbec',              idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-    { id: '150', idQuestion: 'Q30', text: 'Carbenet Sauvignon',  idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-    { id: '151', idQuestion: 'Q30', text: 'Pino Noir',           idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-    { id: '152', idQuestion: 'Q30', text: 'Merlot',              idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-    { id: '153', idQuestion: 'Q30', text: 'Otro',                idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-
+    { id: '150', idQuestion: 'Q30', text: 'Malbec',              idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '151', idQuestion: 'Q30', text: 'Carbenet Sauvignon',  idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '152', idQuestion: 'Q30', text: 'Pino Noir',           idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '153', idQuestion: 'Q30', text: 'Merlot',              idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '154', idQuestion: 'Q30', text: 'Otro',                idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    
     // --QUESTION 31--
-    { id: '154', idQuestion: 'Q31', text: 'Dulce', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-    { id: '155', idQuestion: 'Q31', text: 'Seco',  idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-    { id: '156', idQuestion: 'Q31', text: 'Otro',  idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-
+    { id: '155', idQuestion: 'Q31', text: 'Dulce', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '156', idQuestion: 'Q31', text: 'Seco',  idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '157', idQuestion: 'Q31', text: 'Otro',  idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    
     // --QUESTION 32--
-    { id: '157', idQuestion: 'Q32', text: 'Garnacha',    idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-    { id: '158', idQuestion: 'Q32', text: 'Tempranillo', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-    { id: '159', idQuestion: 'Q32', text: 'Cariñena',    idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
-    { id: '160', idQuestion: 'Q32', text: 'Syrah',       idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '158', idQuestion: 'Q32', text: 'Garnacha',    idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '159', idQuestion: 'Q32', text: 'Tempranillo', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '160', idQuestion: 'Q32', text: 'Cariñena',    idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '161', idQuestion: 'Q32', text: 'Syrah',       idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
 
     // --QUESTION 33--
-    { id: '161', idQuestion: 'Q33', text: 'Prepararlo en casa',     idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
-    { id: '162', idQuestion: 'Q33', text: 'Tomarlo en algún lugar', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
+    { id: '162', idQuestion: 'Q33', text: 'Prepararlo en casa',     idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
+    { id: '163', idQuestion: 'Q33', text: 'Tomarlo en algún lugar', idNextQuestion: 'Q35', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
 
     // --QUESTION 34--
-    { id: '163', idQuestion: 'Q34', text: 'Jameson',         idNextQuestion: 'Q35', multipleChoice: false },
-    { id: '164', idQuestion: 'Q34', text: 'Johnnie Walker',  idNextQuestion: 'Q35', multipleChoice: false },
-    { id: '165', idQuestion: 'Q34', text: 'Chivas Regal',    idNextQuestion: 'Q35', multipleChoice: false },
-    { id: '166', idQuestion: 'Q34', text: 'Jack Daniels',    idNextQuestion: 'Q35', multipleChoice: false },
-    { id: '167', idQuestion: 'Q34', text: 'Old Parr',        idNextQuestion: 'Q35', multipleChoice: false },
+    { id: '164', idQuestion: 'Q34', text: 'Jameson',         idNextQuestion: 'Q35', multipleChoice: false },
+    { id: '165', idQuestion: 'Q34', text: 'Johnnie Walker',  idNextQuestion: 'Q35', multipleChoice: false },
+    { id: '166', idQuestion: 'Q34', text: 'Chivas Regal',    idNextQuestion: 'Q35', multipleChoice: false },
+    { id: '167', idQuestion: 'Q34', text: 'Jack Daniels',    idNextQuestion: 'Q35', multipleChoice: false },
+    { id: '168', idQuestion: 'Q34', text: 'Old Parr',        idNextQuestion: 'Q35', multipleChoice: false },
 
     // --QUESTION 35--
-    { id: '168', idQuestion: 'Q35', text: 'Sí', idNextQuestion: 'Q36', multipleChoice: false },
-    { id: '169', idQuestion: 'Q35', text: 'No', idNextQuestion: 'Q37', multipleChoice: false },
+    { id: '169', idQuestion: 'Q35', text: 'Sí', idNextQuestion: 'Q36', multipleChoice: false },
+    { id: '170', idQuestion: 'Q35', text: 'No', idNextQuestion: 'Q37', multipleChoice: false },
 
     // --QUESTION 36--
-    { id: '170', idQuestion: 'Q36', text: 'Vino',       idNextQuestion: 'Q1', multipleChoice: false },
-    { id: '171', idQuestion: 'Q36', text: 'Cerveza',    idNextQuestion: 'Q1', multipleChoice: false },
-    { id: '172', idQuestion: 'Q36', text: 'Coctelería', idNextQuestion: 'Q1', multipleChoice: false },
+    { id: '171', idQuestion: 'Q36', text: 'Vino',       idNextQuestion: 'Q1', multipleChoice: false },
+    { id: '172', idQuestion: 'Q36', text: 'Cerveza',    idNextQuestion: 'Q1', multipleChoice: false },
+    { id: '173', idQuestion: 'Q36', text: 'Coctelería', idNextQuestion: 'Q1', multipleChoice: false },
     
     // --QUESTION 37--
-    { id: '173', idQuestion: 'Q37', text: 'Sí', idNextQuestion: 'Q1', multipleChoice: false, endSection: true },
-    { id: '174', idQuestion: 'Q37', text: 'No', idNextQuestion: 'Q1', multipleChoice: false, endSection: true },
+    { id: '174', idQuestion: 'Q37', text: 'Sí', idNextQuestion: 'Q1', multipleChoice: false, endSection: true },
+    { id: '175', idQuestion: 'Q37', text: 'No', idNextQuestion: 'Q1', multipleChoice: false, endSection: true },
 
     // --QUESTION 38--
-    { id: '175', idQuestion: 'Q38', text: 'Leer',     idNextQuestion: 'Q39', multipleChoice: false },
-    { id: '176', idQuestion: 'Q38', text: 'Escribir', idNextQuestion: 'Q40', multipleChoice: false },
-    { id: '177', idQuestion: 'Q38', text: 'Ambas',    idNextQuestion: 'Q39', multipleChoice: false },
+    { id: '176', idQuestion: 'Q38', text: 'Leer',     idNextQuestion: 'Q39', multipleChoice: false },
+    { id: '177', idQuestion: 'Q38', text: 'Escribir', idNextQuestion: 'Q40', multipleChoice: false },
+    { id: '178', idQuestion: 'Q38', text: 'Ambas',    idNextQuestion: 'Q39', multipleChoice: false },
 
     // --QUESTION 39--
-    { id: '178', idQuestion: 'Q39', text: 'Suspenso',        idNextQuestion: 'Q41' },
-    { id: '179', idQuestion: 'Q39', text: 'Policial',        idNextQuestion: 'Q41' },
-    { id: '180', idQuestion: 'Q39', text: 'Terror',          idNextQuestion: 'Q41' },
-    { id: '181', idQuestion: 'Q39', text: 'Ciencia ficción', idNextQuestion: 'Q41' },
-    { id: '182', idQuestion: 'Q39', text: 'Fantasía',        idNextQuestion: 'Q41' },
-    { id: '183', idQuestion: 'Q39', text: 'Romance',         idNextQuestion: 'Q41' },
-    { id: '184', idQuestion: 'Q39', text: 'No ficción',      idNextQuestion: 'Q41' },
-    { id: '185', idQuestion: 'Q39', text: 'Clásicos',        idNextQuestion: 'Q41' },
-    { id: '186', idQuestion: 'Q39', text: 'Thriller',        idNextQuestion: 'Q41' },
-    { id: '187', idQuestion: 'Q39', text: 'Juvenil',         idNextQuestion: 'Q41' },
-    { id: '188', idQuestion: 'Q39', text: 'Cuentos',         idNextQuestion: 'Q41' },
-    { id: '189', idQuestion: 'Q39', text: 'Poesía',          idNextQuestion: 'Q41' },
-    { id: '190', idQuestion: 'Q39', text: 'Autoayuda',       idNextQuestion: 'Q41' },
-    { id: '191', idQuestion: 'Q39', text: 'Otro',            idNextQuestion: 'Q41', write: true },
+    { id: '179', idQuestion: 'Q39', text: 'Suspenso',        idNextQuestion: 'Q41' },
+    { id: '180', idQuestion: 'Q39', text: 'Policial',        idNextQuestion: 'Q41' },
+    { id: '181', idQuestion: 'Q39', text: 'Terror',          idNextQuestion: 'Q41' },
+    { id: '182', idQuestion: 'Q39', text: 'Ciencia ficción', idNextQuestion: 'Q41' },
+    { id: '183', idQuestion: 'Q39', text: 'Fantasía',        idNextQuestion: 'Q41' },
+    { id: '184', idQuestion: 'Q39', text: 'Romance',         idNextQuestion: 'Q41' },
+    { id: '185', idQuestion: 'Q39', text: 'No ficción',      idNextQuestion: 'Q41' },
+    { id: '186', idQuestion: 'Q39', text: 'Clásicos',        idNextQuestion: 'Q41' },
+    { id: '187', idQuestion: 'Q39', text: 'Thriller',        idNextQuestion: 'Q41' },
+    { id: '188', idQuestion: 'Q39', text: 'Juvenil',         idNextQuestion: 'Q41' },
+    { id: '189', idQuestion: 'Q39', text: 'Cuentos',         idNextQuestion: 'Q41' },
+    { id: '190', idQuestion: 'Q39', text: 'Poesía',          idNextQuestion: 'Q41' },
+    { id: '191', idQuestion: 'Q39', text: 'Autoayuda',       idNextQuestion: 'Q41' },
+    { id: '192', idQuestion: 'Q39', text: 'Otro',            idNextQuestion: 'Q41', write: true },
 
     // --QUESTION 40--
-    { id: '192', idQuestion: 'Q40', text: 'Sí', idNextQuestion: 'Q42', multipleChoice: false },
-    { id: '193', idQuestion: 'Q40', text: 'No', idNextQuestion: 'Q1', multipleChoice: false, endSection: true },
+    { id: '193', idQuestion: 'Q40', text: 'Sí', idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '194', idQuestion: 'Q40', text: 'No', idNextQuestion: 'Q1', multipleChoice: false, endSection: true },
 
     // --QUESTION 41--
-    { id: '194', idQuestion: 'Q41', text: 'Libro físico',     idNextQuestion: 'Q43', multipleChoice: false },
-    { id: '195', idQuestion: 'Q41', text: 'De forma digital', idNextQuestion: 'Q43', multipleChoice: false },
+    { id: '195', idQuestion: 'Q41', text: 'Libro físico',     idNextQuestion: 'Q43', multipleChoice: false },
+    { id: '196', idQuestion: 'Q41', text: 'De forma digital', idNextQuestion: 'Q43', multipleChoice: false },
 
     // --QUESTION 42--
-    { id: '196', idQuestion: 'Q42', text: 'Suspenso',        idNextQuestion: 'Q1', endSection: true },
-    { id: '197', idQuestion: 'Q42', text: 'Policial',        idNextQuestion: 'Q1', endSection: true },
-    { id: '198', idQuestion: 'Q42', text: 'Terror',          idNextQuestion: 'Q1', endSection: true },
-    { id: '199', idQuestion: 'Q42', text: 'Ciencia ficción', idNextQuestion: 'Q1', endSection: true },
-    { id: '200', idQuestion: 'Q42', text: 'Fantasía',        idNextQuestion: 'Q1', endSection: true },
-    { id: '201', idQuestion: 'Q42', text: 'Romance',         idNextQuestion: 'Q1', endSection: true },
-    { id: '202', idQuestion: 'Q42', text: 'Recetarios',      idNextQuestion: 'Q1', endSection: true },
-    { id: '203', idQuestion: 'Q42', text: 'Poesía',          idNextQuestion: 'Q1', endSection: true },
-    { id: '204', idQuestion: 'Q42', text: 'Guiones',         idNextQuestion: 'Q1', endSection: true },
-    { id: '205', idQuestion: 'Q42', text: 'Vida personal',   idNextQuestion: 'Q1', endSection: true },
-    
+    { id: '197', idQuestion: 'Q42', text: 'Suspenso',        idNextQuestion: 'Q1', endSection: true },
+    { id: '198', idQuestion: 'Q42', text: 'Policial',        idNextQuestion: 'Q1', endSection: true },
+    { id: '199', idQuestion: 'Q42', text: 'Terror',          idNextQuestion: 'Q1', endSection: true },
+    { id: '200', idQuestion: 'Q42', text: 'Ciencia ficción', idNextQuestion: 'Q1', endSection: true },
+    { id: '201', idQuestion: 'Q42', text: 'Fantasía',        idNextQuestion: 'Q1', endSection: true },
+    { id: '202', idQuestion: 'Q42', text: 'Romance',         idNextQuestion: 'Q1', endSection: true },
+    { id: '203', idQuestion: 'Q42', text: 'Recetarios',      idNextQuestion: 'Q1', endSection: true },
+    { id: '204', idQuestion: 'Q42', text: 'Poesía',          idNextQuestion: 'Q1', endSection: true },
+    { id: '205', idQuestion: 'Q42', text: 'Guiones',         idNextQuestion: 'Q1', endSection: true },
+    { id: '206', idQuestion: 'Q42', text: 'Vida personal',   idNextQuestion: 'Q1', endSection: true },
+
     // --QUESTION 43--
-    { id: '206', idQuestion: 'Q43', text: 'A la mañana', idNextQuestion: 'Q44' },
-    { id: '207', idQuestion: 'Q43', text: 'A la tarde',  idNextQuestion: 'Q44' },
-    { id: '208', idQuestion: 'Q43', text: 'A la noche',  idNextQuestion: 'Q44' },
+    { id: '207', idQuestion: 'Q43', text: 'A la mañana', idNextQuestion: 'Q44' },
+    { id: '208', idQuestion: 'Q43', text: 'A la tarde',  idNextQuestion: 'Q44' },
+    { id: '209', idQuestion: 'Q43', text: 'A la noche',  idNextQuestion: 'Q44' },
 
     // --QUESTION 44--
-    { id: '209', idQuestion: 'Q44', text: 'Sí', idNextQuestion: 'Q45', multipleChoice: false },
-    { id: '210', idQuestion: 'Q44', text: 'No', idNextQuestion: 'Q45', multipleChoice: false },
+    { id: '210', idQuestion: 'Q44', text: 'Sí', idNextQuestion: 'Q45', multipleChoice: false },
+    { id: '211', idQuestion: 'Q44', text: 'No', idNextQuestion: 'Q45', multipleChoice: false },
 
     // --QUESTION 45--
-    { id: '211', idQuestion: 'Q45', text: 'En casa',                      idNextQuestion: 'Q46', multipleChoice: false },
-    { id: '212', idQuestion: 'Q45', text: 'Llevo mi libro a todos lados', idNextQuestion: 'Q46', multipleChoice: false },
+    { id: '212', idQuestion: 'Q45', text: 'En casa',                      idNextQuestion: 'Q46', multipleChoice: false },
+    { id: '213', idQuestion: 'Q45', text: 'Llevo mi libro a todos lados', idNextQuestion: 'Q46', multipleChoice: false },
 
     // --QUESTION 46--
-    { id: '213', idQuestion: 'Q46', text: 'Sí', idNextQuestion: 'Q40', multipleChoice: false },
-    { id: '214', idQuestion: 'Q46', text: 'No', idNextQuestion: 'Q1',  multipleChoice: false, endSection: true },
+    { id: '214', idQuestion: 'Q46', text: 'Sí', idNextQuestion: 'Q40', multipleChoice: false },
+    { id: '215', idQuestion: 'Q46', text: 'No', idNextQuestion: 'Q1',  multipleChoice: false, endSection: true },
 
     // --QUESTION 47--
-    { id: '215', idQuestion: 'Q47', text: 'Rock Nacional',      idNextQuestion: 'Q48' },
-    { id: '216', idQuestion: 'Q47', text: 'Rock Internacional', idNextQuestion: 'Q48' },
-    { id: '217', idQuestion: 'Q47', text: 'Pop',                idNextQuestion: 'Q48' },
-    { id: '218', idQuestion: 'Q47', text: 'Reggaetón',          idNextQuestion: 'Q48' },
-    { id: '219', idQuestion: 'Q47', text: 'Trap',               idNextQuestion: 'Q48' },
-    { id: '220', idQuestion: 'Q47', text: 'Electrónica',        idNextQuestion: 'Q48' },
-    { id: '221', idQuestion: 'Q47', text: 'Reggae',             idNextQuestion: 'Q48' },
-    { id: '222', idQuestion: 'Q47', text: 'Metal',              idNextQuestion: 'Q48' },
-    { id: '223', idQuestion: 'Q47', text: 'Jazz',               idNextQuestion: 'Q48' },
-    { id: '224', idQuestion: 'Q47', text: 'Indie',              idNextQuestion: 'Q48' },
-    { id: '225', idQuestion: 'Q47', text: 'Otro',               idNextQuestion: 'Q48', write: true },
+    { id: '216', idQuestion: 'Q47', text: 'Rock Nacional',      idNextQuestion: 'Q48' },
+    { id: '217', idQuestion: 'Q47', text: 'Rock Internacional', idNextQuestion: 'Q48' },
+    { id: '218', idQuestion: 'Q47', text: 'Pop',                idNextQuestion: 'Q48' },
+    { id: '219', idQuestion: 'Q47', text: 'Reggaetón',          idNextQuestion: 'Q48' },
+    { id: '220', idQuestion: 'Q47', text: 'Trap',               idNextQuestion: 'Q48' },
+    { id: '221', idQuestion: 'Q47', text: 'Electrónica',        idNextQuestion: 'Q48' },
+    { id: '222', idQuestion: 'Q47', text: 'Reggae',             idNextQuestion: 'Q48' },
+    { id: '223', idQuestion: 'Q47', text: 'Metal',              idNextQuestion: 'Q48' },
+    { id: '224', idQuestion: 'Q47', text: 'Jazz',               idNextQuestion: 'Q48' },
+    { id: '225', idQuestion: 'Q47', text: 'Indie',              idNextQuestion: 'Q48' },
+    { id: '226', idQuestion: 'Q47', text: 'Otro',               idNextQuestion: 'Q48', write: true },
     
     // --QUESTION 48--
-    { id: '226', idQuestion: 'Q48', text: 'Auriculares', idNextQuestion: 'Q49' },
-    { id: '227', idQuestion: 'Q48', text: 'Parlante',    idNextQuestion: 'Q49' },
-    { id: '228', idQuestion: 'Q48', text: 'Alta voz',    idNextQuestion: 'Q49' },
+    { id: '227', idQuestion: 'Q48', text: 'Auriculares', idNextQuestion: 'Q49' },
+    { id: '228', idQuestion: 'Q48', text: 'Parlante',    idNextQuestion: 'Q49' },
+    { id: '229', idQuestion: 'Q48', text: 'Alta voz',    idNextQuestion: 'Q49' },
 
     // --QUESTION 49--
-    { id: '229', idQuestion: 'Q49', text: 'Sí',          idNextQuestion: 'Q50' },
-    { id: '230', idQuestion: 'Q49', text: 'No',          idNextQuestion: 'Q53' },
-    { id: '231', idQuestion: 'Q49', text: 'No, ya toco', idNextQuestion: 'Q51' },
+    { id: '230', idQuestion: 'Q49', text: 'Sí',          idNextQuestion: 'Q50' },
+    { id: '231', idQuestion: 'Q49', text: 'No',          idNextQuestion: 'Q53' },
+    { id: '232', idQuestion: 'Q49', text: 'No, ya toco', idNextQuestion: 'Q51' },
 
     // --QUESTION 50--
-    { id: '232', idQuestion: 'Q50', text: 'Guitarra', idNextQuestion: 'Q53' },
-    { id: '233', idQuestion: 'Q50', text: 'Piano',    idNextQuestion: 'Q53' },
-    { id: '234', idQuestion: 'Q50', text: 'Bajo',     idNextQuestion: 'Q53' },
-    { id: '235', idQuestion: 'Q50', text: 'Batería',  idNextQuestion: 'Q53' },
-    { id: '236', idQuestion: 'Q50', text: 'Saxofón',  idNextQuestion: 'Q53' },
-    { id: '237', idQuestion: 'Q50', text: 'Violín',   idNextQuestion: 'Q53' },
-    { id: '238', idQuestion: 'Q50', text: 'Cantar',   idNextQuestion: 'Q53' },
-    { id: '239', idQuestion: 'Q50', text: 'Otro',     idNextQuestion: 'Q53', write: true },
+    { id: '233', idQuestion: 'Q50', text: 'Guitarra', idNextQuestion: 'Q53' },
+    { id: '234', idQuestion: 'Q50', text: 'Piano',    idNextQuestion: 'Q53' },
+    { id: '235', idQuestion: 'Q50', text: 'Bajo',     idNextQuestion: 'Q53' },
+    { id: '236', idQuestion: 'Q50', text: 'Batería',  idNextQuestion: 'Q53' },
+    { id: '237', idQuestion: 'Q50', text: 'Saxofón',  idNextQuestion: 'Q53' },
+    { id: '238', idQuestion: 'Q50', text: 'Violín',   idNextQuestion: 'Q53' },
+    { id: '239', idQuestion: 'Q50', text: 'Cantar',   idNextQuestion: 'Q53' },
+    { id: '240', idQuestion: 'Q50', text: 'Otro',     idNextQuestion: 'Q53', write: true },
     
     // --QUESTION 51--
-    { id: '240', idQuestion: 'Q50', text: 'Guitarra', idNextQuestion: 'Q52' },
-    { id: '241', idQuestion: 'Q50', text: 'Piano',    idNextQuestion: 'Q52' },
-    { id: '242', idQuestion: 'Q50', text: 'Bajo',     idNextQuestion: 'Q52' },
-    { id: '243', idQuestion: 'Q50', text: 'Batería',  idNextQuestion: 'Q52' },
-    { id: '244', idQuestion: 'Q50', text: 'Saxofón',  idNextQuestion: 'Q52' },
-    { id: '245', idQuestion: 'Q50', text: 'Violín',   idNextQuestion: 'Q52' },
-    { id: '246', idQuestion: 'Q50', text: 'Cantar',   idNextQuestion: 'Q52' },
-    { id: '247', idQuestion: 'Q50', text: 'Otro',     idNextQuestion: 'Q52', write: true },
+    { id: '241', idQuestion: 'Q50', text: 'Guitarra', idNextQuestion: 'Q52' },
+    { id: '242', idQuestion: 'Q50', text: 'Piano',    idNextQuestion: 'Q52' },
+    { id: '243', idQuestion: 'Q50', text: 'Bajo',     idNextQuestion: 'Q52' },
+    { id: '244', idQuestion: 'Q50', text: 'Batería',  idNextQuestion: 'Q52' },
+    { id: '245', idQuestion: 'Q50', text: 'Saxofón',  idNextQuestion: 'Q52' },
+    { id: '246', idQuestion: 'Q50', text: 'Violín',   idNextQuestion: 'Q52' },
+    { id: '247', idQuestion: 'Q50', text: 'Cantar',   idNextQuestion: 'Q52' },
+    { id: '248', idQuestion: 'Q50', text: 'Otro',     idNextQuestion: 'Q52', write: true },
     
     // --QUESTION 52--
-    { id: '248', idQuestion: 'Q52', text: 'Funda para guitarra',    idNextQuestion: 'Q53', img: './' },
-    { id: '249', idQuestion: 'Q52', text: 'Afinador digital',       idNextQuestion: 'Q53', img: './' },
-    { id: '250', idQuestion: 'Q52', text: 'Soporte de pie',         idNextQuestion: 'Q53', img: './' },
-    { id: '251', idQuestion: 'Q52', text: 'Correa de ajuste',       idNextQuestion: 'Q53', img: './' },
-    { id: '252', idQuestion: 'Q52', text: 'Ecualizador y afinador', idNextQuestion: 'Q53', img: './' },
-    { id: '253', idQuestion: 'Q52', text: 'Capotraste',             idNextQuestion: 'Q53', img: './' },
-    { id: '254', idQuestion: 'Q52', text: 'Encordado',              idNextQuestion: 'Q53', img: './' },
-    { id: '255', idQuestion: 'Q52', text: 'Micrófono de contacto',  idNextQuestion: 'Q53', img: './' },
-    { id: '256', idQuestion: 'Q52', text: 'Otro',                   idNextQuestion: 'Q53', write: true },
-    { id: '257', idQuestion: 'Q52', text: 'No',                     idNextQuestion: 'Q53' },
+    { id: '249', idQuestion: 'Q52', text: 'Funda para guitarra',    idNextQuestion: 'Q53', img: './' },
+    { id: '250', idQuestion: 'Q52', text: 'Afinador digital',       idNextQuestion: 'Q53', img: './' },
+    { id: '251', idQuestion: 'Q52', text: 'Soporte de pie',         idNextQuestion: 'Q53', img: './' },
+    { id: '252', idQuestion: 'Q52', text: 'Correa de ajuste',       idNextQuestion: 'Q53', img: './' },
+    { id: '253', idQuestion: 'Q52', text: 'Ecualizador y afinador', idNextQuestion: 'Q53', img: './' },
+    { id: '254', idQuestion: 'Q52', text: 'Capotraste',             idNextQuestion: 'Q53', img: './' },
+    { id: '255', idQuestion: 'Q52', text: 'Encordado',              idNextQuestion: 'Q53', img: './' },
+    { id: '256', idQuestion: 'Q52', text: 'Micrófono de contacto',  idNextQuestion: 'Q53', img: './' },
+    { id: '257', idQuestion: 'Q52', text: 'Otro',                   idNextQuestion: 'Q53', write: true },
+    { id: '258', idQuestion: 'Q52', text: 'No',                     idNextQuestion: 'Q53' },
     
+    // CORREGIR IDS!!
     // --QUESTION 53--
-    { id: '258', idQuestion: 'Q53', text: 'Miranda',                         idNextQuestion: 'Q1', endSection: true },
-    { id: '259', idQuestion: 'Q53', text: 'Emilia Mernes',                   idNextQuestion: 'Q1', endSection: true },
-    { id: '260', idQuestion: 'Q53', text: 'David Lebón',                     idNextQuestion: 'Q1', endSection: true },
-    { id: '261', idQuestion: 'Q53', text: 'Luciano Pereyra',                 idNextQuestion: 'Q1', endSection: true },
-    { id: '262', idQuestion: 'Q53', text: 'Dread Mar I',                     idNextQuestion: 'Q1', endSection: true },
-    { id: '263', idQuestion: 'Q53', text: 'La Konga',                        idNextQuestion: 'Q1', endSection: true },
-    { id: '264', idQuestion: 'Q53', text: 'Luck Ra',                         idNextQuestion: 'Q1', endSection: true },
-    { id: '265', idQuestion: 'Q53', text: 'La Beriso',                       idNextQuestion: 'Q1', endSection: true },
-    { id: '266', idQuestion: 'Q53', text: 'La Vela Puerca',                  idNextQuestion: 'Q1', endSection: true },
-    { id: '267', idQuestion: 'Q53', text: 'Babásonicos',                     idNextQuestion: 'Q1', endSection: true },
+    { id: '259', idQuestion: 'Q53', text: 'Miranda',                         idNextQuestion: 'Q1', endSection: true },
+    { id: '260', idQuestion: 'Q53', text: 'Emilia Mernes',                   idNextQuestion: 'Q1', endSection: true },
+    { id: '261', idQuestion: 'Q53', text: 'David Lebón',                     idNextQuestion: 'Q1', endSection: true },
+    { id: '262', idQuestion: 'Q53', text: 'Luciano Pereyra',                 idNextQuestion: 'Q1', endSection: true },
+    { id: '263', idQuestion: 'Q53', text: 'Dread Mar I',                     idNextQuestion: 'Q1', endSection: true },
+    { id: '264', idQuestion: 'Q53', text: 'La Konga',                        idNextQuestion: 'Q1', endSection: true },
+    { id: '265', idQuestion: 'Q53', text: 'Luck Ra',                         idNextQuestion: 'Q1', endSection: true },
+    { id: '266', idQuestion: 'Q53', text: 'La Beriso',                       idNextQuestion: 'Q1', endSection: true },
+    { id: '267', idQuestion: 'Q53', text: 'La Vela Puerca',                  idNextQuestion: 'Q1', endSection: true },
+    { id: '268', idQuestion: 'Q53', text: 'Babásonicos',                     idNextQuestion: 'Q1', endSection: true },
     { id: '269', idQuestion: 'Q53', text: 'El Mató a un Policía Motorizado', idNextQuestion: 'Q1', endSection: true },
     { id: '270', idQuestion: 'Q53', text: 'Ciro y Los Persas',               idNextQuestion: 'Q1', endSection: true },
     { id: '271', idQuestion: 'Q53', text: 'El Kuelgue',                      idNextQuestion: 'Q1', endSection: true },
