@@ -46,6 +46,7 @@ export const Container = () => {
   }, [ currentId ])
   
   const handleInputChange = ( { target }, nextQuestionId, multipleChoice ) => {
+    console.log('aca');
     const { name, value, checked, type } = target;
 
     if (type === 'text') {
@@ -109,7 +110,7 @@ export const Container = () => {
   const handleSubmit = ( e ) => {
     e.preventDefault();
     inputValue.length > 0 ? userAnswers.push(inputValue) : ''
-    userAnswersWithId.push(inputTextFormatted);
+    // userAnswersWithId.push(inputTextFormatted);
     if (userAnswers.length === 0) return;
     console.log({ userAnswers });
     console.log({ userAnswersWithId });

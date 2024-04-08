@@ -374,50 +374,51 @@ export const options = [
     
     // --> LEER Y ESCRIBIR <-- 
     // --QUESTION 39--
-    { id: '186', idQuestion: 'Q39', text: 'Leer',     idNextQuestion: 'Q40', multipleChoice: false },
-    { id: '187', idQuestion: 'Q39', text: 'Escribir', idNextQuestion: 'Q41', multipleChoice: false },
-    { id: '188', idQuestion: 'Q39', text: 'Ambas',    idNextQuestion: 'Q40', multipleChoice: false },
+    { id: '186', idQuestion: 'Q39', text: 'Leer',     idNextQuestion: 'Q40' },
+    { id: '187', idQuestion: 'Q39', text: 'Escribir', idNextQuestion: 'Q41' },
+    // CORREGIR ID
 
     // --QUESTION 40--
-    { id: '189', idQuestion: 'Q40', text: 'Suspenso',        idNextQuestion: 'Q42' },
-    { id: '190', idQuestion: 'Q40', text: 'Policial',        idNextQuestion: 'Q42' },
-    { id: '191', idQuestion: 'Q40', text: 'Terror',          idNextQuestion: 'Q42' },
-    { id: '192', idQuestion: 'Q40', text: 'Ciencia ficción', idNextQuestion: 'Q42' },
-    { id: '193', idQuestion: 'Q40', text: 'Fantasía',        idNextQuestion: 'Q42' },
-    { id: '194', idQuestion: 'Q40', text: 'Romance',         idNextQuestion: 'Q42' },
-    { id: '195', idQuestion: 'Q40', text: 'No ficción',      idNextQuestion: 'Q42' },
-    { id: '196', idQuestion: 'Q40', text: 'Clásicos',        idNextQuestion: 'Q42' },
-    { id: '197', idQuestion: 'Q40', text: 'Thriller',        idNextQuestion: 'Q42' },
-    { id: '198', idQuestion: 'Q40', text: 'Juvenil',         idNextQuestion: 'Q42' },
-    { id: '199', idQuestion: 'Q40', text: 'Cuentos',         idNextQuestion: 'Q42' },
-    { id: '200', idQuestion: 'Q40', text: 'Poesía',          idNextQuestion: 'Q42' },
-    { id: '201', idQuestion: 'Q40', text: 'Autoayuda',       idNextQuestion: 'Q42' },
-    { id: '202', idQuestion: 'Q40', text: 'Otro',            idNextQuestion: 'Q42', write: true },
+    { id: '188', idQuestion: 'Q40', text: 'Suspenso',        idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '189', idQuestion: 'Q40', text: 'Policial',        idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '190', idQuestion: 'Q40', text: 'Terror',          idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '191', idQuestion: 'Q40', text: 'Ciencia ficción', idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '192', idQuestion: 'Q40', text: 'Fantasía',        idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '193', idQuestion: 'Q40', text: 'Romance',         idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '194', idQuestion: 'Q40', text: 'No ficción',      idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '195', idQuestion: 'Q40', text: 'Clásicos',        idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '196', idQuestion: 'Q40', text: 'Thriller',        idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '197', idQuestion: 'Q40', text: 'Juvenil',         idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '198', idQuestion: 'Q40', text: 'Cuentos',         idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '199', idQuestion: 'Q40', text: 'Poesía',          idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '200', idQuestion: 'Q40', text: 'Autoayuda',       idNextQuestion: 'Q42', multipleChoice: false },
+    { id: '201', idQuestion: 'Q40', text: 'Otro',            idNextQuestion: 'Q42', write: true, multipleChoice: false },
 
     // --QUESTION 41--
-    { id: '203', idQuestion: 'Q41', text: 'Sí', idNextQuestion: 'Q43', multipleChoice: false },
-    { id: '204', idQuestion: 'Q41', text: 'No', idNextQuestion: 'Q1', multipleChoice: false, endSection: true },
+    { id: '202', idQuestion: 'Q41', text: 'Sí', idNextQuestion: 'Q43', multipleChoice: false },
+    { id: '203', idQuestion: 'Q41', text: 'No', idNextQuestion: 'Q1', multipleChoice: false, endSection: true },
 
     // --QUESTION 42--
-    { id: '205', idQuestion: 'Q42', text: 'Libro físico',     idNextQuestion: 'Q44', multipleChoice: false },
-    { id: '206', idQuestion: 'Q42', text: 'De forma digital', idNextQuestion: 'Q44', multipleChoice: false },
+    { id: '204', idQuestion: 'Q42', text: 'Libro físico',     idNextQuestion: 'Q44', multipleChoice: false },
+    { id: '205', idQuestion: 'Q42', text: 'De forma digital', idNextQuestion: 'Q44', multipleChoice: false },
 
     // --QUESTION 43--
-    { id: '207', idQuestion: 'Q43', text: 'Suspenso',        idNextQuestion: 'Q1', endSection: true },
-    { id: '208', idQuestion: 'Q43', text: 'Policial',        idNextQuestion: 'Q1', endSection: true },
-    { id: '209', idQuestion: 'Q43', text: 'Terror',          idNextQuestion: 'Q1', endSection: true },
-    { id: '210', idQuestion: 'Q43', text: 'Ciencia ficción', idNextQuestion: 'Q1', endSection: true },
-    { id: '211', idQuestion: 'Q43', text: 'Fantasía',        idNextQuestion: 'Q1', endSection: true },
-    { id: '212', idQuestion: 'Q43', text: 'Romance',         idNextQuestion: 'Q1', endSection: true },
-    { id: '213', idQuestion: 'Q43', text: 'Recetarios',      idNextQuestion: 'Q1', endSection: true },
-    { id: '214', idQuestion: 'Q43', text: 'Poesía',          idNextQuestion: 'Q1', endSection: true },
-    { id: '215', idQuestion: 'Q43', text: 'Guiones',         idNextQuestion: 'Q1', endSection: true },
-    { id: '216', idQuestion: 'Q43', text: 'Vida personal',   idNextQuestion: 'Q1', endSection: true },
+    { id: '206', idQuestion: 'Q43', text: 'Suspenso',        idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '207', idQuestion: 'Q43', text: 'Policial',        idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '208', idQuestion: 'Q43', text: 'Terror',          idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '209', idQuestion: 'Q43', text: 'Ciencia ficción', idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '210', idQuestion: 'Q43', text: 'Fantasía',        idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '211', idQuestion: 'Q43', text: 'Romance',         idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '212', idQuestion: 'Q43', text: 'Recetarios',      idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '213', idQuestion: 'Q43', text: 'Poesía',          idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '214', idQuestion: 'Q43', text: 'Guiones',         idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '215', idQuestion: 'Q43', text: 'Vida personal',   idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '216', idQuestion: 'Q43', text: 'Otro',   idNextQuestion: 'Q1', endSection: true, multipleChoice: false, write: true },
 
     // --QUESTION 44--
-    { id: '217', idQuestion: 'Q44', text: 'A la mañana', idNextQuestion: 'Q45' },
-    { id: '218', idQuestion: 'Q44', text: 'A la tarde',  idNextQuestion: 'Q45' },
-    { id: '219', idQuestion: 'Q44', text: 'A la noche',  idNextQuestion: 'Q45' },
+    { id: '217', idQuestion: 'Q44', text: 'A la mañana', idNextQuestion: 'Q45', multipleChoice: false },
+    { id: '218', idQuestion: 'Q44', text: 'A la tarde',  idNextQuestion: 'Q45', multipleChoice: false },
+    { id: '219', idQuestion: 'Q44', text: 'A la noche',  idNextQuestion: 'Q45', multipleChoice: false },
 
     // --QUESTION 45--
     { id: '220', idQuestion: 'Q45', text: 'Sí', idNextQuestion: 'Q46', multipleChoice: false },
