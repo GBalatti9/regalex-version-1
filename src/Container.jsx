@@ -136,14 +136,23 @@ export const Container = () => {
     // Esto se aplica si es la última pregunta de una categoria. Ej, la ultima pregunta de comer.
     const hasEndSection = includesSection(userAnswersWithId, 'endSection');
     if ( hasEndSection ) {
-      const pendingFirstQuestions = pendingQuestions.find(( element ) => element.idQuestion === 'Q1');
-      const index = pendingQuestions.find(( element ) => element.idQuestion === 'Q1');
-      pendingQuestions.splice(index, 1);
-      if (pendingFirstQuestions) {
-        return setcurrentId( pendingFirstQuestions.idNextQuestion )
+      // console.log('endSection perroooo');
+      if (pendingQuestions.length > 0) {
+        setcurrentId(pendingQuestions[0].idNextQuestion);
+        console.log({ pendingQuestions });
+        return pendingQuestions.splice(0, 1);
       } else {
         return setLastQuestion( true );
       }
+
+      // const pendingFirstQuestions = pendingQuestions.find(( element ) => element.idQuestion === 'Q1');
+      // const index = pendingQuestions.find(( element ) => element.idQuestion === 'Q1');
+      // pendingQuestions.splice(index, 1);
+      // if (pendingFirstQuestions) {
+      //   return setcurrentId( pendingFirstQuestions.idNextQuestion )
+      // } else {
+      //   return setLastQuestion( true );
+      // }
     }
     // Acá se chequea si el usuario seleccionó más de una opción y en caso de haber seleccionado más de una va a tomar la primera opción seleccionada y comenzar su ciclo de preguntas. FALTA VER: como hacer para que el usuario vuelva a las preguntas que le quedan pendiente. Ver como hacer para utilizar el endSubSection y el endSection.
     
