@@ -46,11 +46,13 @@ export const Container = () => {
   }, [ currentId ])
   
   const handleInputChange = ( { target }, nextQuestionId, multipleChoice ) => {
-    console.log('aca');
     const { name, value, checked, type } = target;
+    console.log('Handle input change', {name, value, checked, type, nextQuestionId});
 
+    // ACA SE MANEJA EL CASO EN EL QUE EL USUARIO COMPLETA LA OPCIÓN "OTRO/A".
     if (type === 'text') {
       inputTextFormatted = { text: value, idNextQuestion: nextQuestionId }
+      // console.log({ inputTextFormatted });
       inputValue = value;
       setAnswers(( prevAnswers ) => ({
         ...prevAnswers,
@@ -110,12 +112,13 @@ export const Container = () => {
   const handleSubmit = ( e ) => {
     e.preventDefault();
     inputValue.length > 0 ? userAnswers.push(inputValue) : ''
+    Object.values(inputTextFormatted).length > 0 ? userAnswersWithId.push(inputTextFormatted) : '';
     // userAnswersWithId.push(inputTextFormatted);
     if (userAnswers.length === 0) return;
     console.log({ userAnswers });
     console.log({ userAnswersWithId });
-    inputValue = ''
-    
+    inputValue = '';
+    inputTextFormatted = '';
     // Primero se chequea que exista la propiedad endSubSection, luego lo que se va a verificar si en pendingQuestion hay mas de una opcion seleccionada de la pregunta que tiene el mismo id que idPrevQuestion porque si hay una sola no es necesario. Si hay una sola la constante hasEndSubSection va a dar -1 y se maneja en el else del if.
     const hasEndSubSection = includesSection(userAnswersWithId, 'endSubSection');
     if (hasEndSubSection) {
@@ -162,14 +165,15 @@ export const Container = () => {
       }
     } else {
       if (selectedOption === undefined) {
+        console.log('Estoy en selecetedOption === undefined');
         setcurrentId( userAnswersWithId[0].idNextQuestion );
       } else {
-        console.log({ selectedOption });
-        setcurrentId( selectedOption );
+        // setcurrentId( selectedOption );
+        setcurrentId( userAnswersWithId[0].idNextQuestion );
       }
     }
     // console.log({ selectedOption });
-    // console.log( answers );
+    console.log( answers );
   }
 
   return (
