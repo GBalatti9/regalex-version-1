@@ -138,6 +138,7 @@ export const Container = () => {
     if ( hasEndSection ) {
       // console.log('endSection perroooo');
       if (pendingQuestions.length > 0) {
+        // ACA HAY QUE ENCONTRAR LA OPCION QUE TENGA UN ID DISTINTO A LOS DEMÁS
         setcurrentId(pendingQuestions[0].idNextQuestion);
         console.log({ pendingQuestions });
         return pendingQuestions.splice(0, 1);

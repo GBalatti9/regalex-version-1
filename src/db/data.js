@@ -163,54 +163,54 @@ export const options = [
 
     // --> COCINAR <--
     // --QUESTION 9--
-    { id: '53', idQuestion: 'Q9', text: 'Sí', idNextQuestion: 'Q11', multipleChoice: false },
-    { id: '54', idQuestion: 'Q9', text: 'No', idNextQuestion: 'Q10', multipleChoice: false },
+    { id: '54', idQuestion: 'Q9', text: 'Sí', idNextQuestion: 'Q11', multipleChoice: false },
+    { id: '55', idQuestion: 'Q9', text: 'No', idNextQuestion: 'Q10', multipleChoice: false },
 
     // { id: '37', idQuestion: 'Q9', text: 'Tinto',  idNextQuestion: 'Q18', subSection: true, multipleChoice: false   },
     // { id: '38', idQuestion: 'Q9', text: 'Blanco', idNextQuestion: 'Q19', subSection: true, multipleChoice: false   },
     // { id: '39', idQuestion: 'Q9', text: 'Rosado', idNextQuestion: 'Q20', subSection: true, multipleChoice: false   },
 
     // --QUESTION 10--
-    { id: '55', idQuestion: 'Q10', text: 'No sé cocinar',                      idNextQuestion: 'Q17', multipleChoice: false },
-    { id: '56', idQuestion: 'Q10', text: 'No tengo los materiales necesarios', idNextQuestion: 'Q11', multipleChoice: false },
+    { id: '56', idQuestion: 'Q10', text: 'No sé cocinar',                      idNextQuestion: 'Q17', multipleChoice: false },
+    { id: '57', idQuestion: 'Q10', text: 'No tengo los materiales necesarios', idNextQuestion: 'Q11', multipleChoice: false },
 
     // --QUESTION 11--
-    { id: '57', idQuestion: 'Q11', text: 'Bazar/Utensillos basicos',          idNextQuestion: 'Q12' },
-    { id: '58', idQuestion: 'Q11', text: 'Herramientas para cocinar basicas', idNextQuestion: 'Q13' },
-    { id: '59', idQuestion: 'Q11', text: 'Instrumentos de repostería',        idNextQuestion: 'Q14' },
-    { id: '60', idQuestion: 'Q11', text: 'Accesorios para Cocina Específica', idNextQuestion: 'Q15' },
-    { id: '61', idQuestion: 'Q11', text: 'Innovación en la cocina',           idNextQuestion: 'Q16' },
+    { id: '58', idQuestion: 'Q11', text: 'Bazar/Utensillos basicos',          idNextQuestion: 'Q12' },
+    { id: '59', idQuestion: 'Q11', text: 'Herramientas para cocinar basicas', idNextQuestion: 'Q13' },
+    { id: '60', idQuestion: 'Q11', text: 'Instrumentos de repostería',        idNextQuestion: 'Q14' },
+    { id: '61', idQuestion: 'Q11', text: 'Accesorios para Cocina Específica', idNextQuestion: 'Q15' },
+    { id: '62', idQuestion: 'Q11', text: 'Innovación en la cocina',           idNextQuestion: 'Q16' },
     
     // --QUESTION 12--
-    { id: '62', idQuestion: 'Q12', text: 'Opción 1', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './bowl.jpg' },
-    { id: '63', idQuestion: 'Q12', text: 'Opción 2', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './vasos.jpg' },
-    { id: '64', idQuestion: 'Q12', text: 'Opción 3', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './utensillos.jpg' },
-    { id: '65', idQuestion: 'Q12', text: 'Opción 4', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './Bandeja.jpg' },
-    { id: '66', idQuestion: 'Q12', text: 'Opción 5', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './elementos-cucharones.jpg' },
-    { id: '67', idQuestion: 'Q12', text: 'Opción 6', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './tabla.jpg' },
-    { id: '68', idQuestion: 'Q12', text: 'No',       idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './conejo-no.png' },
-    { id: '69', idQuestion: 'Q12', text: 'Otro',     idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', write: true },
+    { id: '63', idQuestion: 'Q12', text: 'Opción 1', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './bowl.jpg' },
+    { id: '64', idQuestion: 'Q12', text: 'Opción 2', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './vasos.jpg' },
+    { id: '65', idQuestion: 'Q12', text: 'Opción 3', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './utensillos.jpg' },
+    { id: '66', idQuestion: 'Q12', text: 'Opción 4', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './Bandeja.jpg' },
+    { id: '67', idQuestion: 'Q12', text: 'Opción 5', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './elementos-cucharones.jpg' },
+    { id: '68', idQuestion: 'Q12', text: 'Opción 6', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './tabla.jpg' },
+    { id: '69', idQuestion: 'Q12', text: 'No',       idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './conejo-no.png' },
+    { id: '70', idQuestion: 'Q12', text: 'Otro',     idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', write: true },
 
     // { id: '44', idQuestion: 'Q12', text: 'Sí',                  idNextQuestion: 'Q22', idPrevQuestion: 'Q7', subSection: true, endSubSection: true, multipleChoice: false  },
     // { id: '45', idQuestion: 'Q12', text: 'No',                  idNextQuestion: 'Q22', idPrevQuestion: 'Q7', subSection: true, endSubSection: true, multipleChoice: false  },
     // { id: '46', idQuestion: 'Q12', text: 'Me gustaría conocer', idNextQuestion: 'Q22', idPrevQuestion: 'Q7', subSection: true, endSubSection: true, multipleChoice: false  },
 
     // --QUESTION 13--
-    { id: '70', idQuestion: 'Q13', text: 'Opción 1', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './olla.jpg' },
-    { id: '71', idQuestion: 'Q13', text: 'Opción 2', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './cuchillo.jpg' },
-    { id: '72', idQuestion: 'Q13', text: 'Opción 3', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './plancha.jpg' },
-    { id: '73', idQuestion: 'Q13', text: 'Opción 4', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './espatula.jpg' },
-    { id: '74', idQuestion: 'Q13', text: 'Opción 5', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './sarten.jpg' },
-    { id: '75', idQuestion: 'Q13', text: 'Opción 6', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './sarten-acero.jpg' },
-    { id: '76', idQuestion: 'Q13', text: 'Opción 7', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './conejo-no.png' },
-    { id: '77', idQuestion: 'Q13', text: 'Otro',     idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', write: true },
+    { id: '71', idQuestion: 'Q13', text: 'Opción 1', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './olla.jpg' },
+    { id: '72', idQuestion: 'Q13', text: 'Opción 2', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './cuchillo.jpg' },
+    { id: '73', idQuestion: 'Q13', text: 'Opción 3', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './plancha.jpg' },
+    { id: '74', idQuestion: 'Q13', text: 'Opción 4', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './espatula.jpg' },
+    { id: '75', idQuestion: 'Q13', text: 'Opción 5', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './sarten.jpg' },
+    { id: '76', idQuestion: 'Q13', text: 'Opción 6', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './sarten-acero.jpg' },
+    { id: '77', idQuestion: 'Q13', text: 'Opción 7', idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './conejo-no.png' },
+    { id: '78', idQuestion: 'Q13', text: 'Otro',     idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', write: true },
     
     // --QUESTION 14--
-    { id: '78', idQuestion: 'Q14', text: 'Opción 1',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './reposteria-opcion1.jpg' },
-    { id: '79', idQuestion: 'Q14', text: 'Opción 2',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './reposteria-opcion2.jpeg' },
-    { id: '80', idQuestion: 'Q14', text: 'Opción 3',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './reposteria-opcion3.jpeg' },
-    { id: '81', idQuestion: 'Q14', text: 'Opción 4',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './reposteria-opcion4.jpeg' },
-    { id: '82', idQuestion: 'Q14', text: 'Opción 5',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './reposteria-opcion5.jpeg' },
+    { id: '79', idQuestion: 'Q14', text: 'Opción 1',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './reposteria-opcion1.jpg' },
+    { id: '80', idQuestion: 'Q14', text: 'Opción 2',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './reposteria-opcion2.jpeg' },
+    { id: '81', idQuestion: 'Q14', text: 'Opción 3',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './reposteria-opcion3.jpeg' },
+    { id: '82', idQuestion: 'Q14', text: 'Opción 4',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './reposteria-opcion4.jpeg' },
+    { id: '83', idQuestion: 'Q14', text: 'Opción 5',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './reposteria-opcion5.jpeg' },
     { id: '84', idQuestion: 'Q14', text: 'Opción 6',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './reposteria-opcion6.jpeg' },
     { id: '85', idQuestion: 'Q14', text: 'Opción 7',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './reposteria-opcion7.jpeg' },
     { id: '86', idQuestion: 'Q14', text: 'Opción 8',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './reposteria-opcion8.jpeg' },
@@ -468,7 +468,6 @@ export const options = [
     { id: '249', idQuestion: 'Q51', text: 'Cantar',   idNextQuestion: 'Q54', multipleChoice: false },
     { id: '250', idQuestion: 'Q51', text: 'Otro',     idNextQuestion: 'Q54', write: true, multipleChoice: false },
     
-    // SOLUCIONAR PROBLEMA. SI EL USUARIO SELECCIONA PRIMERO PIANO Y DESPUES GUITARRA NO VA A VER LAS OPCIONES DE QUESTION 53
     // --QUESTION 52--
     { id: '251', idQuestion: 'Q52', text: 'Guitarra', idNextQuestion: 'Q53' },
     { id: '252', idQuestion: 'Q52', text: 'Piano',    idNextQuestion: 'Q54' },
@@ -479,17 +478,18 @@ export const options = [
     { id: '257', idQuestion: 'Q52', text: 'Cantar',   idNextQuestion: 'Q54' },
     { id: '258', idQuestion: 'Q52', text: 'Otro',     idNextQuestion: 'Q54', write: true },
     
+    // COMO PRIMERO PREGUNTA SI HAY ALGUNA PREGUNTA PENDIENTE, TIENE SENTIDO PONERLE ENDSECTION TRUE A ESTAS OPCIONES. SI EL USUARIO SELECCIONA PRIMERO PIANO Y LUEGO GUITARRA EN LAS OPCIONES ANTERIORES, ESTA PREGUNTA DE ABAJO SE VA A TRANSFORMAR EN LA ÚLTIMA.
     // --QUESTION 53--
-    { id: '259', idQuestion: 'Q53', text: 'Funda para guitarra',    idNextQuestion: 'Q54', img: './guitarra-funda.jpg' },
-    { id: '260', idQuestion: 'Q53', text: 'Afinador digital',       idNextQuestion: 'Q54', img: './guitarra-afinador.jpg' },
-    { id: '261', idQuestion: 'Q53', text: 'Soporte de pie',         idNextQuestion: 'Q54', img: './guitarra-soporte.jpg' },
-    { id: '262', idQuestion: 'Q53', text: 'Correa de ajuste',       idNextQuestion: 'Q54', img: './guitarra-correa.jpg' },
-    { id: '263', idQuestion: 'Q53', text: 'Ecualizador y afinador', idNextQuestion: 'Q54', img: './guitarra-ecualizador.jpg' },
-    { id: '264', idQuestion: 'Q53', text: 'Capotraste',             idNextQuestion: 'Q54', img: './guitarra-capo.jpg' },
-    { id: '265', idQuestion: 'Q53', text: 'Encordado',              idNextQuestion: 'Q54', img: './guitarra-encordado.jpg' },
-    { id: '266', idQuestion: 'Q53', text: 'Micrófono de contacto',  idNextQuestion: 'Q54', img: './guitarra-microfono.jpg' },
-    { id: '267', idQuestion: 'Q53', text: 'No, ninguno',            idNextQuestion: 'Q54' },
-    { id: '268', idQuestion: 'Q53', text: 'Otro',                   idNextQuestion: 'Q54', write: true },
+    { id: '259', idQuestion: 'Q53', text: 'Funda para guitarra',    idNextQuestion: 'Q54', endSection: true, img: './guitarra-funda.jpg' },
+    { id: '260', idQuestion: 'Q53', text: 'Afinador digital',       idNextQuestion: 'Q54', endSection: true, img: './guitarra-afinador.jpg' },
+    { id: '261', idQuestion: 'Q53', text: 'Soporte de pie',         idNextQuestion: 'Q54', endSection: true, img: './guitarra-soporte.jpg' },
+    { id: '262', idQuestion: 'Q53', text: 'Correa de ajuste',       idNextQuestion: 'Q54', endSection: true, img: './guitarra-correa.jpg' },
+    { id: '263', idQuestion: 'Q53', text: 'Ecualizador y afinador', idNextQuestion: 'Q54', endSection: true, img: './guitarra-ecualizador.jpg' },
+    { id: '264', idQuestion: 'Q53', text: 'Capotraste',             idNextQuestion: 'Q54', endSection: true, img: './guitarra-capo.jpg' },
+    { id: '265', idQuestion: 'Q53', text: 'Encordado',              idNextQuestion: 'Q54', endSection: true, img: './guitarra-encordado.jpg' },
+    { id: '266', idQuestion: 'Q53', text: 'Micrófono de contacto',  idNextQuestion: 'Q54', endSection: true, img: './guitarra-microfono.jpg' },
+    { id: '267', idQuestion: 'Q53', text: 'No, ninguno',            idNextQuestion: 'Q54', endSection: true },
+    { id: '268', idQuestion: 'Q53', text: 'Otro',                   idNextQuestion: 'Q54', endSection: true, write: true },
     
     // --QUESTION 54--
     { id: '269', idQuestion: 'Q54', text: 'Miranda',                         idNextQuestion: 'Q1', endSection: true },
@@ -510,7 +510,7 @@ export const options = [
     { id: '284', idQuestion: 'Q54', text: 'Palito Ortega',                   idNextQuestion: 'Q1', endSection: true },
     { id: '285', idQuestion: 'Q54', text: 'Fabiana Cantilo',                 idNextQuestion: 'Q1', endSection: true },
     { id: '286', idQuestion: 'Q54', text: 'Rubén Rada',                      idNextQuestion: 'Q1', endSection: true },
-    { id: '287', idQuestion: 'Q54', text: 'No, ninguno',                              idNextQuestion: 'Q1', endSection: true },
+    { id: '287', idQuestion: 'Q54', text: 'No, ninguno',                     idNextQuestion: 'Q1', endSection: true },
     { id: '288', idQuestion: 'Q54', text: 'Otro',                            idNextQuestion: 'Q1', endSection: true, write: true },
     
     // DEPORTES
