@@ -105,15 +105,15 @@ export const options = [
 
     // --> COMER <--
     // --QUESTION 2--
-    { id: '11', idQuestion: 'Q2', text: 'Italiana',    idNextQuestion: 'Q3', img: './comida-italiana.jpg' },
-    { id: '12', idQuestion: 'Q2', text: 'Española',    idNextQuestion: 'Q3', img: './comida-espanola.jpg' },
-    { id: '13', idQuestion: 'Q2', text: 'Parrillada',  idNextQuestion: 'Q3', img: './comida-parrillada.jpg' },
-    { id: '14', idQuestion: 'Q2', text: 'Oriental',    idNextQuestion: 'Q3', img: './comida-oriental.jpg' },
-    { id: '15', idQuestion: 'Q2', text: 'Peruana',     idNextQuestion: 'Q3', img: './comida-peruana.jpg' },
-    { id: '16', idQuestion: 'Q2', text: 'Vegetariana', idNextQuestion: 'Q3', img: './comida-vegetariana.jpg' },
-    { id: '17', idQuestion: 'Q2', text: 'Vegana',      idNextQuestion: 'Q3', img: './comida-vegana.jpg' },
-    { id: '18', idQuestion: 'Q2', text: 'Árabe',       idNextQuestion: 'Q3', img: './comida-arabe.jpg' },
-    { id: '19', idQuestion: 'Q2', text: 'Otra',        idNextQuestion: 'Q3', write: true },
+    { id: '11', idQuestion: 'Q2', text: 'Italiana',    idNextQuestion: 'Q3', multipleChoice: false, img: './comida-italiana.jpg' },
+    { id: '12', idQuestion: 'Q2', text: 'Española',    idNextQuestion: 'Q3', multipleChoice: false, img: './comida-espanola.jpg' },
+    { id: '13', idQuestion: 'Q2', text: 'Parrillada',  idNextQuestion: 'Q3', multipleChoice: false, img: './comida-parrillada.jpg' },
+    { id: '14', idQuestion: 'Q2', text: 'Oriental',    idNextQuestion: 'Q3', multipleChoice: false, img: './comida-oriental.jpg' },
+    { id: '15', idQuestion: 'Q2', text: 'Peruana',     idNextQuestion: 'Q3', multipleChoice: false, img: './comida-peruana.jpg' },
+    { id: '16', idQuestion: 'Q2', text: 'Vegetariana', idNextQuestion: 'Q3', multipleChoice: false, img: './comida-vegetariana.jpg' },
+    { id: '17', idQuestion: 'Q2', text: 'Vegana',      idNextQuestion: 'Q3', multipleChoice: false, img: './comida-vegana.jpg' },
+    { id: '18', idQuestion: 'Q2', text: 'Árabe',       idNextQuestion: 'Q3', multipleChoice: false, img: './comida-arabe.jpg' },
+    { id: '19', idQuestion: 'Q2', text: 'Otra',        idNextQuestion: 'Q3', multipleChoice: false, write: true },
 
     // --QUESTION 3--
     { id: '20', idQuestion: 'Q3', text: 'Familia', idNextQuestion: 'Q4', multipleChoice: false },
@@ -122,10 +122,10 @@ export const options = [
     { id: '23', idQuestion: 'Q3', text: 'Solo',    idNextQuestion: 'Q4', multipleChoice: false },
 
     // --QUESTION 4--
-    { id: '24', idQuestion: 'Q4', text: 'Desayuno', idNextQuestion: 'Q5' },
-    { id: '25', idQuestion: 'Q4', text: 'Almuerzo', idNextQuestion: 'Q5' },
-    { id: '26', idQuestion: 'Q4', text: 'Merienda', idNextQuestion: 'Q5' },
-    { id: '27', idQuestion: 'Q4', text: 'Cena',     idNextQuestion: 'Q5' },
+    { id: '24', idQuestion: 'Q4', text: 'Desayuno', idNextQuestion: 'Q5', multipleChoice: false },
+    { id: '25', idQuestion: 'Q4', text: 'Almuerzo', idNextQuestion: 'Q5', multipleChoice: false },
+    { id: '26', idQuestion: 'Q4', text: 'Merienda', idNextQuestion: 'Q5', multipleChoice: false },
+    { id: '27', idQuestion: 'Q4', text: 'Cena',     idNextQuestion: 'Q5', multipleChoice: false },
 
     // --QUESTION 5--
     { id: '28', idQuestion: 'Q5', text: 'Dulce',  idNextQuestion: 'Q6', multipleChoice: false },
@@ -134,11 +134,11 @@ export const options = [
     // --QUESTION 6--
     { id: '30', idQuestion: 'Q6', text: 'Buffet libre para dulceros',           idNextQuestion: 'Q8', img: './buffet-libre-para-dulceros.jpg' },
     { id: '31', idQuestion: 'Q6', text: 'Bandejas personalizables',             idNextQuestion: 'Q8', img: './bandejas-personalizables.jpg' },
-    { id: '32', idQuestion: 'Q6', text: 'Gift Card de helado',                  idNextQuestion: 'Q8', img: './giftcard-helado.jpg' },
+    { id: '32', idQuestion: 'Q6', text: 'Gift Card Rapanui',                    idNextQuestion: 'Q8', img: './giftcard-helado.jpg' },
     { id: '33', idQuestion: 'Q6', text: 'Snack box dulce',                      idNextQuestion: 'Q8', img: './snack-box-dulce.jpg' },
     { id: '34', idQuestion: 'Q6', text: 'Box personalizado con fotos y comida', idNextQuestion: 'Q8', img: './box-personalizado-fotos-chocolates.jpg' },
     { id: '35', idQuestion: 'Q6', text: 'Todas',                                idNextQuestion: 'Q8', img: './quiero-todas.jpg' },
-    { id: '36', idQuestion: 'Q6', text: 'Ninguna',                              idNextQuestion: 'Q8', img: '' },
+    { id: '36', idQuestion: 'Q6', text: 'Ninguna',                              idNextQuestion: 'Q8', img: './comer-ninguno-lugares.jpg' },
     { id: '37', idQuestion: 'Q6', text: 'Otra',                                 idNextQuestion: 'Q8', write: true },
 
     // --QUESTION 7--
@@ -159,6 +159,7 @@ export const options = [
     { id: '50', idQuestion: 'Q8', text: 'Kenya Rooftop',      idNextQuestion: 'Q1', endSection: true, img: './kenia-rooftop.jpg' },
     { id: '51', idQuestion: 'Q8', text: 'Victoria Brown Bar', idNextQuestion: 'Q1', endSection: true, img: './victoria-brown-bar.jpg' },
     { id: '52', idQuestion: 'Q8', text: 'No',                 idNextQuestion: 'Q1', endSection: true, img: './comer-ninguno-lugares.jpg' },
+    { id: '53', idQuestion: 'Q8', text: 'Quisiera ir a',      idNextQuestion: 'Q1', endSection: true, write: true },
 
     // --> COCINAR <--
     // --QUESTION 9--
