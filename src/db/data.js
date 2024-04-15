@@ -85,6 +85,26 @@ export const questions = [
     { id: 'Q70', type: 'question', text: '¿Te gustaría saber más sobre jardinería?',                                             category: 'Jardinería' },
     { id: 'Q71', type: 'question', text: '¿Consideras tener todos los elementos necesarios para realizar una buena jardinería?', category: 'Jardinería' },
     { id: 'Q72', type: 'question', text: 'En donde vivís, tenés...',                                                             category: 'Jardinería' },
+
+    // ARTE
+    { id: 'Q73', type: 'question', text: '¿Qué te gusta más?',                                                 category: 'Arte' },
+    { id: 'Q74', type: 'question', text: '¿Qué te gusta más?',                                                 category: 'Dibujar' },
+    { id: 'Q75', type: 'question', text: '¿Con qué materiales solés pintar?',                                  category: 'Pintar' },
+    { id: 'Q76', type: 'question', text: '¿Qué tipo de fotos te gusta sacar?',                                 category: 'Fotografía' }, 
+    { id: 'Q77', type: 'question', text: '¿Cuál de estas manualidades te gusta más?',                          category: 'Manualidades' }, 
+    { id: 'Q78', type: 'question', text: '¿Qué tipo de obra de teatro te gusta más?',                          category: 'Obras de teatro' }, 
+    { id: 'Q79', type: 'question', text: '¿Qué estilo solés dibujar con más frecuencia?',                      category: 'Dibujar' }, 
+    { id: 'Q80', type: 'question', text: '¿Queres aprender más sobre un estilo en especifico?',                category: 'Dibujar' }, 
+    { id: 'Q81', type: 'question', text: '¿Sobre cuál?',                                                       category: 'Dibujar' }, 
+    { id: 'Q82', type: 'question', text: '¿Sobre qué material te gusta pintar?',                               category: 'Pintar' }, 
+    { id: 'Q83', type: 'question', text: '¿Te gustaría seguir aprendiendo?',                                   category: 'Pintar' }, 
+    { id: 'Q84', type: 'question', text: '¿Qué técnicas te gustaría aprender?',                                category: 'Pintar' }, 
+    { id: 'Q85', type: 'question', text: '¿Historia sobre qué estilo te gustaria aprender?',                   category: 'Pintar' }, 
+    { id: 'Q86', type: 'question', text: '¿Te gustaría saber más?',                                            category: 'Fotografía' }, 
+    { id: 'Q87', type: 'question', text: '¿Qué tipo de cámara tenés?',                                         category: 'Fotografía' }, 
+    { id: 'Q88', type: 'question', text: '¿Te gustaría aprender más?',                                         category: 'Manualidades' }, 
+    { id: 'Q89', type: 'question', text: '¿Con qué impronta te sentís mas identificado?',                      category: 'Manualidades' }, 
+    
 ]
 
 export const options = [
@@ -97,7 +117,7 @@ export const options = [
     { id: 'O5', idQuestion: 'Q1', text: 'Música',                     idNextQuestion: 'Q48' },
     { id: 'O6', idQuestion: 'Q1', text: 'Deportes',                   idNextQuestion: 'Q55' },
     { id: 'O7', idQuestion: 'Q1', text: 'Jardinería',                 idNextQuestion: 'Q60' },
-    { id: 'O8', idQuestion: 'Q1', text: 'Arte - Cultura',             idNextQuestion: 'Q16' },
+    { id: 'O8', idQuestion: 'Q1', text: 'Arte - Cultura',             idNextQuestion: 'Q73' },
     { id: 'O9', idQuestion: 'Q1', text: 'Belleza y cuidado personal', idNextQuestion: 'Q16' },
     { id: '10', idQuestion: 'Q1', text: 'Moda',                       idNextQuestion: 'Q16' },
 
@@ -702,4 +722,148 @@ export const options = [
     { id: '438', idQuestion: 'Q72', text: 'Patio',                   idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
     { id: '439', idQuestion: 'Q72', text: 'Balcón',                  idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
     { id: '440', idQuestion: 'Q72', text: 'Ningún espacio exterior', idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
-]
+
+    // --> ARTE <--
+    // --QUESTION 73--
+    { id: '441', idQuestion: 'Q73', text: 'Dibujar',         idNextQuestion: 'Q74', multipleChoice: false },
+    { id: '442', idQuestion: 'Q73', text: 'Pintar',          idNextQuestion: 'Q75', multipleChoice: false },
+    { id: '443', idQuestion: 'Q73', text: 'Fotografía',      idNextQuestion: 'Q76', multipleChoice: false },
+    { id: '444', idQuestion: 'Q73', text: 'Manualidades',    idNextQuestion: 'Q77', multipleChoice: false },
+    { id: '445', idQuestion: 'Q73', text: 'Obras de teatro', idNextQuestion: 'Q78', multipleChoice: false },
+    { id: '446', idQuestion: 'Q73', text: 'Museos',          idNextQuestion: 'Q1', multipleChoice: false },
+    { id: '447', idQuestion: 'Q73', text: 'Exposiciones',    idNextQuestion: 'Q1', multipleChoice: false },
+    { id: '448', idQuestion: 'Q73', text: 'Cine',            idNextQuestion: 'Q1', multipleChoice: false },
+    { id: '449', idQuestion: 'Q73', text: 'Grafitti',        idNextQuestion: 'Q1', multipleChoice: false },
+
+    // --QUESTION 74--
+    { id: '450', idQuestion: 'Q74', text: 'En color',          idNextQuestion: 'Q79', multipleChoice: false },
+    { id: '451', idQuestion: 'Q74', text: 'En blanco y negro', idNextQuestion: 'Q79', multipleChoice: false },
+    { id: '452', idQuestion: 'Q74', text: 'Digital',           idNextQuestion: 'Q79', multipleChoice: false },
+
+    // --QUESTION 75--
+    { id: '453', idQuestion: 'Q75', text: 'Acuarelas',       idNextQuestion: 'Q82', multipleChoice: false },
+    { id: '454', idQuestion: 'Q75', text: 'Acrílico',        idNextQuestion: 'Q82', multipleChoice: false },
+    { id: '455', idQuestion: 'Q75', text: 'Óleo',            idNextQuestion: 'Q82', multipleChoice: false },
+    { id: '456', idQuestion: 'Q75', text: 'Lápices',         idNextQuestion: 'Q82', multipleChoice: false },
+    { id: '457', idQuestion: 'Q75', text: 'Fibras/fibrones', idNextQuestion: 'Q82', multipleChoice: false },
+    { id: '458', idQuestion: 'Q75', text: 'Pastel',          idNextQuestion: 'Q82', multipleChoice: false },
+    { id: '459', idQuestion: 'Q75', text: 'Otro',            idNextQuestion: 'Q82', multipleChoice: false, write: true },
+
+    // --QUESTION 76--
+    { id: '460', idQuestion: 'Q76', text: 'Artísticas',   idNextQuestion: 'Q1',  },
+    { id: '461', idQuestion: 'Q76', text: 'Retrato',      idNextQuestion: 'Q1',  },
+    { id: '462', idQuestion: 'Q76', text: 'Paisajes',     idNextQuestion: 'Q1',  },
+    { id: '463', idQuestion: 'Q76', text: 'Deportes',     idNextQuestion: 'Q1',  },
+    { id: '464', idQuestion: 'Q76', text: 'Productos',    idNextQuestion: 'Q1',  },
+    { id: '465', idQuestion: 'Q76', text: 'Arquitectura', idNextQuestion: 'Q1',  },
+    { id: '466', idQuestion: 'Q76', text: 'Otro',         idNextQuestion: 'Q1', write: true },
+
+    // --QUESTION 77--
+    { id: '467', idQuestion: 'Q77', text: 'Cerámica',               idNextQuestion: 'Q88',  },
+    { id: '468', idQuestion: 'Q77', text: 'Mosaiquismo',            idNextQuestion: 'Q88',  },
+    { id: '469', idQuestion: 'Q77', text: 'Vitro',                  idNextQuestion: 'Q88',  },
+    { id: '470', idQuestion: 'Q77', text: 'Tela',                   idNextQuestion: 'Q88',  },
+    { id: '471', idQuestion: 'Q77', text: 'Lana',                   idNextQuestion: 'Q88',  },
+    { id: '472', idQuestion: 'Q77', text: 'Papel',                  idNextQuestion: 'Q88',  },
+    { id: '473', idQuestion: 'Q77', text: 'Porcelana fría',         idNextQuestion: 'Q88',  },
+    { id: '474', idQuestion: 'Q77', text: 'Materiales reciclables', idNextQuestion: 'Q88',  },
+    { id: '475', idQuestion: 'Q77', text: 'Bisutería',              idNextQuestion: 'Q88',  },
+    { id: '476', idQuestion: 'Q77', text: 'Madera',                 idNextQuestion: 'Q88',  },
+    { id: '477', idQuestion: 'Q77', text: 'Otro',                   idNextQuestion: 'Q88', write: true },
+
+    // --QUESTION 78--
+    { id: '478', idQuestion: 'Q78', text: 'Teatro independiente',  idNextQuestion: 'Q1', endSection: true  },
+    { id: '479', idQuestion: 'Q78', text: 'Comedia/Stand Up',      idNextQuestion: 'Q1', endSection: true  },
+    { id: '480', idQuestion: 'Q78', text: 'Microteatro',           idNextQuestion: 'Q1', endSection: true  },
+    { id: '481', idQuestion: 'Q78', text: 'Musicales',             idNextQuestion: 'Q1', endSection: true  },
+    { id: '482', idQuestion: 'Q78', text: 'Propuesta original',    idNextQuestion: 'Q1', endSection: true  },
+    { id: '483', idQuestion: 'Q78', text: 'Otro',                  idNextQuestion: 'Q1', write: true, endSection: true },
+    
+    // --QUESTION 79--
+    { id: '478', idQuestion: 'Q79', text: 'Dibujo artístico',  idNextQuestion: 'Q80',  },
+    { id: '479', idQuestion: 'Q79', text: 'Naturaleza muerta', idNextQuestion: 'Q80',  },
+    { id: '480', idQuestion: 'Q79', text: 'Caricatura',        idNextQuestion: 'Q80',  },
+    { id: '481', idQuestion: 'Q79', text: 'Ilustración',       idNextQuestion: 'Q80',  },
+    { id: '482', idQuestion: 'Q79', text: 'Hiperrealismo',     idNextQuestion: 'Q80',  },
+    { id: '483', idQuestion: 'Q79', text: 'Comics',            idNextQuestion: 'Q80', },
+    { id: '484', idQuestion: 'Q79', text: 'Grafitti',          idNextQuestion: 'Q80', },
+    { id: '485', idQuestion: 'Q79', text: 'Paisajes',          idNextQuestion: 'Q80', },
+    { id: '486', idQuestion: 'Q79', text: 'Animé',             idNextQuestion: 'Q80', },
+    { id: '487', idQuestion: 'Q79', text: 'Abstracto',         idNextQuestion: 'Q80', },
+    { id: '488', idQuestion: 'Q79', text: 'Retrato',           idNextQuestion: 'Q80', },
+    { id: '489', idQuestion: 'Q79', text: 'Otro',              idNextQuestion: 'Q80', write: true},
+    
+    // --QUESTION 80--
+    { id: '490', idQuestion: 'Q80', text: 'Sí', idNextQuestion: 'Q81', multipleChoice: false },
+    { id: '491', idQuestion: 'Q80', text: 'No', idNextQuestion: 'Q1',  multipleChoice: false, endSubSection: true, idPrevQuestion: 'Q73' },
+    
+    // --QUESTION 81--
+    { id: '492', idQuestion: 'Q81', text: 'Dibujo artístico',  idNextQuestion: 'Q1', idPrevQuestion: 'Q73', endSection: true },
+    { id: '493', idQuestion: 'Q81', text: 'Naturaleza muerta', idNextQuestion: 'Q1', idPrevQuestion: 'Q73', endSection: true },
+    { id: '494', idQuestion: 'Q81', text: 'Caricatura',        idNextQuestion: 'Q1', idPrevQuestion: 'Q73', endSection: true },
+    { id: '495', idQuestion: 'Q81', text: 'Ilustración',       idNextQuestion: 'Q1', idPrevQuestion: 'Q73', endSection: true },
+    { id: '496', idQuestion: 'Q81', text: 'Hiperrealismo',     idNextQuestion: 'Q1', idPrevQuestion: 'Q73', endSection: true },
+    { id: '497', idQuestion: 'Q81', text: 'Comics',            idNextQuestion: 'Q1', idPrevQuestion: 'Q73', endSection: true },
+    { id: '498', idQuestion: 'Q81', text: 'Grafitti',          idNextQuestion: 'Q1', idPrevQuestion: 'Q73', endSection: true },
+    { id: '499', idQuestion: 'Q81', text: 'Paisajes',          idNextQuestion: 'Q1', idPrevQuestion: 'Q73', endSection: true },
+    { id: '500', idQuestion: 'Q81', text: 'Animé',             idNextQuestion: 'Q1', idPrevQuestion: 'Q73', endSection: true },
+    { id: '501', idQuestion: 'Q81', text: 'Abstracto',         idNextQuestion: 'Q1', idPrevQuestion: 'Q73', endSection: true },
+    { id: '502', idQuestion: 'Q81', text: 'Retrato',           idNextQuestion: 'Q1', idPrevQuestion: 'Q73', endSection: true },
+    { id: '503', idQuestion: 'Q81', text: 'Otro',              idNextQuestion: 'Q1', write: true, idPrevQuestion: 'Q73', endSection: true},
+
+    // --QUESTION 82--
+    { id: '504', idQuestion: 'Q82', text: 'Lienzo',              idNextQuestion: 'Q83',  },
+    { id: '505', idQuestion: 'Q82', text: 'Papel',               idNextQuestion: 'Q83',  },
+    { id: '506', idQuestion: 'Q82', text: 'Dibujos pre armados', idNextQuestion: 'Q83',  },
+    { id: '507', idQuestion: 'Q82', text: 'Aluminio',            idNextQuestion: 'Q83',  },
+    { id: '508', idQuestion: 'Q82', text: 'Cartón',              idNextQuestion: 'Q83',  },
+    { id: '509', idQuestion: 'Q82', text: 'Otro',                idNextQuestion: 'Q83', write: true },
+    
+    // --QUESTION 83--
+    { id: '510', idQuestion: 'Q83', text: 'Sí, sobre más técnicas', idNextQuestion: 'Q84', multipleChoice: false  },
+    { id: '511', idQuestion: 'Q83', text: 'Sí, sobre la historia',  idNextQuestion: 'Q85', multipleChoice: false  },
+    { id: '512', idQuestion: 'Q83', text: 'No',                     idNextQuestion: 'Q1', endSection: true, idPrevQuestion: 'Q73', multipleChoice: false  },
+    
+    // --QUESTION 84--
+    { id: '513', idQuestion: 'Q84', text: 'Retratos',          idNextQuestion: 'Q1', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '514', idQuestion: 'Q84', text: 'Naturaleza muerta', idNextQuestion: 'Q1', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '515', idQuestion: 'Q84', text: 'Ilustración',       idNextQuestion: 'Q1', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '516', idQuestion: 'Q84', text: 'Hiperrealismo',     idNextQuestion: 'Q1', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '517', idQuestion: 'Q84', text: 'Paisajes',          idNextQuestion: 'Q1', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '518', idQuestion: 'Q84', text: 'Animé',             idNextQuestion: 'Q1', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '519', idQuestion: 'Q84', text: 'Abstracto',         idNextQuestion: 'Q1', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '520', idQuestion: 'Q84', text: 'Otro',              idNextQuestion: 'Q1', endSection: true, idPrevQuestion: 'Q73', write: true },
+
+    // --QUESTION 85--
+    { id: '521', idQuestion: 'Q85', text: 'Barroco',           idNextQuestion: 'Qfinal', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '522', idQuestion: 'Q85', text: 'Romanticismo',      idNextQuestion: 'Qfinal', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '523', idQuestion: 'Q85', text: 'Surrealismo',       idNextQuestion: 'Qfinal', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '524', idQuestion: 'Q85', text: 'Cubismo',           idNextQuestion: 'Qfinal', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '525', idQuestion: 'Q85', text: 'Hiperrealismo',     idNextQuestion: 'Qfinal', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '526', idQuestion: 'Q85', text: 'Expresionismo',     idNextQuestion: 'Qfinal', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '527', idQuestion: 'Q85', text: 'Abstracto',         idNextQuestion: 'Qfinal', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '528', idQuestion: 'Q85', text: 'Arte Pop',          idNextQuestion: 'Qfinal', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '529', idQuestion: 'Q85', text: 'Otro',              idNextQuestion: 'Qfinal', endSection: true, idPrevQuestion: 'Q73', write: true },
+
+    // --QUESTION 86--
+    { id: '530', idQuestion: 'Q86', text: 'Sí, quisiera saber más sobre la historia de la fotografía', idNextQuestion: 'Q87' },
+    { id: '531', idQuestion: 'Q86', text: 'Sí, saber más sobre técnicas como hobbie',                  idNextQuestion: 'Q87' },
+    { id: '532', idQuestion: 'Q86', text: 'Sí, quisiera aprender de manera profesional',               idNextQuestion: 'Q87' },
+    { id: '533', idQuestion: 'Q86', text: 'No',                                                        idNextQuestion: 'Q87' },
+
+    // --QUESTION 87--
+    { id: '534', idQuestion: 'Q87', text: 'Analógica',   idNextQuestion: 'Qfinal', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '535', idQuestion: 'Q87', text: 'Digital',     idNextQuestion: 'Qfinal', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '536', idQuestion: 'Q87', text: 'Instantánea', idNextQuestion: 'Qfinal', endSection: true, idPrevQuestion: 'Q73' },
+    { id: '537', idQuestion: 'Q87', text: 'No tengo',    idNextQuestion: 'Qfinal', endSection: true, idPrevQuestion: 'Q73' },
+
+    // --QUESTION 88--
+    { id: '538', idQuestion: 'Q88', text: 'Sí',         idNextQuestion: 'Q89', multipleChoice: false },
+    { id: '539', idQuestion: 'Q88', text: 'No',         idNextQuestion: 'Q89', multipleChoice: false },
+    { id: '540', idQuestion: 'Q88', text: 'Sobre otra', idNextQuestion: 'Q89', write: true },
+
+    // --QUESTION 89--
+    { id: '541', idQuestion: 'Q89', text: 'Creación',              idNextQuestion: 'Q89', multipleChoice: false, endSection: true, idPrevQuestion: 'Q73' },
+    { id: '542', idQuestion: 'Q89', text: 'Modificación',          idNextQuestion: 'Q89', multipleChoice: false, endSection: true, idPrevQuestion: 'Q73' },
+    { id: '543', idQuestion: 'Q89', text: 'Reparación de objetos', idNextQuestion: 'Q89', multipleChoice: false, endSection: true, idPrevQuestion: 'Q73' },
+];
