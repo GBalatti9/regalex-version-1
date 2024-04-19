@@ -92,7 +92,7 @@ export const Container = () => {
         userAnswersWithId.splice(index, 1);
 
         // Si un elemento llega con checked === false, entonces hay que verificar que el nextQuestionId no sea igual al selectedOption que determina cuál va a ser la siguiente pregunta. En caso de que sea igual, hay que reemplazar el valor de selectedOption por el primero que se encuentre en el array de userAnswersWithId. 
-        setDisabled(true);
+        userAnswers.length === 0 && setDisabled(true);
         nextQuestionId === selectedOption ? setSelectedOption(userAnswersWithId[0].idNextQuestion) : '';
       }
       
@@ -200,6 +200,8 @@ export const Container = () => {
     }
     // console.log({ selectedOption });
     // console.log( answers );
+    // Este setDisabled cambia el estado luego de enviar la respuesta para que la siguiente pregunta arranque con el boton deshabilitado.
+    setDisabled(true);
   }
 
   return (
