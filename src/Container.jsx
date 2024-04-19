@@ -26,6 +26,8 @@ export const Container = () => {
 
   const [ hasImage, setHasImage ] = useState(false);
 
+  const [ disabled, setDisabled ] = useState(true);
+
   const currentQuestion = questions.find(( question ) => question.id       === currentId);
   const currentOptions  = options.filter(( option )   => option.idQuestion === currentId);
   const optionsHaveImage = currentOptions.filter(( option ) => Object.keys( option ).includes('img'));
@@ -45,14 +47,18 @@ export const Container = () => {
     userAnswersWithId = [];
   }, [ currentId ])
   
-  const handleInputChange = ( { target }, nextQuestionId, multipleChoice ) => {
+  const handleInputChange = ( { target }, nextQuestionId, multipleChoice, endSection, endSubSection, idPrevQuestion ) => {
     const { name, value, checked, type } = target;
-    console.log('Handle input change', {name, value, checked, type, nextQuestionId});
+    checked && setDisabled(false);
+    console.log('Handle input change', {name, value, checked, type, nextQuestionId, endSection, endSubSection, idPrevQuestion});
 
     // ACA SE MANEJA EL CASO EN EL QUE EL USUARIO COMPLETA LA OPCIÓN "OTRO/A".
     if (type === 'text') {
       inputTextFormatted = { text: value, idNextQuestion: nextQuestionId }
-      // console.log({ inputTextFormatted });
+      if ( endSection !== undefined )     { inputTextFormatted.endSection = endSection }
+      if ( endSubSection !== undefined )  { inputTextFormatted.endSubSection = endSubSection }
+      if ( idPrevQuestion !== undefined ) { inputTextFormatted.idPrevQuestion = idPrevQuestion }
+      console.log({ inputTextFormatted });
       inputValue = value;
       setAnswers(( prevAnswers ) => ({
         ...prevAnswers,
@@ -62,7 +68,7 @@ export const Container = () => {
     }
     const objectValue = JSON.parse(value);
     const textValue = objectValue.text;
-    console.log({textValue});
+    // console.log({textValue});
     // return console.log(JSON.parse(value));
 
     if (userAnswers.length > 0) {
@@ -86,7 +92,7 @@ export const Container = () => {
         userAnswersWithId.splice(index, 1);
 
         // Si un elemento llega con checked === false, entonces hay que verificar que el nextQuestionId no sea igual al selectedOption que determina cuál va a ser la siguiente pregunta. En caso de que sea igual, hay que reemplazar el valor de selectedOption por el primero que se encuentre en el array de userAnswersWithId. 
-
+        setDisabled(true);
         nextQuestionId === selectedOption ? setSelectedOption(userAnswersWithId[0].idNextQuestion) : '';
       }
       
@@ -98,20 +104,21 @@ export const Container = () => {
       console.log('Primer elemento del array: ' + textValue);
     }
 
-    console.log( {userAnswers, userAnswersWithId} );
+    // console.log( {userAnswers, userAnswersWithId} );
 
     setAnswers(( prevAnswers ) => ({
       ...prevAnswers,
       [name]: userAnswers
     }))
 
-    console.log({ answers });
-    console.log({ nextQuestionId });
+    // console.log({ answers });
+    // console.log({ nextQuestionId });
   }
 
   const handleSubmit = ( e ) => {
     e.preventDefault();
     inputValue.length > 0 ? userAnswers.push(inputValue) : ''
+    console.log("INPUT TEXT FORMATTED",  { inputTextFormatted });
     Object.values(inputTextFormatted).length > 0 ? userAnswersWithId.push(inputTextFormatted) : '';
     // userAnswersWithId.push(inputTextFormatted);
     if (userAnswers.length === 0) return;
@@ -121,20 +128,28 @@ export const Container = () => {
     inputTextFormatted = '';
     // Primero se chequea que exista la propiedad endSubSection, luego lo que se va a verificar si en pendingQuestion hay mas de una opcion seleccionada de la pregunta que tiene el mismo id que idPrevQuestion porque si hay una sola no es necesario. Si hay una sola la constante hasEndSubSection va a dar -1 y se maneja en el else del if.
     const hasEndSubSection = includesSection(userAnswersWithId, 'endSubSection');
+    const hasEndSection    = includesSection(userAnswersWithId, 'endSection');
+    console.log({ hasEndSection, hasEndSubSection });
     if (hasEndSubSection) {
+
       // Si hasEndSubSection es true, entonces se va a buscar el id del primer elemento en pendingQuestions que haya quedado pendiente para recorrer el bucle interno antes de seguir en el formulario. Se compara el idQuestion de el elemento en pendingQuestion con el idPrevQuestion del primer elemento de las respuestas que recién se seleccionaron. Ese idPrevQuestion hace referencia a la pregunta en donde se ramificó el cuestionario. Entonces, toma esa primera opción pendiente y se pasa a setcurrentId con el idNextQuestion que es la pregunta que le sigue a la opción seleccionada que estaba guardada en pendingQuestions. 
       const hasPendingQuestionsIndex = pendingQuestions.findIndex(( element ) => element.idQuestion === userAnswersWithId[0].idPrevQuestion);
+      console.log({ hasPendingQuestionsIndex });
       if (hasPendingQuestionsIndex !== -1) {
       setcurrentId(pendingQuestions[hasPendingQuestionsIndex].idNextQuestion);
       pendingQuestions.splice(hasPendingQuestionsIndex, 1);
     } else {
+      // Este if es para controlar el caso en el que un elemento tenga tanto endSubSection como endSection. Si el item tiene endSubSection pero despues de esa pregunta no viene ninguna, por ende va a tener endSection también y la idea es que finalice el questionario, no que vuelva al Q1.
+      if (hasEndSection) {
+        setLastQuestion(true);
+      }
       setcurrentId(userAnswersWithId[0].idNextQuestion);
     }
       return;
     }
 
     // Esto se aplica si es la última pregunta de una categoria. Ej, la ultima pregunta de comer.
-    const hasEndSection = includesSection(userAnswersWithId, 'endSection');
+    
     if ( hasEndSection ) {
       // console.log('endSection perroooo');
       // if (pendingQuestions.length > 0) {
@@ -145,7 +160,7 @@ export const Container = () => {
       // } else {
       //   return setLastQuestion( true );
       // }
-
+      console.log("HAS END SECTION", { userAnswersWithId });
       const pendingFirstQuestions = pendingQuestions.find(( element ) => element.idQuestion === 'Q1');
       const index = pendingQuestions.find(( element ) => element.idQuestion === 'Q1');
       pendingQuestions.splice(index, 1);
@@ -158,6 +173,7 @@ export const Container = () => {
     // Acá se chequea si el usuario seleccionó más de una opción y en caso de haber seleccionado más de una va a tomar la primera opción seleccionada y comenzar su ciclo de preguntas. FALTA VER: como hacer para que el usuario vuelva a las preguntas que le quedan pendiente. Ver como hacer para utilizar el endSubSection y el endSection.
     
     if (userAnswersWithId.length > 1) {
+      console.log({ userAnswersWithId });
       // Antes de guardar en pendingQuestions hay que chequear que nextQuestionId sea diferente entre los objetos.
       const allIdsEqual = userAnswersWithId.every((answer, index, array) => {
         return index === 0 || answer.idNextQuestion === array[0].idNextQuestion;
@@ -175,7 +191,7 @@ export const Container = () => {
       }
     } else {
       if (selectedOption === undefined) {
-        console.log('Estoy en selecetedOption === undefined');
+        // console.log('Estoy en selecetedOption === undefined');
         setcurrentId( userAnswersWithId[0].idNextQuestion );
       } else {
         // setcurrentId( selectedOption );
@@ -183,7 +199,7 @@ export const Container = () => {
       }
     }
     // console.log({ selectedOption });
-    console.log( answers );
+    // console.log( answers );
   }
 
   return (
@@ -210,7 +226,7 @@ export const Container = () => {
                       <label htmlFor={option.id}> { option.text } </label>
                       {
                         option.write 
-                        ? <input type="text" onChange={( e ) => handleInputChange( e, option.idNextQuestion, option.multipleChoice )} name={ currentQuestion.text }/>
+                        ? <input type="text" onChange={( e ) => handleInputChange( e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion )} name={ currentQuestion.text }/>
                         :
                         option.multipleChoice === false 
                         ? <input type="radio"    id={ option.id } value={ JSON.stringify(option) } onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice) } name={ currentQuestion.text } />
@@ -221,7 +237,7 @@ export const Container = () => {
                   ))
                 }
                 </div>
-                <button>Siguiente</button>
+                <button disabled={disabled}>Siguiente</button>
               </form>
           </>
       }

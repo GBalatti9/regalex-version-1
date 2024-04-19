@@ -776,12 +776,12 @@ export const options = [
     { id: '477', idQuestion: 'Q77', text: 'Otro',                   idNextQuestion: 'Q88', write: true, multipleChoice: false },
 
     // --QUESTION 78--
-    { id: '478', idQuestion: 'Q78', text: 'Teatro independiente',  idNextQuestion: 'Q1', endSubSection: true, endSection: true  },
-    { id: '479', idQuestion: 'Q78', text: 'Comedia/Stand Up',      idNextQuestion: 'Q1', endSubSection: true, endSection: true  },
-    { id: '480', idQuestion: 'Q78', text: 'Microteatro',           idNextQuestion: 'Q1', endSubSection: true, endSection: true  },
-    { id: '481', idQuestion: 'Q78', text: 'Musicales',             idNextQuestion: 'Q1', endSubSection: true, endSection: true  },
-    { id: '482', idQuestion: 'Q78', text: 'Propuesta original',    idNextQuestion: 'Q1', endSubSection: true, endSection: true  },
-    { id: '483', idQuestion: 'Q78', text: 'Otro',                  idNextQuestion: 'Q1', endSubSection: true, write: true, endSection: true },
+    { id: '478', idQuestion: 'Q78', text: 'Teatro independiente',  idNextQuestion: 'Q1', endSubSection: true, endSection: true, idPrevQuestion: 'Q73'  },
+    { id: '479', idQuestion: 'Q78', text: 'Comedia/Stand Up',      idNextQuestion: 'Q1', endSubSection: true, endSection: true, idPrevQuestion: 'Q73'  },
+    { id: '480', idQuestion: 'Q78', text: 'Microteatro',           idNextQuestion: 'Q1', endSubSection: true, endSection: true, idPrevQuestion: 'Q73'  },
+    { id: '481', idQuestion: 'Q78', text: 'Musicales',             idNextQuestion: 'Q1', endSubSection: true, endSection: true, idPrevQuestion: 'Q73'  },
+    { id: '482', idQuestion: 'Q78', text: 'Propuesta original',    idNextQuestion: 'Q1', endSubSection: true, endSection: true, idPrevQuestion: 'Q73' },
+    { id: '483', idQuestion: 'Q78', text: 'Otro',                  idNextQuestion: 'Q1', endSubSection: true, write: true, endSection: true, idPrevQuestion: 'Q73' },
     
     // --QUESTION 79--
     { id: '478', idQuestion: 'Q79', text: 'Dibujo artístico',  idNextQuestion: 'Q80', multipleChoice: false  },
@@ -874,9 +874,11 @@ export const options = [
     
     // --QUESTION 90--
     { id: '547', idQuestion: 'Q90', text: 'Museo favorito', idNextQuestion: 'Q1', multipleChoice: false, endSection: true, endSubSection: true, idPrevQuestion: 'Q73', write: true },
+    { id: '560', idQuestion: 'Q90', text: 'Exposición favorita', idNextQuestion: 'Q1', multipleChoice: false, endSection: true, endSubSection: true, idPrevQuestion: 'Q73' },
     
     // --QUESTION 91--
     { id: '548', idQuestion: 'Q91', text: 'Exposición favorita', idNextQuestion: 'Q1', multipleChoice: false, endSection: true, endSubSection: true, idPrevQuestion: 'Q73', write: true },
+    { id: '559', idQuestion: 'Q91', text: 'Exposición favorita', idNextQuestion: 'Q1', multipleChoice: false, endSection: true, endSubSection: true, idPrevQuestion: 'Q73' },
     
     // --QUESTION 92--
     { id: '549', idQuestion: 'Q92', text: 'Aventura',        idNextQuestion: 'Q93', multipleChoice: false },
