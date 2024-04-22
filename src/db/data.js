@@ -87,28 +87,43 @@ export const questions = [
     { id: 'Q72', type: 'question', text: 'En donde vivís, tenés...',                                                             category: 'Jardinería' },
 
     // ARTE
-    { id: 'Q73', type: 'question', text: '¿Qué te gusta más?',                                                 category: 'Arte' },
-    { id: 'Q74', type: 'question', text: 'Sos de dibujar en...',                                               category: 'Dibujar' },
-    { id: 'Q75', type: 'question', text: '¿Con qué materiales solés pintar?',                                  category: 'Pintar' },
-    { id: 'Q76', type: 'question', text: '¿Qué tipo de fotos te gusta sacar?',                                 category: 'Fotografía' }, 
-    { id: 'Q77', type: 'question', text: '¿Cuál de estas manualidades te gusta más?',                          category: 'Manualidades' }, 
-    { id: 'Q78', type: 'question', text: '¿Qué tipo de obra de teatro te gusta más?',                          category: 'Obras de teatro' }, 
-    { id: 'Q79', type: 'question', text: '¿Qué estilo solés dibujar con más frecuencia?',                      category: 'Dibujar' }, 
-    { id: 'Q80', type: 'question', text: '¿Queres aprender más sobre un estilo en especifico?',                category: 'Dibujar' }, 
-    { id: 'Q81', type: 'question', text: '¿Sobre cuál?',                                                       category: 'Dibujar' }, 
-    { id: 'Q82', type: 'question', text: '¿Sobre qué material te gusta pintar?',                               category: 'Pintar' }, 
-    { id: 'Q83', type: 'question', text: '¿Te gustaría seguir aprendiendo?',                                   category: 'Pintar' }, 
-    { id: 'Q84', type: 'question', text: '¿Qué técnica te gustaría aprender?',                                 category: 'Pintar' }, 
-    { id: 'Q85', type: 'question', text: '¿Historia sobre qué estilo te gustaria aprender?',                   category: 'Pintar' }, 
-    { id: 'Q86', type: 'question', text: '¿Te gustaría saber más?',                                            category: 'Fotografía' }, 
-    { id: 'Q87', type: 'question', text: '¿Qué tipo de cámara tenés?',                                         category: 'Fotografía' }, 
-    { id: 'Q88', type: 'question', text: '¿Te gustaría aprender más?',                                         category: 'Manualidades' }, 
-    { id: 'Q89', type: 'question', text: '¿Con qué impronta te sentís mas identificado?',                      category: 'Manualidades' }, 
-    { id: 'Q90', type: 'question', text: '¿A qué museo te gustaría ir?',                                       category: 'Museos' }, 
-    { id: 'Q91', type: 'question', text: '¿Qué exposición te gustaría conocer?',                               category: 'Exposiciones' }, 
-    { id: 'Q92', type: 'question', text: '¿Cuál es tu género favorito?',                                       category: 'Cine' }, 
-    { id: 'Q93', type: 'question', text: '¿Cuál es tu película preferida?',                                    category: 'Cine' }, 
+    { id: 'Q73', type: 'question', text: '¿Qué te gusta más?',                                  category: 'Arte' },
+    { id: 'Q74', type: 'question', text: 'Sos de dibujar en...',                                category: 'Dibujar' },
+    { id: 'Q75', type: 'question', text: '¿Con qué materiales solés pintar?',                   category: 'Pintar' },
+    { id: 'Q76', type: 'question', text: '¿Qué tipo de fotos te gusta sacar?',                  category: 'Fotografía' }, 
+    { id: 'Q77', type: 'question', text: '¿Cuál de estas manualidades te gusta más?',           category: 'Manualidades' }, 
+    { id: 'Q78', type: 'question', text: '¿Qué tipo de obra de teatro te gusta más?',           category: 'Obras de teatro' }, 
+    { id: 'Q79', type: 'question', text: '¿Qué estilo solés dibujar con más frecuencia?',       category: 'Dibujar' }, 
+    { id: 'Q80', type: 'question', text: '¿Queres aprender más sobre un estilo en especifico?', category: 'Dibujar' }, 
+    { id: 'Q81', type: 'question', text: '¿Sobre cuál?',                                        category: 'Dibujar' }, 
+    { id: 'Q82', type: 'question', text: '¿Sobre qué material te gusta pintar?',                category: 'Pintar' }, 
+    { id: 'Q83', type: 'question', text: '¿Te gustaría seguir aprendiendo?',                    category: 'Pintar' }, 
+    { id: 'Q84', type: 'question', text: '¿Qué técnica te gustaría aprender?',                  category: 'Pintar' }, 
+    { id: 'Q85', type: 'question', text: '¿Historia sobre qué estilo te gustaria aprender?',    category: 'Pintar' }, 
+    { id: 'Q86', type: 'question', text: '¿Te gustaría saber más?',                             category: 'Fotografía' }, 
+    { id: 'Q87', type: 'question', text: '¿Qué tipo de cámara tenés?',                          category: 'Fotografía' }, 
+    { id: 'Q88', type: 'question', text: '¿Te gustaría aprender más?',                          category: 'Manualidades' }, 
+    { id: 'Q89', type: 'question', text: '¿Con qué impronta te sentís mas identificado?',       category: 'Manualidades' }, 
+    { id: 'Q90', type: 'question', text: '¿A qué museo te gustaría ir?',                        category: 'Museos' }, 
+    { id: 'Q91', type: 'question', text: '¿Qué exposición te gustaría conocer?',                category: 'Exposiciones' }, 
+    { id: 'Q92', type: 'question', text: '¿Cuál es tu género favorito?',                        category: 'Cine' }, 
+    { id: 'Q93', type: 'question', text: '¿Cuál es tu película preferida?',                     category: 'Cine' }, 
     
+    // BELLEZA Y CUIDADO PERSONAL
+    { id: 'Q94',  type: 'question', text: '¿Cuál de los siguientes aspectos de belleza y cuidado personal te interesa más en este momento?',  category: 'Bellza y cuidado' },
+    { id: 'Q95',  type: 'question', text: '¿Cuál es tu estilo de maquillaje preferido?',                                                      category: 'Maquillaje' },
+    { id: 'Q96',  type: 'question', text: '¿Cuál es tu producto preferido?',                                                                  category: 'Maquillaje' },
+    { id: 'Q97',  type: 'question', text: '¿Tenés alguna preferencia en cuanto a marcas de maquillaje?',                                      category: 'Maquillaje' },
+    { id: 'Q98',  type: 'question', text: '¿Qué tipos de experiencias te interesan más en un spa?',                                           category: 'Spa' },
+    { id: 'Q99',  type: 'question', text: 'Te gustaría vivir esta experiencia...',                                                            category: 'Spa' },
+    { id: 'Q100', type: 'question', text: '¿Tenes una rutina de skincare?',                                                                   category: 'Cuidado facial' },
+    { id: 'Q101', type: 'question', text: '¿Cuál es tu tipo de piel predominante?',                                                           category: 'Cuidado facial' },
+    { id: 'Q102', type: 'question', text: '¿Cuál es tu principal preocupación en cuanto al cuidado facial?',                                  category: 'Cuidado facial' },
+    { id: 'Q103', type: 'question', text: '¿Qué tipo de productos preferís para tu rutina de cuidado facial?',                                category: 'Cuidado facial' },
+    { id: 'Q104', type: 'question', text: '¿Te gustaria algo de esto?',                                                                       category: 'Cuidado facial' },
+    { id: 'Q105', type: 'question', text: '¿Cuál es tu principal preocupación en el cuidado corporal?',                                       category: 'Cuidado corporal' },
+    { id: 'Q106', type: 'question', text: '¿Qué tipo de productos preferís para tu cuidado corporal?',                                        category: 'Cuidado corporal' },
+
 ]
 
 export const options = [
@@ -122,7 +137,7 @@ export const options = [
     { id: 'O6', idQuestion: 'Q1', text: 'Deportes',                   idNextQuestion: 'Q55' },
     { id: 'O7', idQuestion: 'Q1', text: 'Jardinería',                 idNextQuestion: 'Q60' },
     { id: 'O8', idQuestion: 'Q1', text: 'Arte - Cultura',             idNextQuestion: 'Q73' },
-    { id: 'O9', idQuestion: 'Q1', text: 'Belleza y cuidado personal', idNextQuestion: 'Q16' },
+    { id: 'O9', idQuestion: 'Q1', text: 'Belleza y cuidado personal', idNextQuestion: 'Q94' },
     { id: '10', idQuestion: 'Q1', text: 'Moda',                       idNextQuestion: 'Q16' },
 
     // --> COMER <--
@@ -874,11 +889,9 @@ export const options = [
     
     // --QUESTION 90--
     { id: '547', idQuestion: 'Q90', text: 'Museo favorito', idNextQuestion: 'Q1', multipleChoice: false, endSection: true, endSubSection: true, idPrevQuestion: 'Q73', write: true },
-    { id: '560', idQuestion: 'Q90', text: 'Exposición favorita', idNextQuestion: 'Q1', multipleChoice: false, endSection: true, endSubSection: true, idPrevQuestion: 'Q73' },
     
     // --QUESTION 91--
     { id: '548', idQuestion: 'Q91', text: 'Exposición favorita', idNextQuestion: 'Q1', multipleChoice: false, endSection: true, endSubSection: true, idPrevQuestion: 'Q73', write: true },
-    { id: '559', idQuestion: 'Q91', text: 'Exposición favorita', idNextQuestion: 'Q1', multipleChoice: false, endSection: true, endSubSection: true, idPrevQuestion: 'Q73' },
     
     // --QUESTION 92--
     { id: '549', idQuestion: 'Q92', text: 'Aventura',        idNextQuestion: 'Q93', multipleChoice: false },
@@ -894,4 +907,99 @@ export const options = [
     // --QUESTION 93--
     { id: '558', idQuestion: 'Q93', text: 'Película preferida', idNextQuestion: 'Q1', endSubSection: true, idPrevQuestion: 'Q73', write: true, endSection: true },
     
+    // --QUESTION 94--
+    { id: '559', idQuestion: 'Q94', text: 'Maquillaje',                idNextQuestion: 'Q95',  multipleChoice: false },
+    { id: '560', idQuestion: 'Q94', text: 'Experiencias de relax/spa', idNextQuestion: 'Q98',  multipleChoice: false },
+    { id: '561', idQuestion: 'Q94', text: 'Skincare/Cuidado facial',   idNextQuestion: 'Q100', multipleChoice: false },
+    { id: '562', idQuestion: 'Q94', text: 'Cuidado corporal',          idNextQuestion: 'Q105', multipleChoice: false },
+
+    // --QUESTION 95--
+    { id: '563', idQuestion: 'Q95', text: 'Natural y sutil',     idNextQuestion: 'Q96', multipleChoice: false },
+    { id: '564', idQuestion: 'Q95', text: 'Maquillaje de noche', idNextQuestion: 'Q96', multipleChoice: false },
+    { id: '565', idQuestion: 'Q95', text: 'Artístico',           idNextQuestion: 'Q96', multipleChoice: false },
+
+    // --QUESTION 96--
+    { id: '566', idQuestion: 'Q96', text: 'Primer',                idNextQuestion: 'Q97', multipleChoice: false },
+    { id: '567', idQuestion: 'Q96', text: 'Base',                  idNextQuestion: 'Q97', multipleChoice: false },
+    { id: '568', idQuestion: 'Q96', text: 'Tapa ojeras',           idNextQuestion: 'Q97', multipleChoice: false },
+    { id: '569', idQuestion: 'Q96', text: 'Sombra de ojos',        idNextQuestion: 'Q97', multipleChoice: false },
+    { id: '570', idQuestion: 'Q96', text: 'Iluminador',            idNextQuestion: 'Q97', multipleChoice: false },
+    { id: '571', idQuestion: 'Q96', text: 'Contouring',            idNextQuestion: 'Q97', multipleChoice: false },
+    { id: '572', idQuestion: 'Q96', text: 'Delineador',            idNextQuestion: 'Q97', multipleChoice: false },
+    { id: '573', idQuestion: 'Q96', text: 'Máscara de pestañas',   idNextQuestion: 'Q97', multipleChoice: false },
+    { id: '574', idQuestion: 'Q96', text: 'Labial',                idNextQuestion: 'Q97', multipleChoice: false },
+    { id: '575', idQuestion: 'Q96', text: 'Gloss',                 idNextQuestion: 'Q97', multipleChoice: false },
+    { id: '576', idQuestion: 'Q96', text: 'Arqueador de pestañas', idNextQuestion: 'Q97', multipleChoice: false },
+    { id: '577', idQuestion: 'Q96', text: 'Perfilador de cejas',   idNextQuestion: 'Q97', multipleChoice: false },
+    { id: '578', idQuestion: 'Q96', text: 'Rubor',                 idNextQuestion: 'Q97', multipleChoice: false },
+    { id: '579', idQuestion: 'Q96', text: 'Otro',                  idNextQuestion: 'Q97', multipleChoice: false, write: true },
+
+    // --QUESTION 97--
+    { id: '580', idQuestion: 'Q97', text: 'Primer',                idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '581', idQuestion: 'Q97', text: 'Base',                  idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '582', idQuestion: 'Q97', text: 'Tapa ojeras',           idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '583', idQuestion: 'Q97', text: 'Sombra de ojos',        idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '584', idQuestion: 'Q97', text: 'Iluminador',            idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+
+    // --QUESTION 98--
+    { id: '585', idQuestion: 'Q98', text: 'Masajes',                                                                              idNextQuestion: 'Q99' },
+    { id: '586', idQuestion: 'Q98', text: 'Tratamientos faciales',                                                                idNextQuestion: 'Q99' },
+    { id: '587', idQuestion: 'Q98', text: 'Circuito de agua (Jacuzzi/pileta climatizada)',                                        idNextQuestion: 'Q99' },
+    { id: '588', idQuestion: 'Q98', text: 'Tratamientos corporales (Exfoliación e hidratación corporal de hidratación profunda)', idNextQuestion: 'Q99' },
+    { id: '589', idQuestion: 'Q98', text: 'Dia de spa (Rutina completa)',                                                         idNextQuestion: 'Q99' },
+
+    // --QUESTION 99--
+    { id: '590', idQuestion: 'Q99', text: 'Solo',      idNextQuestion: 'Q1', endSection: true },
+    { id: '591', idQuestion: 'Q99', text: 'En pareja', idNextQuestion: 'Q1', endSection: true },
+    { id: '592', idQuestion: 'Q99', text: 'Familia',   idNextQuestion: 'Q1', endSection: true },
+    { id: '593', idQuestion: 'Q99', text: 'Amigos',    idNextQuestion: 'Q1', endSection: true },
+    
+    // --QUESTION 100--
+    { id: '594', idQuestion: 'Q100', text: 'Sí', idNextQuestion: 'Q101', multipleChoice: false },
+    { id: '595', idQuestion: 'Q100', text: 'No', idNextQuestion: 'Q101', multipleChoice: false },
+
+    // --QUESTION 101--
+    { id: '596', idQuestion: 'Q101', text: 'Seca',     idNextQuestion: 'Q102', multipleChoice: false },
+    { id: '597', idQuestion: 'Q101', text: 'Grasosa',  idNextQuestion: 'Q102', multipleChoice: false },
+    { id: '598', idQuestion: 'Q101', text: 'Mixta',    idNextQuestion: 'Q102', multipleChoice: false },
+    { id: '599', idQuestion: 'Q101', text: 'Sensible', idNextQuestion: 'Q102', multipleChoice: false },
+    { id: '600', idQuestion: 'Q101', text: 'No sé',    idNextQuestion: 'Q102', multipleChoice: false },
+
+    // --QUESTION 102--
+    { id: '601', idQuestion: 'Q102', text: 'Arrugas y líneas de expresión', idNextQuestion: 'Q103', multipleChoice: false },
+    { id: '602', idQuestion: 'Q102', text: 'Acné',                          idNextQuestion: 'Q103', multipleChoice: false },
+    { id: '603', idQuestion: 'Q102', text: 'Hiperpigmentación o manchas',   idNextQuestion: 'Q103', multipleChoice: false },
+    { id: '604', idQuestion: 'Q102', text: 'Poros dilatados',               idNextQuestion: 'Q103', multipleChoice: false },
+    { id: '605', idQuestion: 'Q102', text: 'Ninguna',                       idNextQuestion: 'Q103', multipleChoice: false },
+
+    // --QUESTION 103--
+    { id: '606', idQuestion: 'Q103', text: 'Productos naturales',        idNextQuestion: 'Q104', multipleChoice: false },
+    { id: '608', idQuestion: 'Q103', text: 'Marcas de lujo y alta gama', idNextQuestion: 'Q104', multipleChoice: false },
+    { id: '609', idQuestion: 'Q103', text: 'Sin preferencia específica', idNextQuestion: 'Q104', multipleChoice: false },
+
+    // --QUESTION 104--
+    { id: '610', idQuestion: 'Q104', text: 'Crema hidratante',   idNextQuestion: 'Q1', multipleChoice: false, endSubSection: true, endSection: true, idPrevQuestion: 'Q' },
+    { id: '611', idQuestion: 'Q104', text: 'Serum',              idNextQuestion: 'Q1', multipleChoice: false, endSubSection: true, endSection: true, idPrevQuestion: 'Q' },
+    { id: '612', idQuestion: 'Q104', text: 'Mascarilla',         idNextQuestion: 'Q1', multipleChoice: false, endSubSection: true, endSection: true, idPrevQuestion: 'Q' },
+    { id: '613', idQuestion: 'Q104', text: 'Agua micelar',       idNextQuestion: 'Q1', multipleChoice: false, endSubSection: true, endSection: true, idPrevQuestion: 'Q' },
+    { id: '614', idQuestion: 'Q104', text: 'Exfoliante',         idNextQuestion: 'Q1', multipleChoice: false, endSubSection: true, endSection: true, idPrevQuestion: 'Q' },
+    { id: '615', idQuestion: 'Q104', text: 'Contorno de ojos',   idNextQuestion: 'Q1', multipleChoice: false, endSubSection: true, endSection: true, idPrevQuestion: 'Q' },
+    { id: '616', idQuestion: 'Q104', text: 'Gel de limpieza',    idNextQuestion: 'Q1', multipleChoice: false, endSubSection: true, endSection: true, idPrevQuestion: 'Q' },
+    { id: '617', idQuestion: 'Q104', text: 'Protector solar',    idNextQuestion: 'Q1', multipleChoice: false, endSubSection: true, endSection: true, idPrevQuestion: 'Q' },
+    { id: '618', idQuestion: 'Q104', text: 'Iceglobes',          idNextQuestion: 'Q1', multipleChoice: false, endSubSection: true, endSection: true, idPrevQuestion: 'Q' },
+    { id: '619', idQuestion: 'Q104', text: 'Roller jade/cuarzo', idNextQuestion: 'Q1', multipleChoice: false, endSubSection: true, endSection: true, idPrevQuestion: 'Q' },
+    { id: '620', idQuestion: 'Q104', text: 'Pads',               idNextQuestion: 'Q1', multipleChoice: false, endSubSection: true, endSection: true, idPrevQuestion: 'Q' },
+    { id: '621', idQuestion: 'Q104', text: 'Hidratante labial',  idNextQuestion: 'Q1', multipleChoice: false, endSubSection: true, endSection: true, idPrevQuestion: 'Q' },
+    
+    // --QUESTION 105--
+    { id: '622', idQuestion: 'Q105', text: 'Hidratación',                        idNextQuestion: 'Q106', multipleChoice: false, },
+    { id: '623', idQuestion: 'Q105', text: 'Firmeza y tonificación',             idNextQuestion: 'Q106', multipleChoice: false, },
+    { id: '624', idQuestion: 'Q105', text: 'Exfoliación y suavidad de la piel',  idNextQuestion: 'Q106', multipleChoice: false, },
+    { id: '625', idQuestion: 'Q105', text: 'Aromaterapia y relajación',          idNextQuestion: 'Q106', multipleChoice: false, },
+
+    // --QUESTION 106--
+    { id: '626', idQuestion: 'Q106', text: 'Lociones o cremas hidratantes',           idNextQuestion: 'Q1', multipleChoice: false, endSection: true, },
+    { id: '627', idQuestion: 'Q106', text: 'Exfoliantes corporales',                  idNextQuestion: 'Q1', multipleChoice: false, endSection: true, },
+    { id: '628', idQuestion: 'Q106', text: 'Aceites esenciales o cremas aromáticas',  idNextQuestion: 'Q1', multipleChoice: false, endSection: true, },
+    { id: '629', idQuestion: 'Q106', text: 'Otro',                                    idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true, },
 ];
