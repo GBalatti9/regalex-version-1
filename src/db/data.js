@@ -123,6 +123,29 @@ export const questions = [
     { id: 'Q104', type: 'question', text: '¿Te gustaria algo de esto?',                                                                       category: 'Cuidado facial' },
     { id: 'Q105', type: 'question', text: '¿Cuál es tu principal preocupación en el cuidado corporal?',                                       category: 'Cuidado corporal' },
     { id: 'Q106', type: 'question', text: '¿Qué tipo de productos preferís para tu cuidado corporal?',                                        category: 'Cuidado corporal' },
+    
+    // MODA
+    { id: 'Q107', type: 'question', text: '¿Qué te gusta más?',                    category: 'Moda'                       },
+    { id: 'Q108', type: 'question', text: 'Elegí tu mood',                         category: 'Ropa'                       },
+    { id: 'Q109', type: 'question', text: '¿Te gusta alguna de estas marcas más?', category: 'Mood 1'                     },
+    { id: 'Q110', type: 'question', text: '¿Te gusta alguna de estas marcas más?', category: 'Mood 2'                     },
+    { id: 'Q111', type: 'question', text: '¿Te gusta alguna de estas marcas más?', category: 'Mood 3'                     },
+    { id: 'Q112', type: 'question', text: '¿Te gusta alguna de estas marcas más?', category: 'Mood 4'                     },
+    { id: 'Q113', type: 'question', text: '¿Te gusta alguna de estas marcas más?', category: 'Mood 5'                     },
+    { id: 'Q114', type: 'question', text: '¿Te gusta alguna de estas marcas más?', category: 'Mood 6'                     },
+    { id: 'Q115', type: 'question', text: '¿Te gusta alguna de estas marcas más?', category: 'Mood 7'                     },
+    { id: 'Q116', type: 'question', text: '¿Te gusta alguna de estas marcas más?', category: 'Mood 8'                     },
+    { id: 'Q117', type: 'question', text: 'Querés ropa para...',                   category: 'Ropa'                       },
+    { id: 'Q118', type: 'question', text: '¿Queres algunas de estas prendas?',     category: 'Para salir'                 },
+    { id: 'Q119', type: 'question', text: '¿Queres algunas de estas prendas?',     category: 'Para todos los días'        },
+    { id: 'Q120', type: 'question', text: '¿Queres algunas de estas prendas?',     category: 'Deportiva'                  },
+    { id: 'Q121', type: 'question', text: '¿Queres algunas de estas prendas?',     category: 'Formal'                     },
+    { id: 'Q122', type: 'question', text: '¿Queres algunas de estas prendas?',     category: 'Playa'                      },
+    { id: 'Q123', type: 'question', text: 'Elegí tu mood',                         category: 'Accesorios'                 },
+    { id: 'Q124', type: 'question', text: '¿Qué te gusta más?',                    category: 'Accesorios'                 },
+    { id: 'Q125', type: 'question', text: '¿Te gusta alguna de estas marcas?',     category: 'Gorras - Carteras - Bolsos' },
+    { id: 'Q126', type: 'question', text: '¿Te gusta alguna de estas marcas?',     category: 'Calzados'                   },
+    { id: 'Q127', type: 'question', text: '¿Qué te gusta más?',                    category: 'Accesorios'                 },
 
 ]
 
@@ -138,7 +161,7 @@ export const options = [
     { id: 'O7', idQuestion: 'Q1', text: 'Jardinería',                 idNextQuestion: 'Q60' },
     { id: 'O8', idQuestion: 'Q1', text: 'Arte - Cultura',             idNextQuestion: 'Q73' },
     { id: 'O9', idQuestion: 'Q1', text: 'Belleza y cuidado personal', idNextQuestion: 'Q94' },
-    { id: '10', idQuestion: 'Q1', text: 'Moda',                       idNextQuestion: 'Q16' },
+    { id: '10', idQuestion: 'Q1', text: 'Moda',                       idNextQuestion: 'Q107' },
 
     // --> COMER <--
     // --QUESTION 2--
@@ -1002,4 +1025,190 @@ export const options = [
     { id: '627', idQuestion: 'Q106', text: 'Exfoliantes corporales',                  idNextQuestion: 'Q1', multipleChoice: false, endSection: true, },
     { id: '628', idQuestion: 'Q106', text: 'Aceites esenciales o cremas aromáticas',  idNextQuestion: 'Q1', multipleChoice: false, endSection: true, },
     { id: '629', idQuestion: 'Q106', text: 'Otro',                                    idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true, },
+
+    // --QUESTION 107--
+    { id: '630', idQuestion: 'Q107', text: 'Ropa',        idNextQuestion: 'Q108', multipleChoice: false, },
+    { id: '631', idQuestion: 'Q107', text: 'Accesorios',  idNextQuestion: 'Q123', multipleChoice: false, },
+
+    // --QUESTION 108--
+    { id: '632', idQuestion: 'Q108', text: 'Mood 1', idNextQuestion: 'Q109', multipleChoice: false, img: './mood1.jpg' },
+    { id: '633', idQuestion: 'Q108', text: 'Mood 2', idNextQuestion: 'Q110', multipleChoice: false, img: './mood2.jpg' },
+    { id: '634', idQuestion: 'Q108', text: 'Mood 3', idNextQuestion: 'Q111', multipleChoice: false, img: './mood3.jpg' },
+    { id: '635', idQuestion: 'Q108', text: 'Mood 4', idNextQuestion: 'Q112', multipleChoice: false, img: './mood4.jpg' },
+    { id: '636', idQuestion: 'Q108', text: 'Mood 5', idNextQuestion: 'Q113', multipleChoice: false, img: './mood5.jpg' },
+    { id: '637', idQuestion: 'Q108', text: 'Mood 6', idNextQuestion: 'Q114', multipleChoice: false, img: './mood6.jpg' },
+    { id: '638', idQuestion: 'Q108', text: 'Mood 7', idNextQuestion: 'Q115', multipleChoice: false, img: './mood7.jpg' },
+    { id: '639', idQuestion: 'Q108', text: 'Mood 8', idNextQuestion: 'Q116', multipleChoice: false, img: './mood8.jpg' },
+
+    // --QUESTION 109--
+    { id: '640', idQuestion: 'Q109', text: 'Vans',         idNextQuestion: 'Q117', multipleChoice: false, },
+    { id: '641', idQuestion: 'Q109', text: 'Rip Curl',     idNextQuestion: 'Q117', multipleChoice: false, },
+    { id: '642', idQuestion: 'Q109', text: 'Quick Silver', idNextQuestion: 'Q117', multipleChoice: false, },
+    { id: '643', idQuestion: 'Q109', text: 'Revolver',     idNextQuestion: 'Q117', multipleChoice: false, },
+    { id: '644', idQuestion: 'Q109', text: 'Bolivia',      idNextQuestion: 'Q117', multipleChoice: false, },
+    { id: '645', idQuestion: 'Q109', text: 'Otra',         idNextQuestion: 'Q117', multipleChoice: false, write: true },
+
+    // --QUESTION 110--
+    { id: '646', idQuestion: 'Q110', text: 'o993n',    idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '647', idQuestion: 'Q110', text: 'Bullbeny', idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '648', idQuestion: 'Q110', text: 'Levis',    idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '649', idQuestion: 'Q110', text: 'Revolver', idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '650', idQuestion: 'Q110', text: 'Shaka',    idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '651', idQuestion: 'Q110', text: 'Otra',     idNextQuestion: 'Q117', multipleChoice: false, write: true },
+
+    // --QUESTION 111--
+    { id: '652', idQuestion: 'Q111', text: 'Nike',              idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '653', idQuestion: 'Q111', text: 'Undefined',         idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '654', idQuestion: 'Q111', text: 'Shaka',             idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '655', idQuestion: 'Q111', text: 'King of the Kongo', idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '656', idQuestion: 'Q111', text: 'My Saint',          idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '657', idQuestion: 'Q111', text: 'Otra',              idNextQuestion: 'Q117', multipleChoice: false, write: true },
+
+    // --QUESTION 112--
+    { id: '658', idQuestion: 'Q112', text: 'Lacoste',    idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '659', idQuestion: 'Q112', text: 'La Martina', idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '660', idQuestion: 'Q112', text: 'Le Utthe',   idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '661', idQuestion: 'Q112', text: 'Bensimon',   idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '662', idQuestion: 'Q112', text: 'Otra',       idNextQuestion: 'Q117', multipleChoice: false, write: true },
+
+    // --QUESTION 113--
+    { id: '663', idQuestion: 'Q113', text: 'Ay Not Dead', idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '664', idQuestion: 'Q113', text: 'Revolver',    idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '665', idQuestion: 'Q113', text: 'Tramando',    idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '666', idQuestion: 'Q113', text: 'Zara',        idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '667', idQuestion: 'Q113', text: 'Otra',        idNextQuestion: 'Q117', multipleChoice: false, write: true },
+
+    // --QUESTION 114--
+    { id: '668', idQuestion: 'Q114', text: 'Las Pepas', idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '669', idQuestion: 'Q114', text: 'Bolivia',   idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '670', idQuestion: 'Q114', text: 'Tramando',  idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '671', idQuestion: 'Q114', text: 'Ginebra',   idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '672', idQuestion: 'Q114', text: 'Otra',      idNextQuestion: 'Q117', multipleChoice: false, write: true },
+
+    // --QUESTION 115--
+    { id: '673', idQuestion: 'Q115', text: 'Rapsodia',   idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '674', idQuestion: 'Q115', text: 'JTbyJT',     idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '675', idQuestion: 'Q115', text: 'Tramando',   idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '676', idQuestion: 'Q115', text: 'Indiastyle', idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '677', idQuestion: 'Q115', text: 'Uma',        idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '678', idQuestion: 'Q115', text: 'Otra',       idNextQuestion: 'Q117', multipleChoice: false, write: true },
+
+    // --QUESTION 116--
+    { id: '679', idQuestion: 'Q116', text: 'Zara',       idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '680', idQuestion: 'Q116', text: 'Akiab',      idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '681', idQuestion: 'Q116', text: 'Tucci',      idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '682', idQuestion: 'Q116', text: 'Ossira',     idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '683', idQuestion: 'Q116', text: 'Maria Cher', idNextQuestion: 'Q117', multipleChoice: false,             },
+    { id: '684', idQuestion: 'Q116', text: 'Otra',       idNextQuestion: 'Q117', multipleChoice: false, write: true },
+    
+    // --QUESTION 117--
+    { id: '685', idQuestion: 'Q117', text: 'Salir',          idNextQuestion: 'Q118', multipleChoice: false,             },
+    { id: '686', idQuestion: 'Q117', text: 'Todos los días', idNextQuestion: 'Q119', multipleChoice: false,             },
+    { id: '687', idQuestion: 'Q117', text: 'Deportiva',      idNextQuestion: 'Q120', multipleChoice: false,             },
+    { id: '688', idQuestion: 'Q117', text: 'Formal',         idNextQuestion: 'Q121', multipleChoice: false,             },
+    { id: '689', idQuestion: 'Q117', text: 'Playa',          idNextQuestion: 'Q122', multipleChoice: false,             },
+    { id: '690', idQuestion: 'Q117', text: 'Otra',           idNextQuestion: 'Q123', multipleChoice: false, write: true },
+
+    // --QUESTION 118--
+    { id: '691', idQuestion: 'Q118', text: 'Abrigo',   idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '692', idQuestion: 'Q118', text: 'Blazer',   idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '693', idQuestion: 'Q118', text: 'Vesitdo',  idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '694', idQuestion: 'Q118', text: 'Camisa',   idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '695', idQuestion: 'Q118', text: 'Pantalón', idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '696', idQuestion: 'Q118', text: 'Remera',   idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '697', idQuestion: 'Q118', text: 'Calzado',  idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '698', idQuestion: 'Q118', text: 'Otra',     idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
+    
+    // --QUESTION 119--
+    { id: '699', idQuestion: 'Q119', text: 'Buzo',     idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '700', idQuestion: 'Q119', text: 'Remera',   idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '701', idQuestion: 'Q119', text: 'Pantalón', idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '702', idQuestion: 'Q119', text: 'Falda',    idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '703', idQuestion: 'Q119', text: 'Short',    idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '704', idQuestion: 'Q119', text: 'Calzado',  idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '705', idQuestion: 'Q119', text: 'Otra',     idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
+    
+    // --QUESTION 120--
+    { id: '706', idQuestion: 'Q120', text: 'Remera',     idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '707', idQuestion: 'Q120', text: 'Campera',    idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '708', idQuestion: 'Q120', text: 'Short',      idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '709', idQuestion: 'Q120', text: 'Pant',       idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '710', idQuestion: 'Q120', text: 'Calza',      idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '711', idQuestion: 'Q120', text: 'Bikers',     idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '712', idQuestion: 'Q120', text: 'Zapatillas', idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '713', idQuestion: 'Q120', text: 'Otra',       idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
+
+    // --QUESTION 121--
+    { id: '714', idQuestion: 'Q121', text: 'Vestido',  idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '715', idQuestion: 'Q121', text: 'Traje',    idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '716', idQuestion: 'Q121', text: 'Camisa',   idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '717', idQuestion: 'Q121', text: 'Pantalón', idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '718', idQuestion: 'Q121', text: 'Blazer',   idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '719', idQuestion: 'Q121', text: 'Zapatos',  idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '730', idQuestion: 'Q121', text: 'Otra',     idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
+    
+    // --QUESTION 122--
+    { id: '731', idQuestion: 'Q122', text: 'Traje de baño', idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '732', idQuestion: 'Q122', text: 'Toallas',       idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '733', idQuestion: 'Q122', text: 'Bolsos',        idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '734', idQuestion: 'Q122', text: 'Ojotas',        idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '735', idQuestion: 'Q122', text: 'Otra',          idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
+    
+    // --QUESTION 123--
+    { id: '736', idQuestion: 'Q123', text: 'Mood 1', idNextQuestion: 'Q124', multipleChoice: false, img: './' },
+    { id: '737', idQuestion: 'Q123', text: 'Mood 2', idNextQuestion: 'Q124', multipleChoice: false, img: './' },
+    { id: '738', idQuestion: 'Q123', text: 'Mood 3', idNextQuestion: 'Q124', multipleChoice: false, img: './' },
+    { id: '739', idQuestion: 'Q123', text: 'Mood 4', idNextQuestion: 'Q124', multipleChoice: false, img: './' },
+    { id: '740', idQuestion: 'Q123', text: 'Mood 5', idNextQuestion: 'Q124', multipleChoice: false, img: './' },
+    { id: '741', idQuestion: 'Q123', text: 'Mood 6', idNextQuestion: 'Q124', multipleChoice: false, img: './' },
+    { id: '742', idQuestion: 'Q123', text: 'Mood 7', idNextQuestion: 'Q124', multipleChoice: false, img: './' },
+    { id: '743', idQuestion: 'Q123', text: 'Mood 8', idNextQuestion: 'Q124', multipleChoice: false, img: './' },
+    
+    // --QUESTION 124--
+    { id: '744', idQuestion: 'Q124', text: 'Gorras/pilusos', idNextQuestion: 'Q125', multipleChoice: false, },
+    { id: '745', idQuestion: 'Q124', text: 'Calzados',       idNextQuestion: 'Q126', multipleChoice: false, },
+    { id: '746', idQuestion: 'Q124', text: 'Bolsos',         idNextQuestion: 'Q125', multipleChoice: false, },
+    { id: '747', idQuestion: 'Q124', text: 'Carteras',       idNextQuestion: 'Q125', multipleChoice: false, },
+    { id: '748', idQuestion: 'Q124', text: 'Accesorios',     idNextQuestion: 'Q127', multipleChoice: false, },
+
+    // --QUESTION 125--
+    { id: '749', idQuestion: 'Q125', text: 'Baum',              idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '750', idQuestion: 'Q125', text: 'Reebook',           idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '751', idQuestion: 'Q125', text: 'Martha',            idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '752', idQuestion: 'Q125', text: 'Carhatt',           idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '753', idQuestion: 'Q125', text: 'Negro',             idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '754', idQuestion: 'Q125', text: 'Legión extranjera', idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '755', idQuestion: 'Q125', text: 'Jackie Smith',      idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '756', idQuestion: 'Q125', text: 'Nike',              idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '757', idQuestion: 'Q125', text: 'Lazaro',            idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '758', idQuestion: 'Q125', text: 'Prune',             idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '759', idQuestion: 'Q125', text: 'Humo estudio',      idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '760', idQuestion: 'Q125', text: 'Bastardo',          idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '761', idQuestion: 'Q125', text: 'Ricky Sarkany',     idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '762', idQuestion: 'Q125', text: 'Planar',            idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '763', idQuestion: 'Q125', text: 'Juanita Jo',        idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '764', idQuestion: 'Q125', text: 'Otra',              idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
+    
+    // --QUESTION 126--
+    { id: '765', idQuestion: 'Q126', text: 'Adidas',         idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '766', idQuestion: 'Q126', text: 'Vans',           idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '767', idQuestion: 'Q126', text: 'Converse',       idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '768', idQuestion: 'Q126', text: 'Jordan',         idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '769', idQuestion: 'Q126', text: 'Lazaro',         idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '770', idQuestion: 'Q126', text: 'Dr Martens',     idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '771', idQuestion: 'Q126', text: 'Oggi',           idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '772', idQuestion: 'Q126', text: 'Prune',          idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '773', idQuestion: 'Q126', text: 'Las Motas',      idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '774', idQuestion: 'Q126', text: 'Justa Osadia',   idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '775', idQuestion: 'Q126', text: 'Jessica Kessel', idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '775', idQuestion: 'Q126', text: 'Paruolo',        idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '776', idQuestion: 'Q126', text: 'Otra',           idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
+    
+    // --QUESTION 127--
+    { id: '772', idQuestion: 'Q127', text: 'Bijuterie',  idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '773', idQuestion: 'Q127', text: 'Joyas',      idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '774', idQuestion: 'Q127', text: 'Anillos',    idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '775', idQuestion: 'Q127', text: 'Collares',   idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '775', idQuestion: 'Q127', text: 'Dijes',      idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '776', idQuestion: 'Q127', text: 'Otra',       idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
 ];
