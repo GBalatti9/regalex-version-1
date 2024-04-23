@@ -215,11 +215,12 @@ export const Container = () => {
         </div>
             <form onSubmit={ handleSubmit }>
               <div style={{ 
-                  display: `${ hasImage ? 'grid' : '' }`, 
-                  gridTemplateColumns: `${hasImage && '1fr 1fr'}`, 
+                  display: `${ hasImage || currentOptions.length > 10 ? 'grid' : '' }`, 
+                  gridTemplateColumns: `${(hasImage || currentOptions.length > 10) && '1fr 1fr'}`, 
                   // gap: `${hasImage && '10px'}`, 
-                  alignItems: 'center'
+                  alignItems: 'center',
                   }}>
+                    {  console.log(currentOptions.length > 2)  }
               {
                 currentOptions.map(( option ) => (
                   <div key={ option.id }>
