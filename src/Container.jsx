@@ -238,18 +238,20 @@ export const Container = () => {
   return (
     <div className="bg-amber-300 min-h-screen pb-12">
       <h1 className="font-bold text-center text-2xl py-4">Regalex</h1>
-      <Card className="flex w-fit mx-auto p-4 bg-white shadow-2xl">
+      <Card className="flex w-4/12 mx-auto p-4 bg-white shadow-2xl">
         {
           displayFirst &&
-          <div>
-            <form onSubmit={handleSubmitFirstForm}>
+          <div className="w-full text-center">
+            <form onSubmit={handleSubmitFirstForm} className="w-full mx-auto">
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <Label htmlFor="email" className="font-bold pb-2">Mail</Label>
                 <Input type="email" name="email" id="email" onChange={handleInputChangeFirstForm} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <Label htmlFor="date" className="font-bold py-2">Fecha de nacimiento</Label>
-                <Calendar mode="single" onChange={ handleInputChangeFirstForm } />
+                <div className="flex justify-center">
+                  <Calendar mode="single" onChange={ handleInputChangeFirstForm }/>
+                </div>
                 {/* <Input type="date" name="date" id="date" onChange={handleInputChangeFirstForm} /> */}
               </div>
               <div className="flex justify-end">
@@ -263,11 +265,12 @@ export const Container = () => {
             ? <FinalMessage />
             :
             !displayFirst &&
-            <div>
+            <div className="mx-auto">
               <h4 className="font-bold"> {currentQuestion?.category?.toUpperCase()} </h4>
-              <h3 className="text-center py-2"> {currentQuestion?.text} </h3>
+              <h3 className="text-center pt-2 pb-3"> {currentQuestion?.text} </h3>
               <form onSubmit={handleSubmit}>
-                <div style={{
+                <div 
+                style={{
                   display: `${hasImage || currentOptions.length > 10 ? 'grid' : ''}`,
                   gridTemplateColumns: `${(hasImage || currentOptions.length > 10) && '1fr 1fr'}`,
                   // gap: `${hasImage && '10px'}`, 
@@ -299,7 +302,7 @@ export const Container = () => {
                     ))
                   }
                 </div>
-                <div className="flex justify-end">
+                <div className="flex justify-end my-4">
                   <Button variants="default" disabled={disabled}>Siguiente</Button>
                 </div>
               </form>
