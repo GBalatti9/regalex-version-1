@@ -6,6 +6,12 @@ import { FinalMessage } from "./components/FinalMessage";
 import { motion } from "framer-motion";
 import { findQuestions } from "./helpers/findQuestions";
 import { FirstForm } from "./components/firstForm";
+import { Button } from "./components/ui/button";
+import { Label } from "@radix-ui/react-label";
+import { Input } from "./components/ui/input";
+import { Calendar } from "./components/ui/calendar";
+import { Card } from "./components/ui/card";
+import { Checkbox } from "@radix-ui/react-checkbox";
 
 // USERANSWERS es simplemente para almacenar TODAS las respuestas del usuario.
 let userAnswers = [];
@@ -230,24 +236,25 @@ export const Container = () => {
   }
 
   return (
-    <>
-      <h2>Regalex</h2>
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-
-
+    <div className="bg-amber-300 min-h-screen pb-12">
+      <h1 className="font-bold text-center text-2xl py-4">Regalex</h1>
+      <Card className="flex w-fit mx-auto p-4 bg-white shadow-2xl">
         {
           displayFirst &&
           <div>
             <form onSubmit={handleSubmitFirstForm}>
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <label htmlFor="email">Mail</label>
-                <input type="email" name="email" id="email" onChange={handleInputChangeFirstForm} />
+                <Label htmlFor="email" className="font-bold pb-2">Mail</Label>
+                <Input type="email" name="email" id="email" onChange={handleInputChangeFirstForm} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <label htmlFor="date">Fecha de nacimiento</label>
-                <input type="date" name="date" id="date" onChange={handleInputChangeFirstForm} />
+                <Label htmlFor="date" className="font-bold py-2">Fecha de nacimiento</Label>
+                <Calendar mode="single" onChange={ handleInputChangeFirstForm } />
+                {/* <Input type="date" name="date" id="date" onChange={handleInputChangeFirstForm} /> */}
               </div>
-              <button>Empezar</button>
+              <div className="flex justify-end">
+                <Button variants="default">Empezar</Button>
+              </div>
             </form>
           </div>
         }
@@ -256,9 +263,9 @@ export const Container = () => {
             ? <FinalMessage />
             :
             !displayFirst &&
-            <>
-              <h4> {currentQuestion?.category?.toUpperCase()} </h4>
-              <h3> {currentQuestion?.text} </h3>
+            <div>
+              <h4 className="font-bold"> {currentQuestion?.category?.toUpperCase()} </h4>
+              <h3 className="text-center py-2"> {currentQuestion?.text} </h3>
               <form onSubmit={handleSubmit}>
                 <div style={{
                   display: `${hasImage || currentOptions.length > 10 ? 'grid' : ''}`,
@@ -277,27 +284,28 @@ export const Container = () => {
                       >
                         {option.img && <div style={{ display: 'flex', justifyContent: 'center' }}><img src={option.img} style={{ width: '100px' }}></img></div>}
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                          <label htmlFor={option.id}> {option.text} </label>
+                          <Label htmlFor={option.id} className="pr-2"> {option.text} </Label>
                           {
                             option.write
-                              ? <input type="text" onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)} name={currentQuestion.text} />
+                              ? <Input type="text" onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)} name={currentQuestion.text} />
                               :
                               option.multipleChoice === false
                                 ? <input type="radio" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion.text} />
-                                : <input type="checkbox" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion.text} />
+                                : 
+                                <input type="checkbox" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion.text} />
                           }
                         </div>
                       </motion.div>
                     ))
                   }
                 </div>
-                <div className="border" style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                  <button disabled={disabled}>Siguiente</button>
+                <div className="flex justify-end">
+                  <Button variants="default" disabled={disabled}>Siguiente</Button>
                 </div>
               </form>
-            </>
+            </div>
         }
-      </div>
-    </>
+      </Card>
+    </div>
   )
 }

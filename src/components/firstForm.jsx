@@ -7,7 +7,7 @@ export const FirstForm = () => {
         date: ''
     });
 
-    const handleInputChange = ({ target }) => {
+    const handleInputChangeFirstForm = ({ target }) => {
         const { name, value } = target;
         setUserInfo(prevUserInfo => ({
             ...prevUserInfo, 
@@ -20,7 +20,7 @@ export const FirstForm = () => {
     }, [userInfo]);
 
 
-    const handleSubmit = (e) => {
+    const handleSubmitFirstForm = (e) => {
         e.preventDefault();
         console.log({ userInfo });
     }
