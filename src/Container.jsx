@@ -58,6 +58,7 @@ export const Container = () => {
       if ( endSection !== undefined )     { inputTextFormatted.endSection = endSection }
       if ( endSubSection !== undefined )  { inputTextFormatted.endSubSection = endSubSection }
       if ( idPrevQuestion !== undefined ) { inputTextFormatted.idPrevQuestion = idPrevQuestion }
+      if ( inputTextFormatted.text.length > 0 ) { setDisabled(false) } else { setDisabled(true) }
       console.log({ inputTextFormatted });
       inputValue = value;
       setAnswers(( prevAnswers ) => ({
