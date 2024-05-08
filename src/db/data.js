@@ -24,23 +24,23 @@ export const questions = [
     
     // TOMAR
     { id: 'Q19', type: 'question', text: '¿Tenés alguna bebida preferida?',                      category: 'Tomar' }, 
-    { id: 'Q20', type: 'question', text: '¿Que tipo de cerveza te gusta más?',                   category: 'Tomar' }, 
-    { id: 'Q21', type: 'question', text: '¿Que tipo de vino te gusta más?',                      category: 'Tomar' },
-    { id: 'Q22', type: 'question', text: '¿Que tipo de fernet te gusta más?',                    category: 'Tomar' },
-    { id: 'Q23', type: 'question', text: '¿Te gustaría saber más sobre la historia del Whisky?', category: 'Tomar' },
-    { id: 'Q24', type: 'question', text: '¿Conocés el Gin de autor?',                            category: 'Tomar' }, 
-    { id: 'Q25', type: 'question', text: '¿Qué tanto te gusta el café?',                         category: 'Tomar' },  
-    { id: 'Q26', type: 'question', text: '¿Qué tipo de té te gusta más?',                        category: 'Tomar' },         
-    { id: 'Q27', type: 'question', text: '¿Te gustaría probar yerbas poco conocidas?',           category: 'Tomar' },
-    { id: 'Q28', type: 'question', text: '¿Qué tipo de cerveza artesanal preferís?',             category: 'Tomar' },
-    { id: 'Q29', type: 'question', text: '¿Qué tipo de cerveza industrial preferís?',            category: 'Tomar' },
-    { id: 'Q30', type: 'question', text: '¿Que tipo de vino tinto te gusta más?',                category: 'Tomar' },
-    { id: 'Q31', type: 'question', text: '¿Que tipo de vino blanco te gusta más?',               category: 'Tomar' },
-    { id: 'Q32', type: 'question', text: '¿Que tipo de vino rosado te gusta más?',               category: 'Tomar' },
-    { id: 'Q33', type: 'question', text: '¿Qué preferís?',                                       category: 'Tomar' },
-    { id: 'Q34', type: 'question', text: '¿Te gusta alguna de estas marcas de whisky?',          category: 'Tomar' },
+    { id: 'Q20', type: 'question', text: '¿Que tipo de cerveza te gusta más?',                   category: 'Cerveza' }, 
+    { id: 'Q21', type: 'question', text: '¿Que tipo de vino te gusta más?',                      category: 'Vino' },
+    { id: 'Q22', type: 'question', text: '¿Que tipo de fernet te gusta más?',                    category: 'Fernet' },
+    { id: 'Q23', type: 'question', text: '¿Te gustaría saber más sobre la historia del Whisky?', category: 'Whisky' },
+    { id: 'Q24', type: 'question', text: '¿Conocés el Gin de autor?',                            category: 'Gin' }, 
+    { id: 'Q25', type: 'question', text: '¿Qué tanto te gusta el café?',                         category: 'Café' },  
+    { id: 'Q26', type: 'question', text: '¿Qué tipo de té te gusta más?',                        category: 'Té' },         
+    { id: 'Q27', type: 'question', text: '¿Te gustaría probar yerbas poco conocidas?',           category: 'Mate' },
+    { id: 'Q28', type: 'question', text: '¿Qué tipo de cerveza artesanal preferís?',             category: 'Cerveza artesanal' },
+    { id: 'Q29', type: 'question', text: '¿Qué tipo de cerveza industrial preferís?',            category: 'Cerveza industrial' },
+    { id: 'Q30', type: 'question', text: '¿Que tipo de vino tinto te gusta más?',                category: 'Vino tinto' },
+    { id: 'Q31', type: 'question', text: '¿Que tipo de vino blanco te gusta más?',               category: 'Vino rosado' },
+    { id: 'Q32', type: 'question', text: '¿Que tipo de vino rosado te gusta más?',               category: 'Vino rosado' },
+    { id: 'Q33', type: 'question', text: '¿Qué preferís?',                                       category: 'Café' },
+    { id: 'Q34', type: 'question', text: '¿Te gusta alguna de estas marcas de whisky?',          category: 'Whisky' },
     { id: 'Q35', type: 'question', text: '¿Cómo te gusta tomarlo?',                              category: 'Tomar' },
-    { id: 'Q36', type: 'question', text: '¿Te gustaría saber más sobre bebidas alcohólicas?',    category: 'Tomar' },
+    { id: 'Q36', type: 'question', text: '¿Te gustaría saber más sobre bebidas alcohólicas?',    category: 'Té' },
     { id: 'Q37', type: 'question', text: '¿Sobre cuál de estas bebidas te gustaría aprender?',   category: 'Tomar' },
     { id: 'Q38', type: 'question', text: '¿Preprarás tragos en tu casa?',                        category: 'Tomar' },
 
@@ -137,11 +137,11 @@ export const questions = [
     { id: 'Q116', type: 'question', text: '¿Cuál de estas marcas te gusta más?',   category: 'Mood 7'                     },
     { id: 'Q117', type: 'question', text: '¿Cuál de estas marcas te gusta más?',   category: 'Mood 8'                     },
     { id: 'Q118', type: 'question', text: 'Querés ropa para...',                   category: 'Ropa'                       },
-    { id: 'Q119', type: 'question', text: '¿Cuál de estas pendas querés?',         category: 'Para salir'                 },
-    { id: 'Q120', type: 'question', text: '¿Cuál de estas pendas querés?',         category: 'Para todos los días'        },
-    { id: 'Q121', type: 'question', text: '¿Cuál de estas pendas querés?',         category: 'Deportiva'                  },
-    { id: 'Q122', type: 'question', text: '¿Cuál de estas pendas querés?',         category: 'Formal'                     },
-    { id: 'Q123', type: 'question', text: '¿Cuál de estas pendas querés?',         category: 'Playa'                      },
+    { id: 'Q119', type: 'question', text: '¿Cuál de estas prendas querés?',        category: 'Para salir'                 },
+    { id: 'Q120', type: 'question', text: '¿Cuál de estas prendas querés?',        category: 'Para todos los días'        },
+    { id: 'Q121', type: 'question', text: '¿Cuál de estas prendas querés?',        category: 'Deportiva'                  },
+    { id: 'Q122', type: 'question', text: '¿Cuál de estas prendas querés?',        category: 'Formal'                     },
+    { id: 'Q123', type: 'question', text: '¿Cuál de estas prendas querés?',        category: 'Playa'                      },
     { id: 'Q124', type: 'question', text: 'Elegí tu mood',                         category: 'Accesorios'                 },
     { id: 'Q125', type: 'question', text: '¿Qué te gusta más?',                    category: 'Accesorios'                 },
     { id: 'Q126', type: 'question', text: '¿Te gusta alguna de estas marcas?',     category: 'Gorras'                     },
@@ -307,6 +307,7 @@ export const options = [
     { id: '107',  idQuestion: 'Q16',  text: 'Opción 8',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './innovacion8.jpg' },
     { id: '108',  idQuestion: 'Q16',  text: 'Opción 9',  idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './innovacion9.jpg' },
     { id: '109',  idQuestion: 'Q16',  text: 'No',        idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', img: './conejo-no.png' },
+    { id: '1090', idQuestion: 'Q16',  text: 'Otro',      idNextQuestion: 'Q17', subSection: true, endSubSection: true, idPrevQuestion: 'Q11', write: true },
     // Es de cocina
     // { id: '41', idQuestion: 'Q16', text: 'Sí', idNextQuestion: 'Q18', multipleChoice: false },
     // { id: '42', idQuestion: 'Q16', text: 'No', idNextQuestion: 'Q17', multipleChoice: false },
@@ -383,7 +384,7 @@ export const options = [
     { id: '150', idQuestion: 'Q28', text: 'Stout',   idNextQuestion: 'Q36', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
     { id: '151', idQuestion: 'Q28', text: 'Scotish', idNextQuestion: 'Q36', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
     { id: '152', idQuestion: 'Q28', text: 'Honey',   idNextQuestion: 'Q36', idPrevQuestion: 'Q19', subSection: true, endSubSection: true  },
-    { id: '152', idQuestion: 'Q28', text: 'Otra',    idNextQuestion: 'Q36', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, write: true  },
+    { id: '1520', idQuestion: 'Q28', text: 'Otra',    idNextQuestion: 'Q36', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, write: true  },
     
     // --QUESTION 29--
     { id: '153', idQuestion: 'Q29', text: 'Quilmes',       idNextQuestion: 'Q36', idPrevQuestion: 'Q19', subSection: true, endSubSection: true   },
@@ -410,6 +411,7 @@ export const options = [
     { id: '168', idQuestion: 'Q32', text: 'Tempranillo', idNextQuestion: 'Q36', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
     { id: '169', idQuestion: 'Q32', text: 'Cariñena',    idNextQuestion: 'Q36', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
     { id: '170', idQuestion: 'Q32', text: 'Syrah',       idNextQuestion: 'Q36', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false  },
+    { id: '1700', idQuestion: 'Q32', text: 'Otro',       idNextQuestion: 'Q36', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, write: true  },
 
     // --QUESTION 33--
     { id: '171', idQuestion: 'Q33', text: 'Prepararlo en casa',     idNextQuestion: 'Q36', idPrevQuestion: 'Q19', subSection: true, endSubSection: true, multipleChoice: false },
@@ -527,7 +529,7 @@ export const options = [
     { id: '244', idQuestion: 'Q50', text: 'No, ya toco', idNextQuestion: 'Q52', multipleChoice: false },
 
     // --QUESTION 51--
-    { id: '245', idQuestion: 'Q51', text: 'Guitarra', idNextQuestion: 'Q54', multipleChoice: false },
+    { id: '245', idQuestion: 'Q51', text: 'Guitarra', idNextQuestion: 'Q53', multipleChoice: false },
     { id: '246', idQuestion: 'Q51', text: 'Piano',    idNextQuestion: 'Q54', multipleChoice: false },
     { id: '247', idQuestion: 'Q51', text: 'Bajo',     idNextQuestion: 'Q54', multipleChoice: false },
     { id: '248', idQuestion: 'Q51', text: 'Batería',  idNextQuestion: 'Q54', multipleChoice: false },
@@ -1117,7 +1119,7 @@ export const options = [
     { id: '691', idQuestion: 'Q118', text: 'Deportiva',      idNextQuestion: 'Q121', multipleChoice: false,             },
     { id: '692', idQuestion: 'Q118', text: 'Formal',         idNextQuestion: 'Q122', multipleChoice: false,             },
     { id: '693', idQuestion: 'Q118', text: 'Playa',          idNextQuestion: 'Q123', multipleChoice: false,             },
-    { id: '694', idQuestion: 'Q118', text: 'Otra',           idNextQuestion: 'Q124', multipleChoice: false, write: true },
+    { id: '694', idQuestion: 'Q118', text: 'Otra',           idNextQuestion: 'Q1',   multipleChoice: false, endSection: true, write: true },
 
     // --QUESTION 119--
     { id: '695', idQuestion: 'Q119', text: 'Abrigo',   idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
@@ -1179,8 +1181,8 @@ export const options = [
     { id: '739', idQuestion: 'Q125', text: 'Calzados',       idNextQuestion: 'Q129', multipleChoice: false, },
     { id: '740', idQuestion: 'Q125', text: 'Bolsos',         idNextQuestion: 'Q127', multipleChoice: false, },
     { id: '741', idQuestion: 'Q125', text: 'Carteras',       idNextQuestion: 'Q128', multipleChoice: false, },
-    { id: '742', idQuestion: 'Q125', text: 'Accesorios',     idNextQuestion: 'Q129', multipleChoice: false, },
-    { id: '743', idQuestion: 'Q125', text: 'Otro',           idNextQuestion: 'Q129', multipleChoice: false, write: true },
+    { id: '742', idQuestion: 'Q125', text: 'Más accesorios', idNextQuestion: 'Q130', multipleChoice: false, },
+    { id: '743', idQuestion: 'Q125', text: 'Otro',           idNextQuestion: 'Q130', multipleChoice: false, write: true, endSection: true },
 
     // --QUESTION 126--
     { id: '744', idQuestion: 'Q126', text: 'Baum',              idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
