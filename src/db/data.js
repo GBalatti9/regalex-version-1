@@ -668,17 +668,17 @@ export const options = [
     { id: '361', idQuestion: 'Q60', text: 'Otra',              idNextQuestion: 'Q70', write: true },
 
     // --QUESTION 61--
-    { id: '362', idQuestion: 'Q61', text: 'Bonete de obispo',    idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '363', idQuestion: 'Q61', text: 'Cactus Chin',         idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '364', idQuestion: 'Q61', text: 'Cactus columnar',     idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '365', idQuestion: 'Q61', text: 'Cactus de navidad',   idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '366', idQuestion: 'Q61', text: 'Cactus de ordenador', idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '367', idQuestion: 'Q61', text: 'Cactus cresta',       idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '368', idQuestion: 'Q61', text: 'Planta cebra',        idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '369', idQuestion: 'Q61', text: 'Suculenta Aloe Vera', idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '370', idQuestion: 'Q61', text: 'Echeveria',           idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '371', idQuestion: 'Q61', text: 'Senecio colgante',    idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '372', idQuestion: 'Q61', text: 'Otra',                idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './', write: true },
+    { id: '362', idQuestion: 'Q61', text: 'Bonete de obispo',    idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './suculentas-bonete-obispo.jpg' },
+    { id: '363', idQuestion: 'Q61', text: 'Cactus Chin',         idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './suculentas-cactus-chin.jpg' },
+    { id: '364', idQuestion: 'Q61', text: 'Cactus columnar',     idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './suculentas-cactus-columnar.jpg' },
+    { id: '365', idQuestion: 'Q61', text: 'Cactus de navidad',   idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './suculentas-cactus-navidad.jpg' },
+    { id: '366', idQuestion: 'Q61', text: 'Cactus de ordenador', idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './suculentas-cactus-ordenador.jpg' },
+    { id: '367', idQuestion: 'Q61', text: 'Cactus cresta',       idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './suculentas-cactus-cresta.jpg' },
+    { id: '368', idQuestion: 'Q61', text: 'Planta cebra',        idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './suculentas-planta-cebra.jpg' },
+    { id: '369', idQuestion: 'Q61', text: 'Suculenta Aloe Vera', idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './suculentas-aloe-vera.jpg' },
+    { id: '370', idQuestion: 'Q61', text: 'Echeveria',           idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './suculentas-echeveria.jpg' },
+    { id: '371', idQuestion: 'Q61', text: 'Senecio colgante',    idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './suculentas-senecio-colgante.jpg' },
+    { id: '372', idQuestion: 'Q61', text: 'Otra',                idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', write: true },
 
     // --QUESTION 62--
     { id: '373', idQuestion: 'Q62', text: 'Menta',    idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
