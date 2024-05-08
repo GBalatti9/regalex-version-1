@@ -681,15 +681,15 @@ export const options = [
     { id: '372', idQuestion: 'Q61', text: 'Otra',                idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', write: true },
 
     // --QUESTION 62--
-    { id: '373', idQuestion: 'Q62', text: 'Menta',    idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '374', idQuestion: 'Q62', text: 'Romero',   idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '375', idQuestion: 'Q62', text: 'Albahaca', idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '376', idQuestion: 'Q62', text: 'Oregano',  idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '377', idQuestion: 'Q62', text: 'Laurel',   idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '378', idQuestion: 'Q62', text: 'Cilantro', idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '379', idQuestion: 'Q62', text: 'Tomillo',  idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '380', idQuestion: 'Q62', text: 'Perejil',  idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '381', idQuestion: 'Q62', text: 'Otra',     idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './', write: true },
+    { id: '373', idQuestion: 'Q62', text: 'Menta',    idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './aromaticas-menta.jpg' },
+    { id: '374', idQuestion: 'Q62', text: 'Romero',   idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './aromaticas-romero.jpg' },
+    { id: '375', idQuestion: 'Q62', text: 'Albahaca', idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './aromaticas-albahaca.jpg' },
+    { id: '376', idQuestion: 'Q62', text: 'Oregano',  idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './aromaticas-oregano.jpg' },
+    { id: '377', idQuestion: 'Q62', text: 'Laurel',   idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './aromaticas-laurel.jpg' },
+    { id: '378', idQuestion: 'Q62', text: 'Cilantro', idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './aromaticas-cilantro.jpg' },
+    { id: '379', idQuestion: 'Q62', text: 'Tomillo',  idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './aromaticas-tomillo.jpg' },
+    { id: '380', idQuestion: 'Q62', text: 'Perejil',  idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './aromaticas-perejil.jpg' },
+    { id: '381', idQuestion: 'Q62', text: 'Otra',     idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', write: true },
     
     // --QUESTION 63--
     { id: '382', idQuestion: 'Q63', text: 'Sí',  idNextQuestion: 'Q70', subSection: true, multipleChoice: false },
