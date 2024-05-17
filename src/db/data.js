@@ -40,7 +40,7 @@ export const questions = [
     { id: 'Q33', type: 'question', text: '¿Qué preferís?',                                       category: 'Café' },
     { id: 'Q34', type: 'question', text: '¿Te gusta alguna de estas marcas de whisky?',          category: 'Whisky' },
     { id: 'Q35', type: 'question', text: '¿Cómo te gusta tomarlo?',                              category: 'Tomar' },
-    { id: 'Q36', type: 'question', text: '¿Te gustaría saber más sobre bebidas alcohólicas?',    category: 'Té' },
+    { id: 'Q36', type: 'question', text: '¿Te gustaría saber más sobre bebidas alcohólicas?',    category: 'Tomar' },
     { id: 'Q37', type: 'question', text: '¿Sobre cuál de estas bebidas te gustaría aprender?',   category: 'Tomar' },
     { id: 'Q38', type: 'question', text: '¿Preprarás tragos en tu casa?',                        category: 'Tomar' },
 

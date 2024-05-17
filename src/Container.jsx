@@ -20,6 +20,8 @@ let userAnswersWithId = [];
 
 let pendingQuestions = [];
 
+let end;
+
 let inputValue = '';
 let inputTextFormatted = {
   text: '',
@@ -43,9 +45,31 @@ export const Container = () => {
 
   const [displayFirst, setDisplayFirst] = useState(true);
 
-  const currentQuestion = questions.find((question) => question.id === currentId);
-  const currentOptions = options.filter((option) => option.idQuestion === currentId);
+  const [currentQuestion, setCurrentQuestion] = useState([]);
+  const [currentOptions, setCurrentOptions] = useState([]);
+
+  // const currentQuestion = ( questions ) => {
+  //   return questions.find((question) => question.id === currentId);
+  // }
+  // const currentQuestion = questions.find((question) => question.id === currentId);
+  // const currentOptions = options.filter((option) => option.idQuestion === currentId);
   const optionsHaveImage = currentOptions.filter((option) => Object.keys(option).includes('img'));
+
+  useEffect(() => {
+    const currentQuestionFn = ( questions ) => {
+      const questionsArr = questions.find(( question ) => question.id === currentId)
+      setCurrentQuestion(questionsArr);
+    }
+    const currentOptionsFn = ( options ) => {
+      const optionsArr = options.filter(( option ) => option.idQuestion === currentId);
+      setCurrentOptions(optionsArr)
+    }
+    
+    currentQuestionFn(questions);
+    currentOptionsFn(options);
+
+    console.log({ currentQuestion, currentOptions });
+  }, [currentId])
 
   useEffect(() => {
     if (optionsHaveImage.length > 0) {
@@ -139,7 +163,7 @@ export const Container = () => {
     e.preventDefault();
     inputValue.length > 0 ? userAnswers.push(inputValue) : ''
     console.log("INPUT TEXT FORMATTED", { inputTextFormatted });
-    findQuestions(answers);
+    
     Object.values(inputTextFormatted).length > 0 ? userAnswersWithId.push(inputTextFormatted) : '';
     // userAnswersWithId.push(inputTextFormatted);
     if (userAnswers.length === 0) return;
@@ -162,6 +186,9 @@ export const Container = () => {
       } else {
         // Este if es para controlar el caso en el que un elemento tenga tanto endSubSection como endSection. Si el item tiene endSubSection pero despues de esa pregunta no viene ninguna, por ende va a tener endSection también y la idea es que finalice el questionario, no que vuelva al Q1.
         if (hasEndSection) {
+          const end = findQuestions(answers);
+          setCurrentQuestion(end);
+          console.log({ currentQuestion });
           setLastQuestion(true);
         }
         setcurrentId(userAnswersWithId[0].idNextQuestion);
@@ -188,6 +215,21 @@ export const Container = () => {
       if (pendingFirstQuestions) {
         return setcurrentId(pendingFirstQuestions.idNextQuestion)
       } else {
+        console.log({ end });
+        if (!currentQuestion.lastForm) {
+          console.log('primera vez!!!!');
+          end = findQuestions(answers);
+        }
+        // console.log("END 194",  end[0] );
+        console.log({ end });
+        if (end.length > 0) {
+          setCurrentQuestion(() => end[0].Q);
+          setCurrentOptions(end[0].O);
+          end.shift();
+          console.log("END 222", { end });
+          console.log("CURRENT QUESTION: ",{ currentQuestion });
+          return 
+        }
         return setLastQuestion(true);
       }
     }
@@ -305,9 +347,9 @@ export const Container = () => {
                               ? <Input type="text" onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)} name={currentQuestion.text} value={inputTextFormatted.text}/>
                               :
                               option.multipleChoice === false
-                                ? <input type="radio" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion.text} />
+                                ? <input type="radio" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion?.text} />
                                 : 
-                                <input type="checkbox" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion.text} />
+                                <input type="checkbox" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion?.text} />
                           }
                         </div>
                       </motion.div>
