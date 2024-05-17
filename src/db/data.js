@@ -67,8 +67,8 @@ export const questions = [
     // DEPORTES
     { id: 'Q55', type: 'question', text: '¿Cuál de estos deportes te gusta ver?',           category: 'Deportes' },
     { id: 'Q56', type: 'question', text: '¿Practicás ese deporte?',                         category: 'Deportes' },
-    { id: 'Q57', type: 'question', text: '¿Te gustaría aprender más?',                      category: 'Deportes' },
-    { id: 'Q58', type: 'question', text: '¿Sobre qué deporte te gustaría aprender más?',    category: 'Deportes' },
+    { id: 'Q57', type: 'question', text: '¿Sobre qué deporte te gustaría aprender más?',    category: 'Deportes' },
+    // { id: 'Q58', type: 'question', text: '¿Te gustaría aprender algún otro deporte?',    category: 'Deportes' },
     { id: 'Q59', type: 'question', text: '¿Te gustaria intentar alguna de estas opciones?', category: 'Deportes' },
     
     // JARDINERÍA
@@ -616,32 +616,32 @@ export const options = [
     { id: '314', idQuestion: 'Q56', text: 'Sí',       idNextQuestion: 'Q57', multipleChoice: false },
     { id: '315', idQuestion: 'Q56', text: 'No, otro', idNextQuestion: 'Q57', write: true, multipleChoice: false },
 
-    // --QUESTION 57--
-    { id: '316', idQuestion: 'Q57', text: 'Sí', idNextQuestion: 'Q58', multipleChoice: false },
-    { id: '317', idQuestion: 'Q57', text: 'No', idNextQuestion: 'Q58', multipleChoice: false },
+    // // --QUESTION 57--
+    // { id: '316', idQuestion: 'Q57', text: 'Sí', idNextQuestion: 'Q58', multipleChoice: false },
+    // { id: '317', idQuestion: 'Q57', text: 'No', idNextQuestion: 'Q58', multipleChoice: false },
 
-    // --QUESTION 58--
-    { id: '318', idQuestion: 'Q58', text: 'Fútbol',        idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '319', idQuestion: 'Q58', text: 'Tenis',         idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '320', idQuestion: 'Q58', text: 'Páddle',        idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '321', idQuestion: 'Q58', text: 'Hockey',        idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '322', idQuestion: 'Q58', text: 'Golf',          idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '323', idQuestion: 'Q58', text: 'Básquet',       idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '324', idQuestion: 'Q58', text: 'Patín',         idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '325', idQuestion: 'Q58', text: 'Skate',         idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '326', idQuestion: 'Q58', text: 'Automovilismo', idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '327', idQuestion: 'Q58', text: 'Ping Pong',     idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '328', idQuestion: 'Q58', text: 'Pesca',         idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '329', idQuestion: 'Q58', text: 'Motos',         idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '330', idQuestion: 'Q58', text: 'Natación',      idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '331', idQuestion: 'Q58', text: 'Voley',         idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '332', idQuestion: 'Q58', text: 'Handball',      idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '333', idQuestion: 'Q58', text: 'Baile',         idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '334', idQuestion: 'Q58', text: 'Gimnasio',      idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '335', idQuestion: 'Q58', text: 'Boxeo',         idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '336', idQuestion: 'Q58', text: 'Rugby',         idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '337', idQuestion: 'Q58', text: 'Polo',          idNextQuestion: 'Q59', multipleChoice: false },
-    { id: '338', idQuestion: 'Q58', text: 'Atletismo',     idNextQuestion: 'Q59', multipleChoice: false },
+    // --QUESTION 57--
+    { id: '318', idQuestion: 'Q57', text: 'Fútbol',        idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '319', idQuestion: 'Q57', text: 'Tenis',         idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '320', idQuestion: 'Q57', text: 'Páddle',        idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '321', idQuestion: 'Q57', text: 'Hockey',        idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '322', idQuestion: 'Q57', text: 'Golf',          idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '323', idQuestion: 'Q57', text: 'Básquet',       idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '324', idQuestion: 'Q57', text: 'Patín',         idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '325', idQuestion: 'Q57', text: 'Skate',         idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '326', idQuestion: 'Q57', text: 'Automovilismo', idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '327', idQuestion: 'Q57', text: 'Ping Pong',     idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '328', idQuestion: 'Q57', text: 'Pesca',         idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '329', idQuestion: 'Q57', text: 'Motos',         idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '330', idQuestion: 'Q57', text: 'Natación',      idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '331', idQuestion: 'Q57', text: 'Voley',         idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '332', idQuestion: 'Q57', text: 'Handball',      idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '333', idQuestion: 'Q57', text: 'Baile',         idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '334', idQuestion: 'Q57', text: 'Gimnasio',      idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '335', idQuestion: 'Q57', text: 'Boxeo',         idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '336', idQuestion: 'Q57', text: 'Rugby',         idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '337', idQuestion: 'Q57', text: 'Polo',          idNextQuestion: 'Q59', multipleChoice: false },
+    { id: '338', idQuestion: 'Q57', text: 'Atletismo',     idNextQuestion: 'Q59', multipleChoice: false },
 
     // --QUESTION 59--
     { id: '339', idQuestion: 'Q59', text: 'Túnel del viento',  idNextQuestion: 'Q1', endSection: true, img: './tunel-viento.jpg' },
@@ -657,6 +657,7 @@ export const options = [
     // { id: '367', idQuestion: 'Q59', text: 'Bautismo de Fuego', idNextQuestion: 'Q1', endSection: true, img: './bungee-jumping.jpg' },
     // { id: '367', idQuestion: 'Q59', text: 'Parque de Saltos',  idNextQuestion: 'Q1', endSection: true, img: './bungee-jumping.jpg' },
     { id: '349', idQuestion: 'Q59', text: 'No',                idNextQuestion: 'Q1', endSection: true, img: './conejo-no.png' },
+    { id: '816', idQuestion: 'Q59', text: 'Otro',                idNextQuestion: 'Q1', endSection: true, img: './conejo-no.png', write: true },
 
     // --> JARDINERIA <--
     // --QUESTION 60--
@@ -1134,7 +1135,7 @@ export const options = [
     { id: '702', idQuestion: 'Q119', text: 'Camisa',   idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
     { id: '703', idQuestion: 'Q119', text: 'Pantalón', idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
     { id: '704', idQuestion: 'Q119', text: 'Remera',   idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
-    { id: '705', idQuestion: 'Q119', text: 'Calzado',  idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '705', idQuestion: 'Q119', text: 'Calzado',  idNextQuestion: 'Q129', multipleChoice: false, endSection: true              },
     { id: '706', idQuestion: 'Q119', text: 'Otra',     idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
     
     // --QUESTION 120--
@@ -1143,7 +1144,7 @@ export const options = [
     { id: '709', idQuestion: 'Q120', text: 'Pantalón', idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
     { id: '710', idQuestion: 'Q120', text: 'Falda',    idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
     { id: '711', idQuestion: 'Q120', text: 'Short',    idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
-    { id: '712', idQuestion: 'Q120', text: 'Calzado',  idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '712', idQuestion: 'Q120', text: 'Calzado',  idNextQuestion: 'Q129', multipleChoice: false, endSection: true              },
     { id: '713', idQuestion: 'Q120', text: 'Otra',     idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
     
     // --QUESTION 121--
@@ -1153,7 +1154,7 @@ export const options = [
     { id: '717', idQuestion: 'Q121', text: 'Pant',       idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
     { id: '718', idQuestion: 'Q121', text: 'Calza',      idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
     { id: '719', idQuestion: 'Q121', text: 'Bikers',     idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
-    { id: '720', idQuestion: 'Q121', text: 'Zapatillas', idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
+    { id: '720', idQuestion: 'Q121', text: 'Zapatillas', idNextQuestion: 'Q129', multipleChoice: false, endSection: true              },
     { id: '721', idQuestion: 'Q121', text: 'Otra',       idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
 
     // --QUESTION 122--

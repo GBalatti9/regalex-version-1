@@ -36,6 +36,7 @@ export const Container = () => {
   const [hasImage, setHasImage] = useState(false);
 
   const [disabled, setDisabled] = useState(true);
+  const [firstDisabled, setFirstDisabled] = useState(true);
 
   const [displayFirst, setDisplayFirst] = useState(true);
 
@@ -230,6 +231,10 @@ export const Container = () => {
     }));
   }
 
+  useEffect(() => {
+    userInfo.email.length !== 0 && userInfo.date.length !== 0 ? setFirstDisabled(false) : setFirstDisabled(true);
+  }, [userInfo])
+
   const handleSubmitFirstForm = (e) => {
     e.preventDefault();
     setDisplayFirst(false);
@@ -256,7 +261,7 @@ export const Container = () => {
                 {/* <Input type="date" name="date" id="date" onChange={handleInputChangeFirstForm} /> */}
               </div>
               <div className="flex justify-end pt-2">
-                <Button variants="default">Empezar</Button>
+                <Button variants="default" disabled={firstDisabled}>Empezar</Button>
               </div>
             </form>
           </div>
