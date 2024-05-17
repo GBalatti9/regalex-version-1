@@ -21,7 +21,10 @@ let userAnswersWithId = [];
 let pendingQuestions = [];
 
 let inputValue = '';
-let inputTextFormatted = {};
+let inputTextFormatted = {
+  text: '',
+  idNextQuestion: ''
+};
 export const Container = () => {
 
   // ID ACTUAL
@@ -72,13 +75,17 @@ export const Container = () => {
       if (idPrevQuestion !== undefined) { inputTextFormatted.idPrevQuestion = idPrevQuestion }
       if (inputTextFormatted.text.length > 0) { setDisabled(false) } else { setDisabled(true) }
       console.log({ inputTextFormatted });
+      document.querySelectorAll('input[type=radio], input[type=checkbox]').forEach(input => input.checked = false);
       inputValue = value;
       setAnswers((prevAnswers) => ({
         ...prevAnswers,
         [name]: inputValue
       }))
+      console.log({ answers });
       return;
     }
+    console.log({ inputTextFormatted });
+    inputTextFormatted = { text: '', idNextQuestion: '' }
     const objectValue = JSON.parse(value);
     const textValue = objectValue.text;
     // console.log({textValue});
@@ -282,7 +289,6 @@ export const Container = () => {
                   // gap: `${hasImage && '10px'}`, 
                   alignItems: 'center',
                 }}>
-                  {console.log(currentOptions.length > 2)}
                   {
                     currentOptions.map((option) => (
                       <motion.div key={option.id}
@@ -292,11 +298,11 @@ export const Container = () => {
                         transition={{ duration: 1 }}
                       >
                         {option.img && <div style={{ display: 'flex', justifyContent: 'center' }}><img src={option.img} style={{ width: '100px' }}></img></div>}
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <div className="mx-auto w-11/12 text-center">
                           <Label htmlFor={option.id} className="pr-2"> {option.text} </Label>
                           {
                             option.write
-                              ? <Input type="text" onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)} name={currentQuestion.text} />
+                              ? <Input type="text" onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)} name={currentQuestion.text} value={inputTextFormatted.text}/>
                               :
                               option.multipleChoice === false
                                 ? <input type="radio" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion.text} />
