@@ -696,14 +696,14 @@ export const options = [
     { id: '383', idQuestion: 'Q63', text: 'No',  idNextQuestion: 'Q68', subSection: true, multipleChoice: false },
 
     // --QUESTION 64--
-    { id: '384', idQuestion: 'Q64', text: 'Chokkan',     idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '385', idQuestion: 'Q64', text: 'Moyogi',      idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '386', idQuestion: 'Q64', text: 'Shakan',      idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '387', idQuestion: 'Q64', text: 'Kengai',      idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '388', idQuestion: 'Q64', text: 'Fikinagashi', idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '389', idQuestion: 'Q64', text: 'Literati',    idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '390', idQuestion: 'Q64', text: 'Yose-ue',     idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },
-    { id: '391', idQuestion: 'Q64', text: 'Otro',        idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './', write: true },
+    { id: '384', idQuestion: 'Q64', text: 'Chokkan',     idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './bonsai-chokkan.jpg' },
+    { id: '385', idQuestion: 'Q64', text: 'Moyogi',      idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './bonsai-moyogi.jpg' },
+    { id: '386', idQuestion: 'Q64', text: 'Shakan',      idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './bonsai-shakan.jpg' },
+    { id: '387', idQuestion: 'Q64', text: 'Kengai',      idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './bonsai-kengai.jpg' },
+    { id: '388', idQuestion: 'Q64', text: 'Fikinagashi', idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './bonsai-fikinagashi.jpg' },
+    { id: '389', idQuestion: 'Q64', text: 'Literati',    idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './bonsai-literati.jpg' },
+    { id: '390', idQuestion: 'Q64', text: 'Yose-ue',     idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './bonsai-yose-ue.jpg' },
+    { id: '391', idQuestion: 'Q64', text: 'Otro',        idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', write: true },
 
     // --QUESTION 65--
     { id: '392', idQuestion: 'Q65', text: 'Poto',             idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './' },

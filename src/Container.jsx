@@ -250,11 +250,12 @@ export const Container = () => {
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <Label htmlFor="date" className="font-bold py-2">Fecha de nacimiento</Label>
                 <div className="flex justify-center">
-                  <Calendar mode="single" onChange={ handleInputChangeFirstForm }/>
+                <input type="date" name="date" id="date" onChange={handleInputChangeFirstForm} />
+                  {/* <Calendar mode="single" onChange={ handleInputChangeFirstForm }/> */}
                 </div>
                 {/* <Input type="date" name="date" id="date" onChange={handleInputChangeFirstForm} /> */}
               </div>
-              <div className="flex justify-end">
+              <div className="flex justify-end pt-2">
                 <Button variants="default">Empezar</Button>
               </div>
             </form>
