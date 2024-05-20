@@ -12,6 +12,7 @@ import { Input } from "./components/ui/input";
 import { Calendar } from "./components/ui/calendar";
 import { Card } from "./components/ui/card";
 import { Checkbox } from "@radix-ui/react-checkbox";
+import { PersonalizationForm } from "./components/PersonalizationForm";
 
 // USERANSWERS es simplemente para almacenar TODAS las respuestas del usuario.
 let userAnswers = [];
@@ -327,7 +328,7 @@ export const Container = () => {
         }
         {
           lastQuestion
-            ? <FinalMessage />
+            ? <PersonalizationForm />
             :
             !displayFirst &&
             <div className="mx-auto">
