@@ -218,18 +218,28 @@ export const Container = () => {
         console.log({ end });
         if (!currentQuestion.lastForm) {
           console.log('primera vez!!!!');
+          console.log(findQuestions(answers));
           end = findQuestions(answers);
+          setCurrentQuestion(end[0].Q);
+          setCurrentOptions(end[0].O);
+          console.log({ currentOptions });
+          console.log("estoy en primera vez");
+          end.shift();
+          return;
         }
         // console.log("END 194",  end[0] );
         console.log({ end });
         if (end.length > 0) {
-          setCurrentQuestion(() => end[0].Q);
-          setCurrentOptions(end[0].O);
-          end.shift();
+          const firstItem = end.shift();
+          console.log({ firstItem });
+          console.log('estoy en length + 1');
+          setCurrentQuestion(firstItem.Q);
+          setCurrentOptions(firstItem.O);
           console.log("END 222", { end });
           console.log("CURRENT QUESTION: ",{ currentQuestion });
-          return 
-        }
+          return;
+        } 
+
         return setLastQuestion(true);
       }
     }

@@ -983,10 +983,10 @@ export const options = [
     { id: '592', idQuestion: 'Q98', text: 'Otro',                                                                                 idNextQuestion: 'Q99', write: true, },
 
     // --QUESTION 99--
-    { id: '593', idQuestion: 'Q99', text: 'Solo',      idNextQuestion: 'Q1', endSection: true, write: true },
-    { id: '594', idQuestion: 'Q99', text: 'En pareja', idNextQuestion: 'Q1', endSection: true, write: true },
-    { id: '595', idQuestion: 'Q99', text: 'Familia',   idNextQuestion: 'Q1', endSection: true, write: true },
-    { id: '596', idQuestion: 'Q99', text: 'Amigos',    idNextQuestion: 'Q1', endSection: true, write: true },
+    { id: '593', idQuestion: 'Q99', text: 'Solo',      idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '594', idQuestion: 'Q99', text: 'En pareja', idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '595', idQuestion: 'Q99', text: 'Familia',   idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
+    { id: '596', idQuestion: 'Q99', text: 'Amigos',    idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
     
     // --QUESTION 100--
     { id: '597', idQuestion: 'Q100', text: 'Sí', idNextQuestion: 'Q101', multipleChoice: false },
@@ -997,7 +997,7 @@ export const options = [
 
     // --QUESTION 102--
     { id: '600', idQuestion: 'Q102', text: 'Piel Seca',     idNextQuestion: 'Q103', multipleChoice: false },
-    { id: '601', idQuestion: 'Q102', text: 'Piel Grasosa',  idNextQuestion: 'Q103', multipleChoice: false },
+    { id: '601', idQuestion: 'Q102', text: 'Piel Grasa',  idNextQuestion: 'Q103', multipleChoice: false },
     { id: '602', idQuestion: 'Q102', text: 'Piel Mixta',    idNextQuestion: 'Q103', multipleChoice: false },
     { id: '603', idQuestion: 'Q102', text: 'Piel Sensible', idNextQuestion: 'Q103', multipleChoice: false },
     { id: '604', idQuestion: 'Q102', text: 'No sé',         idNextQuestion: 'Q103', multipleChoice: false },
@@ -1144,7 +1144,7 @@ export const options = [
     { id: '709', idQuestion: 'Q120', text: 'Pantalón', idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
     { id: '710', idQuestion: 'Q120', text: 'Falda',    idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
     { id: '711', idQuestion: 'Q120', text: 'Short',    idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
-    { id: '712', idQuestion: 'Q120', text: 'Calzado',  idNextQuestion: 'Q129', multipleChoice: false, endSection: true              },
+    { id: '712', idQuestion: 'Q120', text: 'Calzado',  idNextQuestion: 'Q129', multipleChoice: false,              },
     { id: '713', idQuestion: 'Q120', text: 'Otra',     idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
     
     // --QUESTION 121--
@@ -1154,7 +1154,7 @@ export const options = [
     { id: '717', idQuestion: 'Q121', text: 'Pant',       idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
     { id: '718', idQuestion: 'Q121', text: 'Calza',      idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
     { id: '719', idQuestion: 'Q121', text: 'Bikers',     idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
-    { id: '720', idQuestion: 'Q121', text: 'Zapatillas', idNextQuestion: 'Q129', multipleChoice: false, endSection: true              },
+    { id: '720', idQuestion: 'Q121', text: 'Zapatillas', idNextQuestion: 'Q129', multipleChoice: false              },
     { id: '721', idQuestion: 'Q121', text: 'Otra',       idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
 
     // --QUESTION 122--
@@ -1189,7 +1189,7 @@ export const options = [
     { id: '744', idQuestion: 'Q125', text: 'Bolsos',         idNextQuestion: 'Q127', multipleChoice: false, },
     { id: '745', idQuestion: 'Q125', text: 'Carteras',       idNextQuestion: 'Q128', multipleChoice: false, },
     { id: '746', idQuestion: 'Q125', text: 'Más accesorios', idNextQuestion: 'Q130', multipleChoice: false, },
-    { id: '747', idQuestion: 'Q125', text: 'Otro',           idNextQuestion: 'Q130', multipleChoice: false, write: true, endSection: true },
+    { id: '747', idQuestion: 'Q125', text: 'Otro',           idNextQuestion: 'Q130', multipleChoice: false, write: true },
 
     // --QUESTION 126--
     { id: '748', idQuestion: 'Q126', text: 'Baum',              idNextQuestion: 'Q1', multipleChoice: false, endSection: true              },
