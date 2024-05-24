@@ -69,7 +69,7 @@ export const Container = () => {
     currentQuestionFn(questions);
     currentOptionsFn(options);
 
-    console.log({ currentQuestion, currentOptions });
+    // console.log({ currentQuestion, currentOptions });
   }, [currentId])
 
   useEffect(() => {
@@ -90,7 +90,7 @@ export const Container = () => {
   const handleInputChange = ({ target }, nextQuestionId, multipleChoice, endSection, endSubSection, idPrevQuestion) => {
     const { name, value, checked, type } = target;
     checked && setDisabled(false);
-    console.log('Handle input change', { name, value, checked, type, nextQuestionId, endSection, endSubSection, idPrevQuestion });
+    // console.log('Handle input change', { name, value, checked, type, nextQuestionId, endSection, endSubSection, idPrevQuestion });
 
     // ACA SE MANEJA EL CASO EN EL QUE EL USUARIO COMPLETA LA OPCIÓN "OTRO/A".
     if (type === 'text') {
@@ -99,17 +99,17 @@ export const Container = () => {
       if (endSubSection !== undefined) { inputTextFormatted.endSubSection = endSubSection }
       if (idPrevQuestion !== undefined) { inputTextFormatted.idPrevQuestion = idPrevQuestion }
       if (inputTextFormatted.text.length > 0) { setDisabled(false) } else { setDisabled(true) }
-      console.log({ inputTextFormatted });
+      // console.log({ inputTextFormatted });
       document.querySelectorAll('input[type=radio], input[type=checkbox]').forEach(input => input.checked = false);
       inputValue = value;
       setAnswers((prevAnswers) => ({
         ...prevAnswers,
         [name]: inputValue
       }))
-      console.log({ answers });
+      // console.log({ answers });
       return;
     }
-    console.log({ inputTextFormatted });
+    // console.log({ inputTextFormatted });
     inputTextFormatted = { text: '', idNextQuestion: '' }
     const objectValue = JSON.parse(value);
     const textValue = objectValue.text;
@@ -146,7 +146,7 @@ export const Container = () => {
       setSelectedOption(nextQuestionId);
       userAnswers.push(textValue);
       userAnswersWithId.push(objectValue)
-      console.log('Primer elemento del array: ' + textValue);
+      // console.log('Primer elemento del array: ' + textValue);
     }
 
     // console.log( {userAnswers, userAnswersWithId} );
@@ -163,24 +163,24 @@ export const Container = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     inputValue.length > 0 ? userAnswers.push(inputValue) : ''
-    console.log("INPUT TEXT FORMATTED", { inputTextFormatted });
+    // console.log("INPUT TEXT FORMATTED", { inputTextFormatted });
     
     Object.values(inputTextFormatted).length > 0 ? userAnswersWithId.push(inputTextFormatted) : '';
     // userAnswersWithId.push(inputTextFormatted);
     if (userAnswers.length === 0) return;
-    console.log({ userAnswers });
-    console.log({ userAnswersWithId });
+    // console.log({ userAnswers });
+    // console.log({ userAnswersWithId });
     inputValue = '';
     inputTextFormatted = '';
     // Primero se chequea que exista la propiedad endSubSection, luego lo que se va a verificar si en pendingQuestion hay mas de una opcion seleccionada de la pregunta que tiene el mismo id que idPrevQuestion porque si hay una sola no es necesario. Si hay una sola la constante hasEndSubSection va a dar -1 y se maneja en el else del if.
     const hasEndSubSection = includesSection(userAnswersWithId, 'endSubSection');
     const hasEndSection = includesSection(userAnswersWithId, 'endSection');
-    console.log({ hasEndSection, hasEndSubSection });
+    // console.log({ hasEndSection, hasEndSubSection });
     if (hasEndSubSection) {
 
       // Si hasEndSubSection es true, entonces se va a buscar el id del primer elemento en pendingQuestions que haya quedado pendiente para recorrer el bucle interno antes de seguir en el formulario. Se compara el idQuestion de el elemento en pendingQuestion con el idPrevQuestion del primer elemento de las respuestas que recién se seleccionaron. Ese idPrevQuestion hace referencia a la pregunta en donde se ramificó el cuestionario. Entonces, toma esa primera opción pendiente y se pasa a setcurrentId con el idNextQuestion que es la pregunta que le sigue a la opción seleccionada que estaba guardada en pendingQuestions. 
       const hasPendingQuestionsIndex = pendingQuestions.findIndex((element) => element.idQuestion === userAnswersWithId[0].idPrevQuestion);
-      console.log({ hasPendingQuestionsIndex });
+      // console.log({ hasPendingQuestionsIndex });
       if (hasPendingQuestionsIndex !== -1) {
         setcurrentId(pendingQuestions[hasPendingQuestionsIndex].idNextQuestion);
         pendingQuestions.splice(hasPendingQuestionsIndex, 1);
@@ -189,7 +189,7 @@ export const Container = () => {
         if (hasEndSection) {
           const end = findQuestions(answers);
           setCurrentQuestion(end);
-          console.log({ currentQuestion });
+          // console.log({ currentQuestion });
           setLastQuestion(true);
         }
         setcurrentId(userAnswersWithId[0].idNextQuestion);
@@ -209,16 +209,14 @@ export const Container = () => {
       // } else {
       //   return setLastQuestion( true );
       // }
-      console.log("HAS END SECTION", { userAnswersWithId });
+      // console.log("HAS END SECTION", { userAnswersWithId });
       const pendingFirstQuestions = pendingQuestions.find((element) => element.idQuestion === 'Q1');
       const index = pendingQuestions.find((element) => element.idQuestion === 'Q1');
       pendingQuestions.splice(index, 1);
       if (pendingFirstQuestions) {
         return setcurrentId(pendingFirstQuestions.idNextQuestion)
       } else {
-        console.log({ end });
         if (!currentQuestion.lastForm) {
-          console.log('primera vez!!!!');
           console.log(findQuestions(answers));
           end = findQuestions(answers);
           setCurrentQuestion(end[0].Q);
@@ -226,10 +224,10 @@ export const Container = () => {
           console.log({ currentOptions });
           console.log("estoy en primera vez");
           end.shift();
+          console.log("END POST SHIFT", { end });
           return;
         }
-        // console.log("END 194",  end[0] );
-        console.log({ end });
+
         if (end.length > 0) {
           const firstItem = end.shift();
           console.log({ firstItem });
@@ -247,7 +245,7 @@ export const Container = () => {
     // Acá se chequea si el usuario seleccionó más de una opción y en caso de haber seleccionado más de una va a tomar la primera opción seleccionada y comenzar su ciclo de preguntas. FALTA VER: como hacer para que el usuario vuelva a las preguntas que le quedan pendiente. Ver como hacer para utilizar el endSubSection y el endSection.
 
     if (userAnswersWithId.length > 1) {
-      console.log({ userAnswersWithId });
+      // console.log({ userAnswersWithId });
       // Antes de guardar en pendingQuestions hay que chequear que nextQuestionId sea diferente entre los objetos.
       const allIdsEqual = userAnswersWithId.every((answer, index, array) => {
         return index === 0 || answer.idNextQuestion === array[0].idNextQuestion;
@@ -261,7 +259,7 @@ export const Container = () => {
         setcurrentId(userAnswersWithId[0].idNextQuestion);
         userAnswersWithId.shift();
         pendingQuestions.push(...userAnswersWithId);
-        console.log({ pendingQuestions });
+        // console.log({ pendingQuestions });
       }
     } else {
       if (selectedOption === undefined) {

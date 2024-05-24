@@ -19,6 +19,23 @@ export const findQuestions = (answers) => {
     let sportsQ = {};
     let sportsO = [];
 
+    
+
+    const requestQ = { id: 'Q1000', idQuestion: 'Q1000', text: '¿Te gusta algo de esto?', category: 'Preguntas random', lastForm: true };
+    // ESTO TIENE UN ERROR, QUE PASA SI TIENE LAS 3 EN IDNEXTQUESTION??
+    const requestO = [
+        { id: 'O1', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Perfumes', img: '../../random-perfumes.jpg' },
+        { id: 'O2', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Accesorios/Bijuterie', img: '../../random-bijuterie.jpg' },
+        { id: 'O3', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Juegos de mesa', img: '../../random-juego.jpg' },
+        { id: 'O4', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Decoración', img: '../../random-decoracion.jpg' },
+        { id: 'O5', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Set de resaltadores', img: '../../random-resaltadores.jpg' },
+        { id: 'O6', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Glamping', img: '../../random-gampling.jpg' },
+        { id: 'O7', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Stand notebook', img: '../../random-notebook.jpg' },
+        { id: 'O8', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Set de mate', img: '../../random-set-mate.jpg' }
+    ]
+
+    let arrToExport = [{ Q: requestQ, O: requestO }];
+
     if (!findCategory.includes('Comer')) {
         foodQ = {
             id: 'Q8',
@@ -35,6 +52,8 @@ export const findQuestions = (answers) => {
             { id: '51', idQuestion: 'Q8', text: 'Victoria Brown Bar', idNextQuestion: 'Q54', endSection: true, img: './victoria-brown-bar.jpg' },
             { id: '52', idQuestion: 'Q8', text: 'No', idNextQuestion: 'Q54', endSection: true, img: './comer-ninguno-lugares.jpg' },
         )
+
+        arrToExport.push({ Q: foodQ, O: foodO })
     }
 
     if (!findCategory.includes('Música')) {
@@ -67,6 +86,8 @@ export const findQuestions = (answers) => {
             { id: '288', idQuestion: 'Q54', text: 'Rubén Rada', idNextQuestion: 'Q59', endSection: true },
             { id: '289', idQuestion: 'Q54', text: 'No, ninguno', idNextQuestion: 'Q59', endSection: true },
         )
+        arrToExport.push({ Q: musicQ, O: musicO })
+
     }
 
     if (!findCategory.includes('Deportes')) {
@@ -90,7 +111,11 @@ export const findQuestions = (answers) => {
             { id: '348', idQuestion: 'Q59', text: 'Bungee Jumping', idNextQuestion: 'Q1', endSection: true, img: './bungee-jumping.jpg' },
             { id: '349', idQuestion: 'Q59', text: 'No', idNextQuestion: 'Q1', endSection: true, img: './conejo-no.png' },
         )
+
+        arrToExport.push({ Q: sportsQ, O: sportsO })
     }
 
-    return [{ Q: foodQ, O: foodO, }, { Q: musicQ, O: musicO,}, { Q: sportsQ, O: sportsO }]
+
+
+    return arrToExport;
 }
