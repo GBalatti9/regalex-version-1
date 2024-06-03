@@ -7,7 +7,7 @@ export const findQuestions = (answers) => {
 
     if (findCategory.includes('Comer') && findCategory.includes('Música') && findCategory.includes('Deportes')) {
         console.log('incluye las tres');
-        return;
+        return 'true';
     }
 
     let foodQ = {};
@@ -31,7 +31,8 @@ export const findQuestions = (answers) => {
         { id: 'O5', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Set de resaltadores', img: '../../random-resaltadores.jpg' },
         { id: 'O6', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Glamping', img: '../../random-gampling.jpg' },
         { id: 'O7', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Stand notebook', img: '../../random-notebook.jpg' },
-        { id: 'O8', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Set de mate', img: '../../random-set-mate.jpg' }
+        { id: 'O8', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Set de mate', img: '../../random-set-mate.jpg' },
+        { id: 'O9', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'No', img: '../../conejo-no.png' }
     ]
 
     let arrToExport = [{ Q: requestQ, O: requestO }];

@@ -18,9 +18,9 @@ const personalizationOptions = [
     { id: '3', text: 'Que sea sorpresa', idQuestion: 'Q2', multipleChoice: false, idNextQuestion: 'Q3' },
 
     { id: '4', text: 'Sí', idQuestion: 'Q3', multipleChoice: false, idNextQuestion: 'Q4' },
-    { id: '5', text: 'No', idQuestion: 'Q3', multipleChoice: false, idNextQuestion: 'Q4', endSection: true },
+    { id: '5', text: 'No', idQuestion: 'Q3', multipleChoice: false, endSection: true },
 
-    { id: '6', text: '', idQuestion: 'Q4', write: true, idNextQuestion: 'Q1', endSection: true },
+    { id: '6', text: '', idQuestion: 'Q4', write: true, endSection: true },
 ]
 
 
@@ -33,7 +33,7 @@ export const PersonalizationForm = () => {
         console.log(target.name, target.value);
         console.log({ endSection });
         if (endSection) {
-            setLastMessage(true)
+            setLastMessage(true);
         }
     }
 

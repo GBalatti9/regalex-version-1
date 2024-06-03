@@ -219,6 +219,9 @@ export const Container = () => {
         if (!currentQuestion.lastForm) {
           console.log(findQuestions(answers));
           end = findQuestions(answers);
+          if (end === 'true') {
+            return setLastQuestion(true);
+          }
           setCurrentQuestion(end[0].Q);
           setCurrentOptions(end[0].O);
           console.log({ currentOptions });
@@ -301,7 +304,7 @@ export const Container = () => {
   return (
     <div className="bg-amber-300 min-h-screen pb-12">
       <h1 className="font-bold text-center text-2xl py-4">Regalex</h1>
-      <Card className="flex w-4/12 mx-auto p-4 bg-white shadow-2xl">
+      <Card className="flex sm:w-4/12 mx-auto p-4 bg-white shadow-2xl">
         {
           displayFirst &&
           <div className="w-full text-center">
