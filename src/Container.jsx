@@ -336,7 +336,7 @@ export const Container = () => {
               <h4 className="font-bold"> {currentQuestion?.category?.toUpperCase()} </h4>
               <h3 className="text-center pt-2 pb-3"> {currentQuestion?.text} </h3>
               <form onSubmit={handleSubmit}>
-                <div 
+                <div
                 style={{
                   display: `${hasImage || currentOptions.length > 10 ? 'grid' : ''}`,
                   gridTemplateColumns: `${(hasImage || currentOptions.length > 10) && '1fr 1fr'}`,
@@ -352,17 +352,22 @@ export const Container = () => {
                         transition={{ duration: 1 }}
                       >
                         {option.img && <div style={{ display: 'flex', justifyContent: 'center' }}><img src={option.img} style={{ width: '100px' }}></img></div>}
-                        <div className="mx-auto w-11/12 text-center">
-                          <Label htmlFor={option.id} className="pr-2"> {option.text} </Label>
+                        <div className={`mx-auto ${hasImage ? 'text-center': ''}`}>
                           {
                             option.write
-                              ? <Input type="text" onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)} name={currentQuestion.text} value={inputTextFormatted.text}/>
+                              ? 
+                              option.text === 'Otro' || option.text === 'Otra' && (
+                                <div className="flex items-center">
+                                  <Label htmlFor={option.id} className="pr-2"> {option.text} </Label>
+                                  <Input className="w-10/12" type="text" onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)} name={currentQuestion.text} value={inputTextFormatted.text}/>
+                                </div>)
                               :
                               option.multipleChoice === false
                                 ? <input type="radio" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion?.text} />
                                 : 
                                 <input type="checkbox" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion?.text} />
                           }
+                          <Label htmlFor={option.id} className="pr-2"> {option.text !== 'Otro' && option.text !== 'Otra' && option.text} </Label>
                         </div>
                       </motion.div>
                     ))

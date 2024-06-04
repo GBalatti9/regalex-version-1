@@ -332,11 +332,11 @@ export const options = [
     { id: '115', idQuestion: 'Q19', text: 'Vino',          idNextQuestion: 'Q21', img: './tomar-vino.jpg'  },
     { id: '116', idQuestion: 'Q19', text: 'Fernet',        idNextQuestion: 'Q22', img: './tomar-fernet.jpg'  },
     { id: '117', idQuestion: 'Q19', text: 'Whisky',        idNextQuestion: 'Q23', img: './tomar-whisky.jpg'  },
-    { id: '118', idQuestion: 'Q19', text: 'Agua ardiente', idNextQuestion: 'Q36', img: './tomar-agua-ardiente.jpeg'  },
     { id: '119', idQuestion: 'Q19', text: 'Gin',           idNextQuestion: 'Q24', img: './tomar-gin.jpg'  },
     { id: '120', idQuestion: 'Q19', text: 'Café',          idNextQuestion: 'Q25', img: './tomar-cafe.jpg'  },
     { id: '121', idQuestion: 'Q19', text: 'Té',            idNextQuestion: 'Q26', img: './tomar-te.jpg'  },
     { id: '122', idQuestion: 'Q19', text: 'Mate',          idNextQuestion: 'Q27', img: './tomar-mate.jpg'  },
+    { id: '118', idQuestion: 'Q19', text: 'Agua ardiente', idNextQuestion: 'Q36', img: './tomar-agua-ardiente.jpeg'  },
     { id: '123', idQuestion: 'Q19', text: 'Otra',          idNextQuestion: 'Q36', write: true  },
     
     // --QUESTION 20--

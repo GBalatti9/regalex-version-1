@@ -21,21 +21,23 @@ export const findQuestions = (answers) => {
 
     
 
-    const requestQ = { id: 'Q1000', idQuestion: 'Q1000', text: '¿Te gusta algo de esto?', category: 'Preguntas random', lastForm: true };
-    // ESTO TIENE UN ERROR, QUE PASA SI TIENE LAS 3 EN IDNEXTQUESTION??
-    const requestO = [
-        { id: 'O1', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Perfumes', img: '../../random-perfumes.jpg' },
-        { id: 'O2', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Accesorios/Bijuterie', img: '../../random-bijuterie.jpg' },
-        { id: 'O3', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Juegos de mesa', img: '../../random-juego.jpg' },
-        { id: 'O4', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Decoración', img: '../../random-decoracion.jpg' },
-        { id: 'O5', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Set de resaltadores', img: '../../random-resaltadores.jpg' },
-        { id: 'O6', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Glamping', img: '../../random-gampling.jpg' },
-        { id: 'O7', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Stand notebook', img: '../../random-notebook.jpg' },
-        { id: 'O8', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Set de mate', img: '../../random-set-mate.jpg' },
-        { id: 'O9', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'No', img: '../../conejo-no.png' }
-    ]
+    // const requestQ = { id: 'Q1000', idQuestion: 'Q1000', text: '¿Te gusta algo de esto?', category: 'Preguntas random', lastForm: true };
+    // // ESTO TIENE UN ERROR, QUE PASA SI TIENE LAS 3 EN IDNEXTQUESTION??
+    // const requestO = [
+    //     { id: 'O1', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Perfumes', img: '../../random-perfumes.jpg' },
+    //     { id: 'O2', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Accesorios/Bijuterie', img: '../../random-bijuterie.jpg' },
+    //     { id: 'O3', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Juegos de mesa', img: '../../random-juego.jpg' },
+    //     { id: 'O4', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Decoración', img: '../../random-decoracion.jpg' },
+    //     { id: 'O5', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Set de resaltadores', img: '../../random-resaltadores.jpg' },
+    //     { id: 'O6', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Glamping', img: '../../random-gampling.jpg' },
+    //     { id: 'O7', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Stand notebook', img: '../../random-notebook.jpg' },
+    //     { id: 'O8', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'Set de mate', img: '../../random-set-mate.jpg' },
+    //     { id: 'O9', idQuestion: 'Q1000', idNextQuestion: `${!findCategory.includes('Comer') ? 'Q8' : !findCategory.includes('Música') ? 'Q54' : 'Q59'}`, text: 'No', img: '../../conejo-no.png' }
+    // ]
 
-    let arrToExport = [{ Q: requestQ, O: requestO }];
+    let arrToExport = [
+        // { Q: requestQ, O: requestO }
+    ];
 
     if (!findCategory.includes('Comer')) {
         foodQ = {
@@ -46,12 +48,12 @@ export const findQuestions = (answers) => {
             lastForm: true,
         }
         foodO.push(
-            { id: '47', idQuestion: 'Q8', text: 'Uptown BA', idNextQuestion: 'Q54', endSection: true, img: './uptown-bar.JPG' },
-            { id: '48', idQuestion: 'Q8', text: 'Airport Palermo', idNextQuestion: 'Q54', endSection: true, img: './airport-bar.jpg' },
-            { id: '49', idQuestion: 'Q8', text: 'The Hole Bar', idNextQuestion: 'Q54', endSection: true, img: './hole-bar.jpg' },
-            { id: '50', idQuestion: 'Q8', text: 'Kenya Rooftop', idNextQuestion: 'Q54', endSection: true, img: './kenia-rooftop.jpg' },
-            { id: '51', idQuestion: 'Q8', text: 'Victoria Brown Bar', idNextQuestion: 'Q54', endSection: true, img: './victoria-brown-bar.jpg' },
-            { id: '52', idQuestion: 'Q8', text: 'No', idNextQuestion: 'Q54', endSection: true, img: './comer-ninguno-lugares.jpg' },
+            { id: '47', idQuestion: 'Q8', text: 'Uptown BA',          idNextQuestion: `${!findCategory.includes('Música') ? 'Q54' : 'Q59'}`, endSection: true, img: './uptown-bar.JPG' },
+            { id: '48', idQuestion: 'Q8', text: 'Airport Palermo',    idNextQuestion: `${!findCategory.includes('Música') ? 'Q54' : 'Q59'}`, endSection: true, img: './airport-bar.jpg' },
+            { id: '49', idQuestion: 'Q8', text: 'The Hole Bar',       idNextQuestion: `${!findCategory.includes('Música') ? 'Q54' : 'Q59'}`, endSection: true, img: './hole-bar.jpg' },
+            { id: '50', idQuestion: 'Q8', text: 'Kenya Rooftop',      idNextQuestion: `${!findCategory.includes('Música') ? 'Q54' : 'Q59'}`, endSection: true, img: './kenia-rooftop.jpg' },
+            { id: '51', idQuestion: 'Q8', text: 'Victoria Brown Bar', idNextQuestion: `${!findCategory.includes('Música') ? 'Q54' : 'Q59'}`, endSection: true, img: './victoria-brown-bar.jpg' },
+            { id: '52', idQuestion: 'Q8', text: 'No',                 idNextQuestion: `${!findCategory.includes('Música') ? 'Q54' : 'Q59'}`, endSection: true, img: './comer-ninguno-lugares.jpg' },
         )
 
         arrToExport.push({ Q: foodQ, O: foodO })
