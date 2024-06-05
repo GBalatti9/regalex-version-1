@@ -336,7 +336,7 @@ export const options = [
     { id: '120', idQuestion: 'Q19', text: 'Café',          idNextQuestion: 'Q25', img: './tomar-cafe.jpg'  },
     { id: '121', idQuestion: 'Q19', text: 'Té',            idNextQuestion: 'Q26', img: './tomar-te.jpg'  },
     { id: '122', idQuestion: 'Q19', text: 'Mate',          idNextQuestion: 'Q27', img: './tomar-mate.jpg'  },
-    { id: '118', idQuestion: 'Q19', text: 'Agua ardiente', idNextQuestion: 'Q36', img: './tomar-agua-ardiente.jpeg'  },
+    // { id: '118', idQuestion: 'Q19', text: 'Agua ardiente', idNextQuestion: 'Q36', img: './tomar-agua-ardiente.jpeg'  },
     { id: '123', idQuestion: 'Q19', text: 'Otra',          idNextQuestion: 'Q36', write: true  },
     
     // --QUESTION 20--
