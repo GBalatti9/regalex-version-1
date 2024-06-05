@@ -177,7 +177,7 @@ export const options = [
     { id: '15', idQuestion: 'Q2', text: 'Peruana',     idNextQuestion: 'Q3', multipleChoice: false, img: './comida-peruana.jpg' },
     { id: '16', idQuestion: 'Q2', text: 'Vegetariana', idNextQuestion: 'Q3', multipleChoice: false, img: './comida-vegetariana.jpg' },
     { id: '17', idQuestion: 'Q2', text: 'Vegana',      idNextQuestion: 'Q3', multipleChoice: false, img: './comida-vegana.jpg' },
-    { id: '18', idQuestion: 'Q2', text: 'Árabe',       idNextQuestion: 'Q3', multipleChoice: false, img: './comida-arabe.jpg' },
+    { id: '18', idQuestion: 'Q2', text: 'Árabe',       idNextQuestion: 'Q3', multipleChoice: false, img: './arabe-food.jpg' },
     { id: '19', idQuestion: 'Q2', text: 'Otra',        idNextQuestion: 'Q3', multipleChoice: false, write: true },
 
     // --QUESTION 3--
