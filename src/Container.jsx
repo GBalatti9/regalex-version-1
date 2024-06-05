@@ -356,7 +356,7 @@ export const Container = () => {
                           {
                             option.write
                               ? 
-                              option.text === 'Otro' || option.text === 'Otra' && (
+                              option.text === 'Otro' || option.text === 'Otra' || option.text === 'No, otro' && (
                                 <div className="flex items-center">
                                   <Label htmlFor={option.id} className="pr-2"> {option.text} </Label>
                                   <Input className="w-10/12" type="text" onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)} name={currentQuestion.text} value={inputTextFormatted.text}/>
@@ -367,7 +367,7 @@ export const Container = () => {
                                 : 
                                 <input type="checkbox" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion?.text} />
                           }
-                          <Label htmlFor={option.id} className="pr-2"> {option.text !== 'Otro' && option.text !== 'Otra' && option.text} </Label>
+                          <Label htmlFor={option.id} className="pr-2"> {option.text !== 'Otro' && option.text !== 'Otra' && option.text !== 'No, otro' && option.text} </Label>
                         </div>
                       </motion.div>
                     ))
