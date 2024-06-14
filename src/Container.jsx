@@ -342,7 +342,8 @@ export const Container = () => {
                   gridTemplateColumns: `${(hasImage || currentOptions.length > 10) && '1fr 1fr'}`,
                   // gap: `${hasImage && '10px'}`, 
                   alignItems: 'center',
-                }}>
+                }}
+                >
                   {
                     currentOptions.map((option) => (
                       <motion.div key={option.id}
@@ -350,13 +351,16 @@ export const Container = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1 }}
+                        className="pt-2 w-10/12 mx-auto"
                       >
-                        {option.img && <div style={{ display: 'flex', justifyContent: 'center' }}><img src={option.img} style={{ width: '100px' }}></img></div>}
-                        <div className={`mx-auto ${hasImage ? 'text-center': ''}`}>
+                        {option.img && <div className="flex justify-center">
+                          <img src={option.img} style={{ width: '100px' }} />
+                          </div>}
+                        <div className={`mx-auto ${hasImage ? '': ''}`}>
                           {
                             option.write
                               ? 
-                              option.text === 'Otro' || option.text === 'Otra' || option.text === 'No, otro' || option.text === 'No tengo, me gustaría tener:' || option.text === 'Sobre otra' || option.text === '' && (
+                              (option.text === 'Otro' || option.text === 'Otra' || option.text === 'No, otro' || option.text === 'No tengo, me gustaría tener:' || option.text === 'Sobre otra' || option.text === '' || option.text === 'Quisiera ir a') && (
                                 <div className="flex items-center">
                                   <Label htmlFor={option.id} className="pr-2"> {option.text} </Label>
                                   <Input className="w-10/12" type="text" onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)} name={currentQuestion.text} value={inputTextFormatted.text}/>
@@ -368,7 +372,7 @@ export const Container = () => {
                                 <input type="checkbox" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion?.text} />
                           }
                           <Label htmlFor={option.id} className="pr-2"> {
-                          option.text !== 'Otro' && option.text !== 'Otra' && option.text !== 'No, otro' && option.text !== 'No tengo, me gustaría tener:' && option.text !== 'Sobre otra' && option.text !== '' && option.text} </Label>
+                          (option.text !== 'Otro' && option.text !== 'Otra' && option.text !== 'No, otro' && option.text !== 'No tengo, me gustaría tener:' && option.text !== 'Sobre otra' && option.text !== '' && option.text !== 'Quisiera ir a') && option.text} </Label>
                         </div>
                       </motion.div>
                     ))
