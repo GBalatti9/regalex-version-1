@@ -304,12 +304,12 @@ export const Container = () => {
   return (
     <div className="bg-amber-300 min-h-screen pb-12">
       <h1 className="font-bold text-center text-2xl py-4">Regalex</h1>
-      <Card className="flex sm:w-4/12 mx-auto p-4 bg-white shadow-2xl">
+      <Card className="flex sm:w-7/12 mx-auto p-4 bg-white shadow-2xl">
         {
           displayFirst &&
           <div className="w-full text-center">
-            <form onSubmit={handleSubmitFirstForm} className="w-full mx-auto">
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <form onSubmit={handleSubmitFirstForm} className="py-5 w-8/12 mx-auto">
+              <div className="flex flex-col">
                 <Label htmlFor="email" className="font-bold pb-2">Mail</Label>
                 <Input type="email" name="email" id="email" onChange={handleInputChangeFirstForm} />
               </div>
@@ -332,14 +332,14 @@ export const Container = () => {
             ? <PersonalizationForm />
             :
             !displayFirst &&
-            <div className="mx-auto">
+            <div className="mx-auto w-10/12">
               <h4 className="font-bold"> {currentQuestion?.category?.toUpperCase()} </h4>
               <h3 className="text-center pt-2 pb-3"> {currentQuestion?.text} </h3>
               <form onSubmit={handleSubmit}>
                 <div
                 style={{
                   display: `${hasImage || currentOptions.length > 10 ? 'grid' : ''}`,
-                  gridTemplateColumns: `${(hasImage || currentOptions.length > 10) && '1fr 1fr'}`,
+                  gridTemplateColumns: `${(hasImage || currentOptions.length > 10) && '1fr 1fr 1fr'}`,
                   // gap: `${hasImage && '10px'}`, 
                   alignItems: 'center',
                 }}
@@ -353,16 +353,17 @@ export const Container = () => {
                         transition={{ duration: 1 }}
                         className="pt-2 w-10/12 mx-auto"
                       >
-                        {option.img && <div className="flex justify-center">
-                          <img src={option.img} style={{ width: '100px' }} />
+                        {option.img && 
+                        <div className="flex justify-center h-24 bg-center bg-cover">
+                          <img src={option.img} className="w-full" />
                           </div>}
-                        <div className={`mx-auto ${hasImage ? '': ''}`}>
+                        <div className={`mx-auto ${hasImage ? 'text-sm': ''}`}>
                           {
                             option.write
                               ? 
                               (option.text === 'Otro' || option.text === 'Otra' || option.text === 'No, otro' || option.text === 'No tengo, me gustaría tener:' || option.text === 'Sobre otra' || option.text === '' || option.text === 'Quisiera ir a') && (
-                                <div className="flex items-center">
-                                  <Label htmlFor={option.id} className="pr-2"> {option.text} </Label>
+                                <div className="flex flex-col">
+                                  <Label htmlFor={option.id} className="pr-2 pb-2"> {option.text} </Label>
                                   <Input className="w-10/12" type="text" onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)} name={currentQuestion.text} value={inputTextFormatted.text}/>
                                 </div>)
                               :
