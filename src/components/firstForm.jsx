@@ -9,6 +9,7 @@ export const FirstForm = () => {
 
     const handleInputChangeFirstForm = ({ target }) => {
         const { name, value } = target;
+        console.log({ name, value });
         setUserInfo(prevUserInfo => ({
             ...prevUserInfo, 
             [name]: value,
@@ -29,11 +30,11 @@ export const FirstForm = () => {
             <form onSubmit={handleSubmit}>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <label htmlFor="email">Mail</label>
-                    <input type="email" name="email" id="email" onChange={handleInputChange}/>
+                    <input type="email" name="data[email]" id="email" onChange={handleInputChange}/>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <label htmlFor="date">Fecha de nacimiento</label>
-                    <input type="date" name="date" id="date" onChange={handleInputChange}/>
+                    <input type="date" name="data[date]" id="date" onChange={handleInputChange}/>
                 </div>
                 <button>Empezar</button>
             </form>

@@ -2,7 +2,7 @@
 
 export const findQuestions = (answers) => {
     console.log({ answers });
-    const categories = answers['¿Qué categorías/s disfrutás más?'];
+    const categories = answers.data['¿Qué categorías/s disfrutás más?'];
     const findCategory = categories.filter((element) => ['Comer', 'Música', 'Deportes'].includes(element));
 
     if (findCategory.includes('Comer') && findCategory.includes('Música') && findCategory.includes('Deportes')) {

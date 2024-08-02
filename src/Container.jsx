@@ -36,6 +36,7 @@ export const Container = () => {
   const [selectedOption, setSelectedOption] = useState();
   // TODAS LAS RESPUESTAS DEL USUARIO
   const [answers, setAnswers] = useState([]);
+  console.log({ answers });
 
   const [lastQuestion, setLastQuestion] = useState(false);
 
@@ -57,15 +58,15 @@ export const Container = () => {
   const optionsHaveImage = currentOptions.filter((option) => Object.keys(option).includes('img'));
 
   useEffect(() => {
-    const currentQuestionFn = ( questions ) => {
-      const questionsArr = questions.find(( question ) => question.id === currentId)
+    const currentQuestionFn = (questions) => {
+      const questionsArr = questions.find((question) => question.id === currentId)
       setCurrentQuestion(questionsArr);
     }
-    const currentOptionsFn = ( options ) => {
-      const optionsArr = options.filter(( option ) => option.idQuestion === currentId);
+    const currentOptionsFn = (options) => {
+      const optionsArr = options.filter((option) => option.idQuestion === currentId);
       setCurrentOptions(optionsArr)
     }
-    
+
     currentQuestionFn(questions);
     currentOptionsFn(options);
 
@@ -102,9 +103,14 @@ export const Container = () => {
       // console.log({ inputTextFormatted });
       document.querySelectorAll('input[type=radio], input[type=checkbox]').forEach(input => input.checked = false);
       inputValue = value;
+      const key = name.split('[').pop().replace(']', ''); // Extrae la clave del input
+
       setAnswers((prevAnswers) => ({
         ...prevAnswers,
-        [name]: inputValue
+        data: {
+          ...prevAnswers.data,
+          [key]: value
+        }
       }))
       // console.log({ answers });
       return;
@@ -151,9 +157,19 @@ export const Container = () => {
 
     // console.log( {userAnswers, userAnswersWithId} );
 
+    console.log({ name });
+    // setAnswers((prevAnswers) => ({
+    //   ...prevAnswers,
+    //   [name]: userAnswers
+    // }))
+
+    const key = name.split('[').pop().replace(']', ''); // Extrae la clave del input
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
-      [name]: userAnswers
+      data: {
+        ...prevAnswers.data,
+        [key]: userAnswers
+      }
     }))
 
     // console.log({ answers });
@@ -164,7 +180,7 @@ export const Container = () => {
     e.preventDefault();
     inputValue.length > 0 ? userAnswers.push(inputValue) : ''
     // console.log("INPUT TEXT FORMATTED", { inputTextFormatted });
-    
+
     Object.values(inputTextFormatted).length > 0 ? userAnswersWithId.push(inputTextFormatted) : '';
     // userAnswersWithId.push(inputTextFormatted);
     if (userAnswers.length === 0) return;
@@ -238,9 +254,9 @@ export const Container = () => {
           setCurrentQuestion(firstItem.Q);
           setCurrentOptions(firstItem.O);
           console.log("END 222", { end });
-          console.log("CURRENT QUESTION: ",{ currentQuestion });
+          console.log("CURRENT QUESTION: ", { currentQuestion });
           return;
-        } 
+        }
 
         return setLastQuestion(true);
       }
@@ -279,25 +295,30 @@ export const Container = () => {
     setDisabled(true);
   }
 
-  const [userInfo, setUserInfo] = useState({
-    email: '',
-    date: ''
-  });
+  const [userInfo, setUserInfo] = useState({});
 
   const handleInputChangeFirstForm = ({ target }) => {
     const { name, value } = target;
+    const key = name.split('[').pop().replace(']', ''); // Extrae la clave del input
     setUserInfo(prevUserInfo => ({
       ...prevUserInfo,
-      [name]: value,
+      data: {
+        ...prevUserInfo.data,
+        [key]: value
+      }
     }));
   }
 
+  // useEffect(() => {
+  //   userInfo.email.length !== 0 && userInfo.date.length !== 0 ? setFirstDisabled(false) : setFirstDisabled(true);
+  // }, [userInfo])
   useEffect(() => {
-    userInfo.email.length !== 0 && userInfo.date.length !== 0 ? setFirstDisabled(false) : setFirstDisabled(true);
+    userInfo.data && userInfo.data.date ? setFirstDisabled(false) : setFirstDisabled(true);
   }, [userInfo])
 
   const handleSubmitFirstForm = (e) => {
     e.preventDefault();
+    setAnswers(userInfo);
     setDisplayFirst(false);
   }
 
@@ -319,20 +340,21 @@ export const Container = () => {
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <Label htmlFor="date" className="font-bold py-2">Fecha de nacimiento</Label>
                 <div className="flex justify-center">
-                <input type="date" name="date" id="date" onChange={handleInputChangeFirstForm} />
+                  <input type="date" name="date" id="date" onChange={handleInputChangeFirstForm} />
                   {/* <Calendar mode="single" onChange={ handleInputChangeFirstForm }/> */}
                 </div>
                 {/* <Input type="date" name="date" id="date" onChange={handleInputChangeFirstForm} /> */}
               </div>
               <div className="flex justify-end pt-2">
                 <Button variants="default" disabled={firstDisabled}>Empezar</Button>
+                {/* <Button variants="default">Empezar</Button> */}
               </div>
             </form>
           </div>
         }
         {
           lastQuestion
-            ? <PersonalizationForm />
+            ? <PersonalizationForm answers={answers} />
             :
             !displayFirst &&
             <div className={`${hasImage ? 'w-10/12' : ''} mx-auto`}>
@@ -340,12 +362,12 @@ export const Container = () => {
               <h3 className="text-center pt-2 pb-3"> {currentQuestion?.text} </h3>
               <form onSubmit={handleSubmit}>
                 <div
-                style={{
-                  display: `${hasImage || currentOptions.length > 10 ? 'grid' : ''}`,
-                  gridTemplateColumns: `${(hasImage || currentOptions.length > 10) && '1fr 1fr 1fr'}`,
-                  // gap: `${hasImage && '10px'}`, 
-                  alignItems: 'center',
-                }}
+                  style={{
+                    display: `${hasImage || currentOptions.length > 10 ? 'grid' : ''}`,
+                    gridTemplateColumns: `${(hasImage || currentOptions.length > 10) && '1fr 1fr 1fr'}`,
+                    // gap: `${hasImage && '10px'}`, 
+                    alignItems: 'center',
+                  }}
                 >
                   {
                     currentOptions.map((option) => (
@@ -356,27 +378,33 @@ export const Container = () => {
                         transition={{ duration: 1 }}
                         className="pt-2 w-10/12 mx-auto"
                       >
-                        {option.img && 
-                        <div className="flex justify-center h-24 bg-center bg-cover">
-                          <img src={option.img} className="w-full" />
+                        {option.img &&
+                          <div className="flex justify-center h-24 w-12/12 border-red-500 border bg-center bg-cover">
+                            <img src={option.img} className="w-full" />
                           </div>}
-                        <div className={`mx-auto ${hasImage ? 'text-sm': ''}`}>
+                        <div className={`mx-auto ${hasImage ? 'text-sm' : ''}`}>
                           {
                             option.write
-                              ? 
+                              ?
                               (option.text === 'Otro' || option.text === 'Otra' || option.text === 'No, otro' || option.text === 'No tengo, me gustaría tener:' || option.text === 'Sobre otra' || option.text === '' || option.text === 'Quisiera ir a') && (
                                 <div className="flex flex-col">
                                   <Label htmlFor={option.id} className="pr-2 pb-2"> {option.text} </Label>
-                                  <Input className="w-10/12" type="text" onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)} name={currentQuestion.text} value={inputTextFormatted.text}/>
+                                  <Input 
+                                    className="w-10/12" 
+                                    type="text" 
+                                    onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)} 
+                                    name={currentQuestion.text} 
+                                    value={inputTextFormatted.text} 
+                                    />
                                 </div>)
                               :
                               option.multipleChoice === false
                                 ? <input type="radio" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion?.text} />
-                                : 
+                                :
                                 <input type="checkbox" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion?.text} />
                           }
                           <Label htmlFor={option.id} className="pr-2"> {
-                          (option.text !== 'Otro' && option.text !== 'Otra' && option.text !== 'No, otro' && option.text !== 'No tengo, me gustaría tener:' && option.text !== 'Sobre otra' && option.text !== '' && option.text !== 'Quisiera ir a') && option.text} </Label>
+                            (option.text !== 'Otro' && option.text !== 'Otra' && option.text !== 'No, otro' && option.text !== 'No tengo, me gustaría tener:' && option.text !== 'Sobre otra' && option.text !== '' && option.text !== 'Quisiera ir a') && option.text} </Label>
                         </div>
                       </motion.div>
                     ))
