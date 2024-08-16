@@ -30,10 +30,10 @@ const personalizationOptions = [
     { id: '3', text: 'Que sea sorpresa', idQuestion: 'Q2', multipleChoice: false, img: '../../../seguimiento.png', idNextQuestion: 'Q3', write: false },
 
     { id: '4', text: 'Sí', idQuestion: 'Q3', multipleChoice: false, idNextQuestion: 'Q4', write: false, grid: true },
-    { id: '5', text: 'No', idQuestion: 'Q3', multipleChoice: false, endSection: true, write: false, grid: true },
-    { id: '6', text: 'Paso', idQuestion: 'Q3', multipleChoice: false, endSection: true, write: false, grid: true },
+    { id: '5', text: 'No', idQuestion: 'Q3', multipleChoice: false, endSection: true, write: false, grid: true, lastQuestionAllForm: true },
+    { id: '6', text: 'Paso', idQuestion: 'Q3', multipleChoice: false, endSection: true, write: false, grid: true, lastQuestionAllForm: true },
 
-    { id: '7', text: '', idQuestion: 'Q4', write: true, endSection: true, grid: false },
+    { id: '7', text: '', idQuestion: 'Q4', write: true, endSection: true, grid: false, lastQuestionAllForm: true },
 ]
 
 
@@ -63,17 +63,19 @@ export const PersonalizationForm = ({ answers }) => {
             setLastMessage(true);
         }
 
-        try {
-            const response = await fetch("https://sheetdb.io/api/v1/55c8yhgkm2d5q", {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ data: answers.data }), // Asegúrate de enviar `data` correctamente
-            })
-            console.log({ response });
-        } catch (error) {
-            console.log({ error });
+        if (personalizationQuestion[index].lastQuestionAllForm) {
+            try {
+                const response = await fetch("https://sheetdb.io/api/v1/55c8yhgkm2d5q", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ data: answers.data }), // Asegúrate de enviar `data` correctamente
+                })
+                console.log({ response });
+            } catch (error) {
+                console.log({ error });
+            }
         }
     }
 
