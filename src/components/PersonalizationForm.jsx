@@ -62,6 +62,8 @@ export const PersonalizationForm = ({ answers }) => {
         if (personalizationQuestion[index].lastQuestion) {
             setLastMessage(true);
         }
+        console.log(personalizationQuestion[index].lastQuestionAllForm);
+        
 
         if (personalizationQuestion[index].lastQuestionAllForm) {
             try {
