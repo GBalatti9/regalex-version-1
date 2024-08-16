@@ -62,7 +62,7 @@ export const PersonalizationForm = ({ answers }) => {
         if (personalizationQuestion[index].lastQuestion) {
             setLastMessage(true);
         }
-        console.log(personalizationQuestion[index].lastQuestionAllForm);
+        console.log("HANDLE SUBMIT:", personalizationQuestion[index]);
         
 
         if (personalizationQuestion[index].lastQuestionAllForm) {
