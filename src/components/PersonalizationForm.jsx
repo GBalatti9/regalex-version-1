@@ -56,7 +56,7 @@ export const PersonalizationForm = ({ answers }) => {
 
     const handleSubmit = async (e, options) => {
         e.preventDefault();
-        // console.log("ACA!!", { options });
+        console.log("ACA!!", { options });
         setIndex(index + 1);
         console.log(personalizationQuestion[index]);
         if (personalizationQuestion[index].lastQuestion) {
