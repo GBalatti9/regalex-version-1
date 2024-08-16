@@ -9,7 +9,7 @@ const personalizationQuestion = [
     { id: 'Q1', text: 'Si luego de llenar el cuestionario, se te ocurrió algo que te gustaría que te regalen, escribilo acá abajo!' },
     { id: 'Q2', text: 'Querés...' },
     { id: 'Q3', text: '¿Queres que Regalex le envié estas recomendación a algún familiar o amigo?' },
-    { id: 'Q4', text: 'Ingresar mail o ig de las personas a las que le tenemos que mandar las recomendaciones!', lastQuestion: true },
+    { id: 'Q4', text: 'Ingresar mail o ig de las personas a las que le tenemos que mandar las recomendaciones!', lastQuestionAllForm: true },
 ]
 
 const personalizationOptions = [
@@ -41,6 +41,7 @@ const personalizationOptions = [
 export const PersonalizationForm = ({ answers }) => {
     const [index, setIndex] = useState(0);
     const [lastMessage, setLastMessage] = useState(false);
+    const [message, setMessage] = useState(null);
 
     const [answersPersonalizationForm, setAnswersPersonalizationForm] = useState({})
 
@@ -56,13 +57,16 @@ export const PersonalizationForm = ({ answers }) => {
 
     const handleSubmit = async (e, options) => {
         e.preventDefault();
-        console.log("ACA!!", { options });
+        console.log("ACA!!", { answersPersonalizationForm });
         setIndex(index + 1);
         console.log(personalizationQuestion[index]);
-        if (personalizationQuestion[index].lastQuestion) {
-            setLastMessage(true);
-        }
+        // if (personalizationQuestion[index].lastQuestion) {
+        //     setLastMessage(true);
+        // }
+        
         console.log("HANDLE SUBMIT:", personalizationQuestion[index]);
+        
+        const allAnswers = {...answers.data, ...answersPersonalizationForm}
         
 
         if (personalizationQuestion[index].lastQuestionAllForm) {
@@ -72,9 +76,10 @@ export const PersonalizationForm = ({ answers }) => {
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ data: answers.data }), // Asegúrate de enviar `data` correctamente
+                    body: JSON.stringify({ data: allAnswers }), // Asegúrate de enviar `data` correctamente
                 })
                 console.log({ response });
+                setMessage('Gracias por contestar')
             } catch (error) {
                 console.log({ error });
             }
@@ -83,7 +88,7 @@ export const PersonalizationForm = ({ answers }) => {
 
     return (
         <>
-            {!lastMessage ?
+            {!message ?
                 <div className="mx-auto w-full" >
                     <h4 className="font-bold"> {personalizationQuestion[index]?.category?.toUpperCase()} </h4>
                     <h3 className="text-center pt-2 pb-3"> {personalizationQuestion[index]?.text} </h3>
