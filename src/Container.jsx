@@ -328,7 +328,7 @@ export const Container = () => {
     <div className="bg-amber-300 min-h-screen pb-12">
       <h1 className="font-bold text-center text-2xl py-4">Regalex</h1>
       {/* <Card className={"flex sm:w-4/12 mx-auto p-4 bg-white shadow-2xl"}> */}
-      <Card className={`${hasImage || currentOptions.length > 10 ? 'sm:w-7/12' : 'sm:w-4/12'} mx-auto p-4 shadow-2xl `}>
+      <Card className={`${hasImage || currentOptions.length > 10 ? 'sm:w-7/12' : 'sm:w-4/12'} mx-auto max-w-[600px] p-4 shadow-2xl `}>
         {
           displayFirst &&
           <div className="w-full text-center">
@@ -358,7 +358,7 @@ export const Container = () => {
             :
             !displayFirst &&
             <div className={`${hasImage ? 'w-10/12' : ''} mx-auto`}>
-              <h4 className="font-bold"> {currentQuestion?.category?.toUpperCase()} </h4>
+              <h4 className={`font-bold px-3 ${hasImage || currentOptions.length > 10 ? 'px-3' : 'w-11/12'}  mx-auto`}> {currentQuestion?.category?.toUpperCase()} </h4>
               <h3 className="text-center pt-2 pb-3"> {currentQuestion?.text} </h3>
               <form onSubmit={handleSubmit}>
                 <div
@@ -379,24 +379,37 @@ export const Container = () => {
                         className="pt-2 w-10/12 mx-auto"
                       >
                         {option.img &&
-                          <div className="flex justify-center h-24 w-12/12 border-red-500 border bg-center bg-cover">
+                          <div className="flex justify-center h-24 w-12/12 bg-center bg-cover">
                             <img src={option.img} className="w-full" />
                           </div>}
                         <div className={`mx-auto ${hasImage ? 'text-sm' : ''}`}>
                           {
                             option.write
                               ?
-                              (option.text === 'Otro' || option.text === 'Otra' || option.text === 'No, otro' || option.text === 'No tengo, me gustaría tener:' || option.text === 'Sobre otra' || option.text === '' || option.text === 'Quisiera ir a') && (
-                                <div className="flex flex-col">
+                              option.text === 'Quisiera ir a' ?
+                              <div className="absolute">
+                              <Label htmlFor={option.id} className="pr-2 pb-2"> {option.text} </Label>
+                              <Input
+                                className="border border-black rounded-none"
+                                type="text"
+                                onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)}
+                                name={currentQuestion.text}
+                                value={inputTextFormatted.text}
+                              />
+                            </div>
+                              :
+                              (option.text === 'Otro' || option.text === 'Otra' || option.text === 'No, otro' || option.text === 'No tengo, me gustaría tener:' || option.text === 'Sobre otra' || option.text === '') && (
+                                <div className="flex items-center">
                                   <Label htmlFor={option.id} className="pr-2 pb-2"> {option.text} </Label>
-                                  <Input 
-                                    className="w-10/12" 
-                                    type="text" 
-                                    onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)} 
-                                    name={currentQuestion.text} 
-                                    value={inputTextFormatted.text} 
-                                    />
-                                </div>)
+                                  <Input
+                                    className="border border-black rounded-none"
+                                    type="text"
+                                    onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)}
+                                    name={currentQuestion.text}
+                                    value={inputTextFormatted.text}
+                                  />
+                                </div>
+                                )
                               :
                               option.multipleChoice === false
                                 ? <input type="radio" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion?.text} />

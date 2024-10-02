@@ -31,9 +31,7 @@ const personalizationOptions = [
 
     { id: '4', text: 'Sí', idQuestion: 'Q3', multipleChoice: false, idNextQuestion: 'Q4', write: false, grid: true },
     { id: '5', text: 'No', idQuestion: 'Q3', multipleChoice: false, endSection: true, write: false, grid: true, lastQuestionAllForm: true },
-    { id: '6', text: 'Paso', idQuestion: 'Q3', multipleChoice: false, endSection: true, write: false, grid: true, lastQuestionAllForm: true },
-
-    { id: '7', text: '', idQuestion: 'Q4', write: true, endSection: true, grid: false, lastQuestionAllForm: true },
+    { id: '6', text: '', idQuestion: 'Q4', write: true, endSection: true, grid: false, lastQuestionAllForm: true },
 ]
 
 
@@ -45,29 +43,39 @@ export const PersonalizationForm = ({ answers }) => {
 
     const [answersPersonalizationForm, setAnswersPersonalizationForm] = useState({})
 
-    const handleInputChange = ({ target }) => {
+    const handleInputChange = ({ target }, id) => {
         const { name, value } = target;
 
         setAnswersPersonalizationForm((prevForm) => ({
             ...prevForm,
             [name]: value
         }))
-
+        
     }
 
     const handleSubmit = async (e, options) => {
         e.preventDefault();
         console.log("ACA!!", { answersPersonalizationForm });
-        setIndex(index + 1);
-        console.log(personalizationQuestion[index]);
+        if (options === "Q3") {
+            const isNo = answersPersonalizationForm["¿Queres que Regalex le envié estas recomendación a algún familiar o amigo?"];
+            if (isNo === 'No') {
+                setMessage('Gracias por contestar')
+            }
+            
+        }
+        console.log({ options });
+        
+        if(!personalizationQuestion[index].lastQuestionAllForm) {
+            setIndex(index + 1);
+        }
         // if (personalizationQuestion[index].lastQuestion) {
         //     setLastMessage(true);
         // }
-        
+
         console.log("HANDLE SUBMIT:", personalizationQuestion[index]);
-        
-        const allAnswers = {...answers.data, ...answersPersonalizationForm}
-        
+
+        const allAnswers = { ...answers.data, ...answersPersonalizationForm }
+
 
         if (personalizationQuestion[index].lastQuestionAllForm) {
             try {
@@ -89,52 +97,96 @@ export const PersonalizationForm = ({ answers }) => {
     return (
         <>
             {!message ?
-                <div className="mx-auto w-full" >
-                    <h4 className="font-bold"> {personalizationQuestion[index]?.category?.toUpperCase()} </h4>
-                    <h3 className="text-center pt-2 pb-3"> {personalizationQuestion[index]?.text} </h3>
-                    <form onSubmit={(e) => handleSubmit(e, personalizationOptions[index])}>
-                        {/* <div className="grid grid-cols-3 text-center"> */}
-                        {/* <div className={`${typeof(personalizationQuestion[index].img === 'string') ? 'grid grid-cols-3 text-center' : 'border flex justify-center items-center'}`} > */}
-                        {/* <div className={`${personalizationOptions[index].img ? 'grid grid-cols-6 text-center' : 'border border-red-500'}`}> */}
-                        <div className={`${personalizationOptions[index].img ? 'grid grid-cols-6 text-center' : 'border border-red-500'}`}>
-                            {
-                                personalizationOptions.map((option) => (
-                                    <motion.div key={option.id}
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
-                                        transition={{ duration: 1 }}
-                                        className={`${option.grid ? 'col-span-2' : "border col-span-6 w-11/12 mx-auto"}`}
-                                    // className={`${option.img ? '' : ''}`}
-                                    >
-                                        {
-                                            option.idQuestion === personalizationQuestion[index].id &&
-                                            <div className="w-full col-span-3">
-                                                <div className='mx-auto'>
-                                                    {option.img && <div className="h-28 w-6/12 mx-auto bg-center bg-cover" style={{ backgroundImage: `url(${option.img})` }}> </div>}
-                                                </div>
-                                                <div>
-                                                    {
-                                                        option.write
-                                                            ? <Input type="text" className="border border-black grid-cols-3" onChange={(e) => handleInputChange(e, option.endSection)} name={personalizationQuestion[index]?.text} />
-                                                            :
-                                                            option.multipleChoice === false
-                                                                ? <input type="radio" id={option.id} value={(option.text)} onChange={(e) => handleInputChange(e, option.text)} name={personalizationQuestion[index]?.text} />
+                personalizationQuestion[index].id === "Q2" ?
+                    <div>
+                        <h3 className="text-center pt-2 pb-3"> {personalizationQuestion[index]?.text} </h3>
+                        <form onSubmit={(e) => handleSubmit(e, personalizationOptions[index])} >
+                            <div className="flex w-10/12 justify-around mx-auto py-5">
+                            {[personalizationOptions[10], personalizationOptions[11]].map((option) => (
+                                <div key={option.id}>
+                                    <div className='mx-auto'>
+                                        {option.img && <div className="h-80 w-44 bg-cover bg-center" style={{ backgroundImage: `url(${option.img})` }}> </div>}
+                                    </div>
+                                    {
+                                        option.multipleChoice === false
+                                        ? <input type="radio" id={option.id} value={(option.text)} onChange={(e) => handleInputChange(e, option.text)} name={personalizationQuestion[index]?.text} />
+                                        :
+                                        <input type="checkbox" id={option.id} value={(option.text)} onChange={handleInputChange} name={personalizationQuestion[index]?.text} />
+                                    }
+                                    <Label htmlFor={option.id} className="pr-2"> {option.text} </Label>
+                                </div>
+                            ))}
+                            </div>
+                            <div className="flex justify-end my-4">
+                                <Button variants="default">Siguiente</Button>
+                            </div>
+                        </form>
+                    </div>
+                    :
+                    personalizationQuestion[index].id === "Q3" ? 
+                    <div>
+                        <h3 className="text-center pt-2 pb-3"> {personalizationQuestion[index]?.text} </h3>
+                        <form onSubmit={(e) => handleSubmit(e, personalizationQuestion[index].id)} >
+                            <div className="flex w-10/12 justify-around mx-auto py-5">
+                            {[personalizationOptions[12], personalizationOptions[13]].map((option) => (
+                                <div key={option.id}>
+                                    <input type="radio" id={option.id} value={(option.text)} onChange={(e) => handleInputChange(e, personalizationQuestion[index].id)} name={personalizationQuestion[index]?.text} />
+                                    <Label htmlFor={option.id} className="pr-2"> {option.text} </Label>
+                                </div>
+                            ))}
+                            </div>
+                            <div className="flex justify-end my-4">
+                                <Button variants="default">Siguiente</Button>
+                            </div>
+                        </form>
+                    </div>
+                    :
+                    <div className="mx-auto w-full" >
+                        <h4 className="font-bold"> {personalizationQuestion[index]?.category?.toUpperCase()} </h4>
+                        <h3 className="text-center pt-2 pb-3"> {personalizationQuestion[index]?.text} </h3>
+                        <form onSubmit={(e) => handleSubmit(e, personalizationOptions[index])}>
+                            {/* <div className="grid grid-cols-3 text-center"> */}
+                            {/* <div className={`${typeof(personalizationQuestion[index].img === 'string') ? 'grid grid-cols-3 text-center' : 'border flex justify-center items-center'}`} > */}
+                            {/* <div className={`${personalizationOptions[index].img ? 'grid grid-cols-6 text-center' : 'border border-red-500'}`}> */}
+                            <div className={`${personalizationOptions[index].img ? 'grid grid-cols-6 text-center' : 'border border-red-500'}`}>
+                                {
+                                    personalizationOptions.map((option) => (
+                                        <motion.div key={option.id}
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
+                                            transition={{ duration: 1 }}
+                                            className={`${option.grid ? 'col-span-2' : "col-span-6 w-11/12 mx-auto"}`}
+                                        // className={`${option.img ? '' : ''}`}
+                                        >
+                                            {
+                                                option.idQuestion === personalizationQuestion[index].id &&
+                                                <div className="w-full col-span-3">
+                                                    <div className='mx-auto'>
+                                                        {option.img && <div className="h-28 w-6/12 mx-auto bg-center bg-cover" style={{ backgroundImage: `url(${option.img})` }}> </div>}
+                                                    </div>
+                                                    <div>
+                                                        {
+                                                            option.write
+                                                                ? <Input type="text" className="border rounded-none border-black grid-cols-3" onChange={(e) => handleInputChange(e, option.endSection)} name={personalizationQuestion[index]?.text} />
                                                                 :
-                                                                <input type="checkbox" id={option.id} value={(option.text)} onChange={handleInputChange} name={personalizationQuestion[index]?.text} />
-                                                    }
-                                                    <Label htmlFor={option.id} className="pr-2"> {option.text} </Label>
+                                                                option.multipleChoice === false
+                                                                    ? <input type="radio" id={option.id} value={(option.text)} onChange={(e) => handleInputChange(e, option.text)} name={personalizationQuestion[index]?.text} />
+                                                                    :
+                                                                    <input type="checkbox" id={option.id} value={(option.text)} onChange={handleInputChange} name={personalizationQuestion[index]?.text} />
+                                                        }
+                                                        <Label htmlFor={option.id} className="pr-2"> {option.text} </Label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        }
-                                    </motion.div>
-                                ))}
-                        </div>
-                        <div className="flex justify-end my-4">
-                            <Button variants="default">Siguiente</Button>
-                        </div>
-                    </form>
-                </div>
+                                            }
+                                        </motion.div>
+                                    ))}
+                            </div>
+                            <div className="flex justify-end my-4">
+                                <Button variants="default">Siguiente</Button>
+                            </div>
+                        </form>
+                    </div>
                 :
                 <div>
 

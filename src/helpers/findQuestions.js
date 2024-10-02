@@ -52,7 +52,7 @@ export const findQuestions = (answers) => {
             { id: '48', idQuestion: 'Q8', text: 'Airport Palermo',    idNextQuestion: `${!findCategory.includes('Música') ? 'Q54' : 'Q59'}`, endSection: true, img: './airport-bar.jpg' },
             { id: '49', idQuestion: 'Q8', text: 'The Hole Bar',       idNextQuestion: `${!findCategory.includes('Música') ? 'Q54' : 'Q59'}`, endSection: true, img: './hole-bar.jpg' },
             { id: '50', idQuestion: 'Q8', text: 'Kenya Rooftop',      idNextQuestion: `${!findCategory.includes('Música') ? 'Q54' : 'Q59'}`, endSection: true, img: './kenia-rooftop.jpg' },
-            { id: '51', idQuestion: 'Q8', text: 'Victoria Brown Bar', idNextQuestion: `${!findCategory.includes('Música') ? 'Q54' : 'Q59'}`, endSection: true, img: './victoria-brown-bar.jpg' },
+            { id: '51', idQuestion: 'Q8', text: 'Victoria Brown', idNextQuestion: `${!findCategory.includes('Música') ? 'Q54' : 'Q59'}`, endSection: true, img: './victoria-brown-bar.jpg' },
             { id: '52', idQuestion: 'Q8', text: 'No',                 idNextQuestion: `${!findCategory.includes('Música') ? 'Q54' : 'Q59'}`, endSection: true, img: './comer-ninguno-lugares.jpg' },
         )
 
