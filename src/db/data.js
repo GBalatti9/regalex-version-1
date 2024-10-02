@@ -978,7 +978,7 @@ export const options = [
     { id: '590', idQuestion: 'Q97', text: 'Marcas especializadas en productos naturales/orgánicos', idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
     { id: '591', idQuestion: 'Q97', text: 'Marcas de lujo y alta gama',                             idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
     { id: '592', idQuestion: 'Q97', text: 'No tengo preferencia específica',                        idNextQuestion: 'Q1', endSection: true, multipleChoice: false },
-    { id: '593', idQuestion: 'Q97', text: 'Sí, hay una marca que me encanta:',                      idNextQuestion: 'Q1', endSection: true, multipleChoice: false, write: true },
+    { id: '593', idQuestion: 'Q97', text: 'Hay una marca que me encanta:',                      idNextQuestion: 'Q1', endSection: true, multipleChoice: false, write: true },
 
     // --QUESTION 98--
     { id: '594', idQuestion: 'Q98', text: 'Masajes',                                                                              idNextQuestion: 'Q99', write: false, multipleChoice: false },

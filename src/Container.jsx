@@ -49,8 +49,8 @@ export const Container = () => {
 
   const [currentQuestion, setCurrentQuestion] = useState([]);
   const [currentOptions, setCurrentOptions] = useState([]);
-  console.log({ currentQuestion, currentOptions });
-  
+  // console.log({ currentQuestion, currentOptions });
+
 
   // const currentQuestion = ( questions ) => {
   //   return questions.find((question) => question.id === currentId);
@@ -60,7 +60,7 @@ export const Container = () => {
   const optionsHaveImage = currentOptions.filter((option) => Object.keys(option).includes('img'));
 
   useEffect(() => {
-    
+
     const currentQuestionFn = (questions) => {
       const questionsArr = questions.find((question) => question.id === currentId)
       setCurrentQuestion(questionsArr);
@@ -159,7 +159,7 @@ export const Container = () => {
 
     // console.log( {userAnswers, userAnswersWithId} );
 
-    console.log({ name });
+    // console.log({ name });
     // setAnswers((prevAnswers) => ({
     //   ...prevAnswers,
     //   [name]: userAnswers
@@ -198,6 +198,7 @@ export const Container = () => {
 
       // Si hasEndSubSection es true, entonces se va a buscar el id del primer elemento en pendingQuestions que haya quedado pendiente para recorrer el bucle interno antes de seguir en el formulario. Se compara el idQuestion del elemento en pendingQuestion con el idPrevQuestion del primer elemento de las respuestas que recién se seleccionaron. Ese idPrevQuestion hace referencia a la pregunta en donde se ramificó el cuestionario. Entonces, toma esa primera opción pendiente y se pasa a setcurrentId con el idNextQuestion que es la pregunta que le sigue a la opción seleccionada que estaba guardada en pendingQuestions. 
       const hasPendingQuestionsIndex = pendingQuestions.findIndex((element) => element.idQuestion === userAnswersWithId[0].idPrevQuestion);
+
       // console.log({ hasPendingQuestionsIndex });
       if (hasPendingQuestionsIndex !== -1) {
         setcurrentId(pendingQuestions[hasPendingQuestionsIndex].idNextQuestion);
@@ -205,45 +206,55 @@ export const Container = () => {
       } else {
         // Este if es para controlar el caso en el que un elemento tenga tanto endSubSection como endSection. Si el item tiene endSubSection pero despues de esa pregunta no viene ninguna, por ende va a tener endSection también y la idea es que finalice el questionario, no que vuelva al Q1.
         if (hasEndSection) {
-          
-          if (!currentQuestion.lastForm) {
-            console.log(findQuestions(answers));
-            end = findQuestions(answers);
-            if (end === 'true') {
-              return setLastQuestion(true);
+
+          const pendingFirstQuestions = pendingQuestions.find((element) => element.idQuestion === 'Q1');
+          console.log({ pendingFirstQuestions });
+
+          const index = pendingQuestions.find((element) => element.idQuestion === 'Q1');
+          pendingQuestions.splice(index, 1);
+          if (pendingFirstQuestions) {
+            return setcurrentId(pendingFirstQuestions.idNextQuestion)
+          } else {
+            if (!currentQuestion.lastForm) {
+              // console.log(findQuestions(answers));
+              end = findQuestions(answers);
+              if (end === 'true') {
+                return setLastQuestion(true);
+              }
+              setCurrentQuestion(end[0].Q);
+              setCurrentOptions(end[0].O);
+              // console.log({ currentOptions });
+              // console.log("estoy en primera vez");
+              end.shift();
+              // console.log("END POST SHIFT", { end });
+              return;
             }
-            setCurrentQuestion(end[0].Q);
-            setCurrentOptions(end[0].O);
-            console.log({ currentOptions });
-            console.log("estoy en primera vez");
-            end.shift();
-            console.log("END POST SHIFT", { end });
-            return;
-          }
-  
-          if (end.length > 0) {
-            const firstItem = end.shift();
-            console.log({ firstItem });
-            console.log('estoy en length + 1');
-            setCurrentQuestion(firstItem.Q);
-            setCurrentOptions(firstItem.O);
-            console.log("END 222", { end });
-            console.log("CURRENT QUESTION: ", { currentQuestion });
-            return;
+
+            if (end.length > 0) {
+              const firstItem = end.shift();
+              // console.log({ firstItem });
+              // console.log('estoy en length + 1');
+              setCurrentQuestion(firstItem.Q);
+              setCurrentOptions(firstItem.O);
+              // console.log("END 222", { end });
+              // console.log("CURRENT QUESTION: ", { currentQuestion });
+              return;
+            }
+
+            return setLastQuestion(true);
           }
 
-          return setLastQuestion(true);
+
         }
         setcurrentId(userAnswersWithId[0].idNextQuestion);
       }
       return;
     }
-    
+
     // Esto se aplica si es la última pregunta de una categoria. Ej, la ultima pregunta de comer.
-    
+
     if (hasEndSection) {
-      console.log("estoy en el otro if");
-      
+
       // console.log('endSection perroooo');
       // if (pendingQuestions.length > 0) {
       //   // ACA HAY QUE ENCONTRAR LA OPCION QUE TENGA UN ID DISTINTO A LOS DEMÁS PARA GUITARRA
@@ -255,34 +266,36 @@ export const Container = () => {
       // }
       // console.log("HAS END SECTION", { userAnswersWithId });
       const pendingFirstQuestions = pendingQuestions.find((element) => element.idQuestion === 'Q1');
+      console.log({ pendingFirstQuestions });
+
       const index = pendingQuestions.find((element) => element.idQuestion === 'Q1');
       pendingQuestions.splice(index, 1);
       if (pendingFirstQuestions) {
         return setcurrentId(pendingFirstQuestions.idNextQuestion)
       } else {
         if (!currentQuestion.lastForm) {
-          console.log(findQuestions(answers));
+          // console.log(findQuestions(answers));
           end = findQuestions(answers);
           if (end === 'true') {
             return setLastQuestion(true);
           }
           setCurrentQuestion(end[0].Q);
           setCurrentOptions(end[0].O);
-          console.log({ currentOptions });
-          console.log("estoy en primera vez");
+          // console.log({ currentOptions });
+          // console.log("estoy en primera vez");
           end.shift();
-          console.log("END POST SHIFT", { end });
+          // console.log("END POST SHIFT", { end });
           return;
         }
 
         if (end.length > 0) {
           const firstItem = end.shift();
-          console.log({ firstItem });
-          console.log('estoy en length + 1');
+          // console.log({ firstItem });
+          // console.log('estoy en length + 1');
           setCurrentQuestion(firstItem.Q);
           setCurrentOptions(firstItem.O);
-          console.log("END 222", { end });
-          console.log("CURRENT QUESTION: ", { currentQuestion });
+          // console.log("END 222", { end });
+          // console.log("CURRENT QUESTION: ", { currentQuestion });
           return;
         }
 
@@ -350,7 +363,7 @@ export const Container = () => {
     setDisplayFirst(false);
   }
 
-  console.log({ hasImage });
+  // console.log({ hasImage });
 
   return (
     <div className="bg-amber-300 min-h-screen pb-12">
@@ -415,19 +428,7 @@ export const Container = () => {
                             option.write
                               ?
                               option.text === 'Quisiera ir a' ?
-                              <div className="absolute">
-                              <Label htmlFor={option.id} className="pr-2 pb-2"> {option.text} </Label>
-                              <Input
-                                className="border border-black rounded-none"
-                                type="text"
-                                onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)}
-                                name={currentQuestion.text}
-                                value={inputTextFormatted.text}
-                              />
-                            </div>
-                              :
-                              (option.text === 'Otro' || option.text === 'Otra' || option.text === 'No, otro' || option.text === 'No tengo, me gustaría tener:' || option.text === 'Sobre otra' || option.text === '') && (
-                                <div className="flex items-center">
+                                <div className="absolute">
                                   <Label htmlFor={option.id} className="pr-2 pb-2"> {option.text} </Label>
                                   <Input
                                     className="border border-black rounded-none"
@@ -437,6 +438,18 @@ export const Container = () => {
                                     value={inputTextFormatted.text}
                                   />
                                 </div>
+                                :
+                                (option.text === 'Otro' || option.text === 'Otra' || option.text === 'No, otro' || option.text === 'No tengo, me gustaría tener:' || option.text === 'Sobre otra' || option.text === '' || option.text === 'Hay una marca que me encanta:') && (
+                                  <div className="flex items-center">
+                                    <Label htmlFor={option.id} className="pr-2 pb-2"> {option.text} </Label>
+                                    <Input
+                                      className="border border-black rounded-none"
+                                      type="text"
+                                      onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)}
+                                      name={currentQuestion.text}
+                                      value={inputTextFormatted.text}
+                                    />
+                                  </div>
                                 )
                               :
                               option.multipleChoice === false
@@ -445,7 +458,7 @@ export const Container = () => {
                                 <input type="checkbox" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion?.text} />
                           }
                           <Label htmlFor={option.id} className="pr-2"> {
-                            (option.text !== 'Otro' && option.text !== 'Otra' && option.text !== 'No, otro' && option.text !== 'No tengo, me gustaría tener:' && option.text !== 'Sobre otra' && option.text !== '' && option.text !== 'Quisiera ir a') && option.text} </Label>
+                            (option.text !== 'Otro' && option.text !== 'Otra' && option.text !== 'No, otro' && option.text !== 'No tengo, me gustaría tener:' && option.text !== 'Sobre otra' && option.text !== '' && option.text !== 'Quisiera ir a' && option.text !== 'Hay una marca que me encanta:') && option.text} </Label>
                         </div>
                       </motion.div>
                     ))
