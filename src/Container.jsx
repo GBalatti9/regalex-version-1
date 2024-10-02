@@ -49,6 +49,8 @@ export const Container = () => {
 
   const [currentQuestion, setCurrentQuestion] = useState([]);
   const [currentOptions, setCurrentOptions] = useState([]);
+  console.log({ currentQuestion, currentOptions });
+  
 
   // const currentQuestion = ( questions ) => {
   //   return questions.find((question) => question.id === currentId);
@@ -58,6 +60,7 @@ export const Container = () => {
   const optionsHaveImage = currentOptions.filter((option) => Object.keys(option).includes('img'));
 
   useEffect(() => {
+    
     const currentQuestionFn = (questions) => {
       const questionsArr = questions.find((question) => question.id === currentId)
       setCurrentQuestion(questionsArr);
@@ -70,7 +73,6 @@ export const Container = () => {
     currentQuestionFn(questions);
     currentOptionsFn(options);
 
-    // console.log({ currentQuestion, currentOptions });
   }, [currentId])
 
   useEffect(() => {
@@ -194,7 +196,7 @@ export const Container = () => {
     // console.log({ hasEndSection, hasEndSubSection });
     if (hasEndSubSection) {
 
-      // Si hasEndSubSection es true, entonces se va a buscar el id del primer elemento en pendingQuestions que haya quedado pendiente para recorrer el bucle interno antes de seguir en el formulario. Se compara el idQuestion de el elemento en pendingQuestion con el idPrevQuestion del primer elemento de las respuestas que recién se seleccionaron. Ese idPrevQuestion hace referencia a la pregunta en donde se ramificó el cuestionario. Entonces, toma esa primera opción pendiente y se pasa a setcurrentId con el idNextQuestion que es la pregunta que le sigue a la opción seleccionada que estaba guardada en pendingQuestions. 
+      // Si hasEndSubSection es true, entonces se va a buscar el id del primer elemento en pendingQuestions que haya quedado pendiente para recorrer el bucle interno antes de seguir en el formulario. Se compara el idQuestion del elemento en pendingQuestion con el idPrevQuestion del primer elemento de las respuestas que recién se seleccionaron. Ese idPrevQuestion hace referencia a la pregunta en donde se ramificó el cuestionario. Entonces, toma esa primera opción pendiente y se pasa a setcurrentId con el idNextQuestion que es la pregunta que le sigue a la opción seleccionada que estaba guardada en pendingQuestions. 
       const hasPendingQuestionsIndex = pendingQuestions.findIndex((element) => element.idQuestion === userAnswersWithId[0].idPrevQuestion);
       // console.log({ hasPendingQuestionsIndex });
       if (hasPendingQuestionsIndex !== -1) {
@@ -203,19 +205,45 @@ export const Container = () => {
       } else {
         // Este if es para controlar el caso en el que un elemento tenga tanto endSubSection como endSection. Si el item tiene endSubSection pero despues de esa pregunta no viene ninguna, por ende va a tener endSection también y la idea es que finalice el questionario, no que vuelva al Q1.
         if (hasEndSection) {
-          const end = findQuestions(answers);
-          setCurrentQuestion(end);
-          // console.log({ currentQuestion });
-          setLastQuestion(true);
+          
+          if (!currentQuestion.lastForm) {
+            console.log(findQuestions(answers));
+            end = findQuestions(answers);
+            if (end === 'true') {
+              return setLastQuestion(true);
+            }
+            setCurrentQuestion(end[0].Q);
+            setCurrentOptions(end[0].O);
+            console.log({ currentOptions });
+            console.log("estoy en primera vez");
+            end.shift();
+            console.log("END POST SHIFT", { end });
+            return;
+          }
+  
+          if (end.length > 0) {
+            const firstItem = end.shift();
+            console.log({ firstItem });
+            console.log('estoy en length + 1');
+            setCurrentQuestion(firstItem.Q);
+            setCurrentOptions(firstItem.O);
+            console.log("END 222", { end });
+            console.log("CURRENT QUESTION: ", { currentQuestion });
+            return;
+          }
+
+          return setLastQuestion(true);
         }
         setcurrentId(userAnswersWithId[0].idNextQuestion);
       }
       return;
     }
-
+    
     // Esto se aplica si es la última pregunta de una categoria. Ej, la ultima pregunta de comer.
-
+    
     if (hasEndSection) {
+      console.log("estoy en el otro if");
+      
       // console.log('endSection perroooo');
       // if (pendingQuestions.length > 0) {
       //   // ACA HAY QUE ENCONTRAR LA OPCION QUE TENGA UN ID DISTINTO A LOS DEMÁS PARA GUITARRA

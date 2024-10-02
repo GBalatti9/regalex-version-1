@@ -850,7 +850,7 @@ export const options = [
     
     // --QUESTION 80--
     { id: '498', idQuestion: 'Q80', text: 'Sí', idNextQuestion: 'Q81', multipleChoice: false },
-    { id: '499', idQuestion: 'Q80', text: 'No', idNextQuestion: 'Q1',  multipleChoice: false, endSubSection: true, idPrevQuestion: 'Q73' },
+    { id: '499', idQuestion: 'Q80', text: 'No', idNextQuestion: 'Q1',  multipleChoice: false, endSubSection: true, endSection: true, idPrevQuestion: 'Q73' },
     
     // --QUESTION 81--
     { id: '500', idQuestion: 'Q81', text: 'Dibujo artístico',  idNextQuestion: 'Q1', idPrevQuestion: 'Q73', endSubSection: true, endSection: true, multipleChoice: false },

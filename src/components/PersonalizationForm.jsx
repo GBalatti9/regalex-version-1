@@ -68,9 +68,7 @@ export const PersonalizationForm = ({ answers }) => {
         if(!personalizationQuestion[index].lastQuestionAllForm) {
             setIndex(index + 1);
         }
-        // if (personalizationQuestion[index].lastQuestion) {
-        //     setLastMessage(true);
-        // }
+
 
         console.log("HANDLE SUBMIT:", personalizationQuestion[index]);
 

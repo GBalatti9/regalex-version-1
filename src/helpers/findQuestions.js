@@ -119,6 +119,8 @@ export const findQuestions = (answers) => {
     }
 
 
+    console.log({ arrToExport });
+    
 
     return arrToExport;
 }
