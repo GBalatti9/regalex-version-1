@@ -99,11 +99,11 @@ export const PersonalizationForm = ({ answers }) => {
                     <div>
                         <h3 className="text-center pt-2 pb-3"> {personalizationQuestion[index]?.text} </h3>
                         <form onSubmit={(e) => handleSubmit(e, personalizationOptions[index])} >
-                            <div className="flex w-10/12 justify-around mx-auto py-5">
+                            <div className="flex justify-around mx-auto py-5">
                             {[personalizationOptions[10], personalizationOptions[11]].map((option) => (
                                 <div key={option.id}>
                                     <div className='mx-auto'>
-                                        {option.img && <div className="h-80 w-44 bg-cover bg-center" style={{ backgroundImage: `url(${option.img})` }}> </div>}
+                                        {option.img && <div className="h-[450px] w-[250px] bg-cover bg-center" style={{ backgroundImage: `url(${option.img})` }}> </div>}
                                     </div>
                                     {
                                         option.multipleChoice === false

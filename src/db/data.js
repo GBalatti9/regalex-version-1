@@ -112,7 +112,7 @@ export const questions = [
 
     
     // BELLEZA Y CUIDADO PERSONAL
-    { id: 'Q94',  type: 'question', text: '¿Cuál de los siguientes aspectos de belleza y cuidado personal te interesa más en este momento?',  category: 'Bellza y cuidado' },
+    { id: 'Q94',  type: 'question', text: '¿Cuál de los siguientes aspectos de belleza y cuidado personal te interesa más en este momento?',  category: 'Belleza y cuidado' },
     { id: 'Q95',  type: 'question', text: '¿Cuál es tu estilo de maquillaje preferido?',                                                      category: 'Maquillaje' },
     { id: 'Q96',  type: 'question', text: '¿Cuál es tu producto preferido?',                                                                  category: 'Maquillaje' },
     { id: 'Q97',  type: 'question', text: '¿Tenés alguna preferencia en cuanto a marcas de maquillaje?',                                      category: 'Maquillaje' },
@@ -199,7 +199,7 @@ export const options = [
     // --QUESTION 6--
     { id: '30', idQuestion: 'Q6', text: 'Buffet libre para dulceros',           idNextQuestion: 'Q8', img: './buffet-libre-para-dulceros.jpg' },
     { id: '31', idQuestion: 'Q6', text: 'Bandejas personalizables',             idNextQuestion: 'Q8', img: './bandejas-personalizables.jpg' },
-    { id: '32', idQuestion: 'Q6', text: 'Gift Card Rapanui',                    idNextQuestion: 'Q8', img: './giftcard-helado.jpg' },
+    { id: '32', idQuestion: 'Q6', text: 'Gift Card Luccianos',                    idNextQuestion: 'Q8', img: './giftcard-helado.jpg' },
     { id: '33', idQuestion: 'Q6', text: 'Snack box dulce',                      idNextQuestion: 'Q8', img: './snack-box-dulce.jpg' },
     // { id: '34', idQuestion: 'Q6', text: 'Box personalizado con fotos y comida', idNextQuestion: 'Q8', img: './box-personalizado-fotos-chocolates.jpg' },
     { id: '34', idQuestion: 'Q6', text: 'Box con fotos y comida', idNextQuestion: 'Q8', img: './box-personalizado-fotos-chocolates.jpg' },
@@ -565,24 +565,24 @@ export const options = [
     { id: '270', idQuestion: 'Q53', text: 'Otro',                   idNextQuestion: 'Q54', write: true },
     
     // --QUESTION 54--
-    { id: '271', idQuestion: 'Q54', text: 'Miranda',                         idNextQuestion: 'Q1', endSection: true },
-    { id: '272', idQuestion: 'Q54', text: 'Emilia Mernes',                   idNextQuestion: 'Q1', endSection: true },
-    { id: '273', idQuestion: 'Q54', text: 'David Lebón',                     idNextQuestion: 'Q1', endSection: true },
-    { id: '274', idQuestion: 'Q54', text: 'Luciano Pereyra',                 idNextQuestion: 'Q1', endSection: true },
-    { id: '275', idQuestion: 'Q54', text: 'Dread Mar I',                     idNextQuestion: 'Q1', endSection: true },
-    { id: '276', idQuestion: 'Q54', text: 'La Konga',                        idNextQuestion: 'Q1', endSection: true },
-    { id: '277', idQuestion: 'Q54', text: 'Luck Ra',                         idNextQuestion: 'Q1', endSection: true },
-    { id: '278', idQuestion: 'Q54', text: 'La Beriso',                       idNextQuestion: 'Q1', endSection: true },
-    { id: '279', idQuestion: 'Q54', text: 'La Vela Puerca',                  idNextQuestion: 'Q1', endSection: true },
-    { id: '280', idQuestion: 'Q54', text: 'Babásonicos',                     idNextQuestion: 'Q1', endSection: true },
-    { id: '281', idQuestion: 'Q54', text: 'El Mató a un Policía Motorizado', idNextQuestion: 'Q1', endSection: true },
-    { id: '282', idQuestion: 'Q54', text: 'Ciro y Los Persas',               idNextQuestion: 'Q1', endSection: true },
-    { id: '283', idQuestion: 'Q54', text: 'El Kuelgue',                      idNextQuestion: 'Q1', endSection: true },
-    { id: '284', idQuestion: 'Q54', text: 'El Cuarteto de Nos',              idNextQuestion: 'Q1', endSection: true },
-    { id: '285', idQuestion: 'Q54', text: 'Airbag',                          idNextQuestion: 'Q1', endSection: true },
-    { id: '286', idQuestion: 'Q54', text: 'Palito Ortega',                   idNextQuestion: 'Q1', endSection: true },
-    { id: '287', idQuestion: 'Q54', text: 'Fabiana Cantilo',                 idNextQuestion: 'Q1', endSection: true },
-    { id: '288', idQuestion: 'Q54', text: 'Rubén Rada',                      idNextQuestion: 'Q1', endSection: true },
+    { id: '271', idQuestion: 'Q54', text: 'Fito Paéz',                         idNextQuestion: 'Q1', endSection: true },
+    { id: '272', idQuestion: 'Q54', text: 'Diego Torres',                   idNextQuestion: 'Q1', endSection: true },
+    { id: '273', idQuestion: 'Q54', text: 'David Bisbal',                     idNextQuestion: 'Q1', endSection: true },
+    { id: '274', idQuestion: 'Q54', text: 'Calamaro',                 idNextQuestion: 'Q1', endSection: true },
+    { id: '275', idQuestion: 'Q54', text: 'No te va a gustar',                     idNextQuestion: 'Q1', endSection: true },
+    { id: '276', idQuestion: 'Q54', text: 'Twenty One Pilots',                        idNextQuestion: 'Q1', endSection: true },
+    { id: '277', idQuestion: 'Q54', text: 'Sabina',                         idNextQuestion: 'Q1', endSection: true },
+    { id: '278', idQuestion: 'Q54', text: 'Luis Fonso',                       idNextQuestion: 'Q1', endSection: true },
+    { id: '279', idQuestion: 'Q54', text: 'El Kuelgue',                  idNextQuestion: 'Q1', endSection: true },
+    { id: '280', idQuestion: 'Q54', text: 'Cuarteto de Nos',                     idNextQuestion: 'Q1', endSection: true },
+    { id: '281', idQuestion: 'Q54', text: 'Luck Ra', idNextQuestion: 'Q1', endSection: true },
+    { id: '282', idQuestion: 'Q54', text: 'Divididos',               idNextQuestion: 'Q1', endSection: true },
+    { id: '283', idQuestion: 'Q54', text: 'Sting',                      idNextQuestion: 'Q1', endSection: true },
+    { id: '284', idQuestion: 'Q54', text: 'Reik',              idNextQuestion: 'Q1', endSection: true },
+    { id: '285', idQuestion: 'Q54', text: 'Patricia Sosa',                          idNextQuestion: 'Q1', endSection: true },
+    { id: '286', idQuestion: 'Q54', text: 'Estelares',                   idNextQuestion: 'Q1', endSection: true },
+    { id: '287', idQuestion: 'Q54', text: 'Los Pameras',                 idNextQuestion: 'Q1', endSection: true },
+    // { id: '288', idQuestion: 'Q54', text: 'Rubén Rada',                      idNextQuestion: 'Q1', endSection: true },
     { id: '289', idQuestion: 'Q54', text: 'No, ninguno',                     idNextQuestion: 'Q1', endSection: true },
     { id: '290', idQuestion: 'Q54', text: 'Otro',                            idNextQuestion: 'Q1', endSection: true, write: true },
     
@@ -788,7 +788,7 @@ export const options = [
     { id: '448', idQuestion: 'Q73', text: 'Museos',          idNextQuestion: 'Q90'  },
     { id: '449', idQuestion: 'Q73', text: 'Exposiciones',    idNextQuestion: 'Q91'  },
     { id: '450', idQuestion: 'Q73', text: 'Cine',            idNextQuestion: 'Q92'  },
-    { id: '451', idQuestion: 'Q73', text: 'Grafitti',        idNextQuestion: 'Q1'  },
+    { id: '451', idQuestion: 'Q73', text: 'Grafitti',        idNextQuestion: 'Q1', endSection: true },
 
     // --QUESTION 74--
     { id: '452', idQuestion: 'Q74', text: 'En color',          idNextQuestion: 'Q79', multipleChoice: false },
@@ -943,8 +943,8 @@ export const options = [
     { id: '565', idQuestion: 'Q92', text: 'Otro',            idNextQuestion: 'Q93', multipleChoice: false, write: true },
     
     // --QUESTION 93--
-    { id: '566', idQuestion: 'Q93', text: 'Sí', idNextQuestion: 'Q1', endSubSection: true, idPrevQuestion: 'Q73', write: true, endSection: true },
-    { id: '567', idQuestion: 'Q93', text: 'No', idNextQuestion: 'Q1', endSubSection: true, idPrevQuestion: 'Q73', endSection: true },
+    { id: '566', idQuestion: 'Q93', text: 'Sí', idNextQuestion: 'Q1', endSubSection: true, idPrevQuestion: 'Q73', endSection: true, multipleChoice: false },
+    { id: '567', idQuestion: 'Q93', text: 'No', idNextQuestion: 'Q1', endSubSection: true, idPrevQuestion: 'Q73', endSection: true, multipleChoice: false },
     
     // --QUESTION 94--
     { id: '568', idQuestion: 'Q94', text: 'Maquillaje',                idNextQuestion: 'Q95',  multipleChoice: false },

@@ -420,18 +420,18 @@ export const Container = () => {
                         className="pt-2 w-10/12 mx-auto"
                       >
                         {option.img &&
-                          <div className="flex justify-center h-24 w-12/12 bg-center bg-cover">
-                            <img src={option.img} className="w-full" />
+                          <div className="flex justify-center h-24 w-12/12 bg-center">
+                            <img src={option.img} className="w-full bg-cover h-full" />
                           </div>}
                         <div className={`mx-auto ${hasImage ? 'text-sm' : ''}`}>
                           {
                             option.write
                               ?
                               option.text === 'Quisiera ir a' ?
-                                <div className="absolute">
-                                  <Label htmlFor={option.id} className="pr-2 pb-2"> {option.text} </Label>
+                                <div className="flex items-center absolute">
+                                  <Label htmlFor={option.id} className="w-[120px]"> {option.text} </Label>
                                   <Input
-                                    className="border border-black rounded-none"
+                                    className="border rounded-md"
                                     type="text"
                                     onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)}
                                     name={currentQuestion.text}
@@ -439,11 +439,22 @@ export const Container = () => {
                                   />
                                 </div>
                                 :
-                                (option.text === 'Otro' || option.text === 'Otra' || option.text === 'No, otro' || option.text === 'No tengo, me gustaría tener:' || option.text === 'Sobre otra' || option.text === '' || option.text === 'Hay una marca que me encanta:') && (
+                                option.text === "Otro" ? 
+                                <div className="flex items-center justify-center absolute">
+                                <Label htmlFor={option.id} className="pr-2 pb-2"> {option.text} </Label>
+                                <Input
+                                  className="border rounded-md"
+                                  type="text"
+                                  onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)}
+                                  name={currentQuestion.text}
+                                  value={inputTextFormatted.text}
+                                />
+                              </div> :
+                                (option.text === 'Otra' || option.text === 'No, otro' || option.text === 'No tengo, me gustaría tener:' || option.text === 'Sobre otra' || option.text === '' || option.text === 'Hay una marca que me encanta:') && (
                                   <div className="flex items-center">
                                     <Label htmlFor={option.id} className="pr-2 pb-2"> {option.text} </Label>
                                     <Input
-                                      className="border border-black rounded-none"
+                                      className="border rounded-md"
                                       type="text"
                                       onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)}
                                       name={currentQuestion.text}
