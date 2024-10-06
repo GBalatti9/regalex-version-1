@@ -788,7 +788,7 @@ export const options = [
     { id: '448', idQuestion: 'Q73', text: 'Museos',          idNextQuestion: 'Q90'  },
     { id: '449', idQuestion: 'Q73', text: 'Exposiciones',    idNextQuestion: 'Q91'  },
     { id: '450', idQuestion: 'Q73', text: 'Cine',            idNextQuestion: 'Q92'  },
-    { id: '451', idQuestion: 'Q73', text: 'Grafitti',        idNextQuestion: 'Q1', endSection: true },
+    // { id: '451', idQuestion: 'Q73', text: 'Grafitti',        idNextQuestion: 'Q1', idPrevQuestion: "Q73", endSubSection: true, endSection: true },
 
     // --QUESTION 74--
     { id: '452', idQuestion: 'Q74', text: 'En color',          idNextQuestion: 'Q79', multipleChoice: false },
@@ -1275,6 +1275,6 @@ export const options = [
     { id: '821', idQuestion: 'Q130', text: 'Otra',       idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
 
     // --QUESTION 131--
-    { id: '822', idQuestion: 'Q131', text: '', idNextQuestion: 'Q1', multipleChoice: false, write: true, endSection: true },
+    { id: '822', idQuestion: 'Q131', text: '', idNextQuestion: 'Q1', multipleChoice: false, write: true, idPrevQuestion: 'Q73', endSubSection: true, endSection: true },
 
 ];
