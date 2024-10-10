@@ -85,7 +85,7 @@ export const PersonalizationForm = ({ answers }) => {
                     body: JSON.stringify({ data: allAnswers }), // Asegúrate de enviar `data` correctamente
                 })
                 console.log({ response });
-                setMessage('Gracias por contestar')
+                setMessage('Gracias por confiarnos tu regalo !Estamos listos para que te regalen algo que te guste!')
             } catch (error) {
                 console.log({ error });
             }
