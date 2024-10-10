@@ -205,6 +205,7 @@ export const options = [
     { id: '34', idQuestion: 'Q6', text: 'Box con fotos y comida', idNextQuestion: 'Q8', img: './box-personalizado-fotos-chocolates.jpg' },
     { id: '35', idQuestion: 'Q6', text: 'Todas',                                idNextQuestion: 'Q8', img: './quiero-todas.jpg' },
     { id: '36', idQuestion: 'Q6', text: 'Ninguna',                              idNextQuestion: 'Q8', img: './comer-ninguno-lugares.jpg' },
+    { id: '1000', idQuestion: 'Q6', text: 'Alfajores',               idNextQuestion: 'Q8', img: './alfajores-havannets.jpg' },
     { id: '37', idQuestion: 'Q6', text: 'Otra',                                 idNextQuestion: 'Q8', write: true },
 
     // --QUESTION 7--
@@ -721,7 +722,7 @@ export const options = [
     { id: '398', idQuestion: 'Q65', text: 'Ficus',            idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './interior-ficus.jpg' },
     { id: '399', idQuestion: 'Q65', text: 'C. de Adam', idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './interior-costilla-de-adam.jpg' },
     { id: '400', idQuestion: 'Q65', text: 'Cactus',           idNextQuestion: 'Q61', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './suculentas-cactus-chin.jpg' },
-    { id: '401', idQuestion: 'Q65', text: 'Aloe Vera',        idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './interior-costilla-de-adam.jpg' },
+    { id: '401', idQuestion: 'Q65', text: 'Aloe Vera',        idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', img: './interior-aloe-vera.jpg' },
     { id: '402', idQuestion: 'Q65', text: 'Otro',             idNextQuestion: 'Q70', subSection: true, endSubSection: true, idPrevQuestion: 'Q60', write: true },
 
     // --QUESTION 66--

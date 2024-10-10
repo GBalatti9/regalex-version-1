@@ -166,7 +166,7 @@ export const PersonalizationForm = ({ answers }) => {
                                                     <div>
                                                         {
                                                             option.write
-                                                                ? <Input type="text" className="border rounded-none border-black grid-cols-3" onChange={(e) => handleInputChange(e, option.endSection)} name={personalizationQuestion[index]?.text} />
+                                                                ? <Input type="text" className="border rounded grid-cols-3" onChange={(e) => handleInputChange(e, option.endSection)} name={personalizationQuestion[index]?.text} />
                                                                 :
                                                                 option.multipleChoice === false
                                                                     ? <input type="radio" id={option.id} value={(option.text)} onChange={(e) => handleInputChange(e, option.text)} name={personalizationQuestion[index]?.text} />
