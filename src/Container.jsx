@@ -420,7 +420,7 @@ export const Container = () => {
                         className="pt-2 w-10/12 mx-auto"
                       >
                         {option.img &&
-                          <div className="flex justify-center h-24 w-12/12 bg-center">
+                          <div className="flex justify-center h-24 w-12/12 bg-center rounded-md overflow-hidden">
                             <img src={option.img} className="w-full bg-cover h-full" />
                           </div>}
                         <div className={`mx-auto ${hasImage ? 'text-sm' : ''}`}>
