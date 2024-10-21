@@ -369,7 +369,7 @@ export const Container = () => {
     <div className="bg-amber-300 min-h-screen pb-12">
       <h1 className="font-bold text-center text-2xl py-4">Regalex</h1>
       {/* <Card className={"flex sm:w-4/12 mx-auto p-4 bg-white shadow-2xl"}> */}
-      <Card className={`${hasImage || currentOptions.length > 10 ? 'sm:w-7/12' : 'sm:w-4/12'} mx-auto max-w-[600px] p-4 shadow-2xl `}>
+      <Card className={`${hasImage || currentOptions.length > 10 ? 'sm:w-7/12' : 'sm:w-4/12'} mx-auto max-w-[600px] p-4 shadow-2xl relative`}>
         {
           displayFirst &&
           <div className="w-full text-center">
@@ -405,7 +405,7 @@ export const Container = () => {
                 <div
                   style={{
                     display: `${hasImage || currentOptions.length > 10 ? 'grid' : ''}`,
-                    gridTemplateColumns: `${(hasImage && currentQuestion?.category?.toUpperCase() === 'ROPA' || currentQuestion?.category?.toUpperCase() === 'ACCESORIOS') ? '1fr 1fr' : '1fr 1fr 1fr'}`,
+                    gridTemplateColumns: `${(hasImage && currentQuestion?.category?.toUpperCase() === 'ROPA' || currentQuestion?.category?.toUpperCase() === 'ACCESORIOS') ? '1fr 1fr' : hasImage && currentOptions.length > 10 ? '1fr 1fr 1fr' : '1fr 1fr 1fr'}`,
                     // hasImage && currentOptions.length > 10) && '1fr 1fr 1fr'
                     // gap: `${hasImage && '10px'}`, 
                     alignItems: 'center',
@@ -420,17 +420,27 @@ export const Container = () => {
                         transition={{ duration: 1 }}
                         className="pt-2 w-10/12 mx-auto"
                       >
-                        {option.img &&
-                          currentQuestion?.category?.toUpperCase() === 'ROPA' || currentQuestion?.category?.toUpperCase() === 'ACCESORIOS'
-                          ?
-                          <div className="flex justify-center h-44 w-12/12 bg-center rounded-md overflow-hidden border">
-                            <img src={option.img} className="w-full bg-cover h-full object-contain" />
-                          </div>
-                          :
+                        {
+                          (option.img && currentQuestion.category &&
+                            (currentQuestion.category.toUpperCase() === 'ROPA' ||
+                              currentQuestion.category.toUpperCase() === 'ACCESORIOS'))
+                            ?
+                            <div className="flex justify-center h-44 w-12/12 bg-center rounded-md overflow-hidden border">
+                              <img src={option.img} alt="" className="w-full bg-cover h-full object-contain" />
+                            </div>
+                            :
+                            option.img ?
+                            <div className="flex justify-center h-28 w-12/12 bg-center rounded-md overflow-hidden">
+                              <img src={option.img} alt="" className="w-full bg-cover h-full object-cover" />
+                            </div>
+                            : ''
+                        }
+                        {/* {
+                          option.img &&
                           <div className="flex justify-center h-28 w-12/12 bg-center rounded-md overflow-hidden">
                             <img src={option.img} className="w-full bg-cover h-full object-cover" />
                           </div>
-                        }
+                        } */}
                         <div className={`mx-auto ${hasImage ? 'text-sm' : ''}`}>
                           {
                             option.write
