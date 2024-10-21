@@ -398,14 +398,15 @@ export const Container = () => {
             ? <PersonalizationForm answers={answers} />
             :
             !displayFirst &&
-            <div className={`${hasImage ? 'w-10/12' : ''} mx-auto`}>
+            <div className={`${hasImage ? 'w-12/12' : ''} mx-auto`}>
               <h4 className={`font-bold px-3 ${hasImage || currentOptions.length > 10 ? 'px-3' : 'w-11/12'}  mx-auto`}> {currentQuestion?.category?.toUpperCase()} </h4>
               <h3 className="text-center pt-2 pb-3"> {currentQuestion?.text} </h3>
               <form onSubmit={handleSubmit}>
                 <div
                   style={{
                     display: `${hasImage || currentOptions.length > 10 ? 'grid' : ''}`,
-                    gridTemplateColumns: `${(hasImage || currentOptions.length > 10) && '1fr 1fr 1fr'}`,
+                    gridTemplateColumns: `${(hasImage && currentQuestion?.category?.toUpperCase() === 'ROPA' || currentQuestion?.category?.toUpperCase() === 'ACCESORIOS') ? '1fr 1fr' : '1fr 1fr 1fr'}`,
+                    // hasImage && currentOptions.length > 10) && '1fr 1fr 1fr'
                     // gap: `${hasImage && '10px'}`, 
                     alignItems: 'center',
                   }}
@@ -420,9 +421,16 @@ export const Container = () => {
                         className="pt-2 w-10/12 mx-auto"
                       >
                         {option.img &&
-                          <div className="flex justify-center h-24 w-12/12 bg-center rounded-md overflow-hidden">
-                            <img src={option.img} className="w-full bg-cover h-full" />
-                          </div>}
+                          currentQuestion?.category?.toUpperCase() === 'ROPA' || currentQuestion?.category?.toUpperCase() === 'ACCESORIOS'
+                          ?
+                          <div className="flex justify-center h-44 w-12/12 bg-center rounded-md overflow-hidden border">
+                            <img src={option.img} className="w-full bg-cover h-full object-contain" />
+                          </div>
+                          :
+                          <div className="flex justify-center h-28 w-12/12 bg-center rounded-md overflow-hidden">
+                            <img src={option.img} className="w-full bg-cover h-full object-cover" />
+                          </div>
+                        }
                         <div className={`mx-auto ${hasImage ? 'text-sm' : ''}`}>
                           {
                             option.write
@@ -439,19 +447,8 @@ export const Container = () => {
                                   />
                                 </div>
                                 :
-                                option.text === "Otro" ? 
-                                <div className="flex items-center justify-center absolute">
-                                <Label htmlFor={option.id} className="pr-2 pb-2"> {option.text} </Label>
-                                <Input
-                                  className="border rounded-md"
-                                  type="text"
-                                  onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)}
-                                  name={currentQuestion.text}
-                                  value={inputTextFormatted.text}
-                                />
-                              </div> :
-                                (option.text === 'Otra' || option.text === 'No, otro' || option.text === 'No tengo, me gustaría tener:' || option.text === 'Sobre otra' || option.text === '' || option.text === 'Hay una marca que me encanta:') && (
-                                  <div className="flex items-center">
+                                option.text === "Otro" ?
+                                  <div className="flex items-center justify-center absolute">
                                     <Label htmlFor={option.id} className="pr-2 pb-2"> {option.text} </Label>
                                     <Input
                                       className="border rounded-md"
@@ -460,8 +457,19 @@ export const Container = () => {
                                       name={currentQuestion.text}
                                       value={inputTextFormatted.text}
                                     />
-                                  </div>
-                                )
+                                  </div> :
+                                  (option.text === 'Otra' || option.text === 'No, otro' || option.text === 'No tengo, me gustaría tener:' || option.text === 'Sobre otra' || option.text === '' || option.text === 'Hay una marca que me encanta:') && (
+                                    <div className="flex items-center">
+                                      <Label htmlFor={option.id} className="pr-2 pb-2"> {option.text} </Label>
+                                      <Input
+                                        className="border rounded-md"
+                                        type="text"
+                                        onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice, option.endSection, option.endSubSection, option.idPrevQuestion)}
+                                        name={currentQuestion.text}
+                                        value={inputTextFormatted.text}
+                                      />
+                                    </div>
+                                  )
                               :
                               option.multipleChoice === false
                                 ? <input type="radio" id={option.id} value={JSON.stringify(option)} onChange={(e) => handleInputChange(e, option.idNextQuestion, option.multipleChoice)} name={currentQuestion?.text} />

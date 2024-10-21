@@ -99,7 +99,7 @@ export const PersonalizationForm = ({ answers }) => {
                     <div>
                         <h3 className="text-center pt-2 pb-3"> {personalizationQuestion[index]?.text} </h3>
                         <form onSubmit={(e) => handleSubmit(e, personalizationOptions[index])} >
-                            <div className="flex justify-around mx-auto py-5">
+                            <div className="flex flex-col sm:flex-row justify-around mx-auto py-5 items-center">
                             {[personalizationOptions[10], personalizationOptions[11]].map((option) => (
                                 <div key={option.id}>
                                     <div className='mx-auto'>
