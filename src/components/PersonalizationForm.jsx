@@ -3,6 +3,8 @@ import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
+import emailjs from 'emailjs-com';
+
 
 const personalizationQuestion = [
     { id: 'Q1000', idQuestion: 'Q1000', text: '¿Te gusta algo de esto?', category: 'Preguntas random', lastForm: true },
@@ -52,6 +54,7 @@ export const PersonalizationForm = ({ answers }) => {
         }))
         
     }
+    // service_vta4w9c
 
     const handleSubmit = async (e, options) => {
         e.preventDefault();
@@ -59,7 +62,18 @@ export const PersonalizationForm = ({ answers }) => {
         if (options === "Q3") {
             const isNo = answersPersonalizationForm["¿Queres que Regalex le envié estas recomendación a algún familiar o amigo?"];
             if (isNo === 'No') {
-                setMessage('Gracias por contestar')
+                emailjs.send(
+                    'service_4de7s4s', 
+                    'template_jfawhus', 
+                    {
+                        to_email: 'regalexbeta@gmail.com', 
+                        message: JSON.stringify(allAnswers, null, 2) // Aquí envías el contenido del objeto
+                    },
+                    '24L6pzMzinjY7EPY9' 
+                ).then(response => {
+                    console.log('Correo enviado exitosamente', response.status, response.text);
+                    setMessage('Gracias por confiarnos tu regalo !Estamos listos para que te regalen algo que te guste!')
+                }).catch(err => console.error('Error al enviar el correo:', err));
             }
             
         }
@@ -69,13 +83,26 @@ export const PersonalizationForm = ({ answers }) => {
             setIndex(index + 1);
         }
 
-
         console.log("HANDLE SUBMIT:", personalizationQuestion[index]);
 
         const allAnswers = { ...answers.data, ...answersPersonalizationForm }
 
 
         if (personalizationQuestion[index].lastQuestionAllForm) {
+            
+            emailjs.send(
+                'service_4de7s4s', 
+                'template_jfawhus', 
+                {
+                    to_email: 'regalexbeta@gmail.com', 
+                    message: JSON.stringify(allAnswers, null, 2) // Aquí envías el contenido del objeto
+                },
+                '24L6pzMzinjY7EPY9' 
+            ).then(response => {
+                console.log('Correo enviado exitosamente', response.status, response.text);
+                setMessage('Gracias por confiarnos tu regalo !Estamos listos para que te regalen algo que te guste!')
+            }).catch(err => console.error('Error al enviar el correo:', err));
+            return;
             try {
                 const response = await fetch("https://sheetdb.io/api/v1/55c8yhgkm2d5q", {
                     method: "POST",
@@ -188,8 +215,8 @@ export const PersonalizationForm = ({ answers }) => {
                 :
                 <div>
 
-                    <p>Gracias por contestar</p>
-                    <Button onClick={() => location.reload()}>Volver a empezar</Button>
+                    <p>Gracias por confiarnos tu regalo ¡Estamos listos para que te regalen algo que te guste!</p>
+                    {/* <Button onClick={() => location.reload()}>Volver a empezar</Button> */}
                 </div>
             }
         </>

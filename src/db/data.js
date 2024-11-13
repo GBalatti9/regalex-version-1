@@ -573,7 +573,7 @@ export const options = [
     { id: '275', idQuestion: 'Q54', text: 'No te va a gustar',                     idNextQuestion: 'Q1', endSection: true },
     { id: '276', idQuestion: 'Q54', text: 'Twenty One Pilots',                        idNextQuestion: 'Q1', endSection: true },
     { id: '277', idQuestion: 'Q54', text: 'Sabina',                         idNextQuestion: 'Q1', endSection: true },
-    { id: '278', idQuestion: 'Q54', text: 'Luis Fonso',                       idNextQuestion: 'Q1', endSection: true },
+    { id: '278', idQuestion: 'Q54', text: 'Luis Fonsi',                       idNextQuestion: 'Q1', endSection: true },
     { id: '279', idQuestion: 'Q54', text: 'El Kuelgue',                  idNextQuestion: 'Q1', endSection: true },
     { id: '280', idQuestion: 'Q54', text: 'Cuarteto de Nos',                     idNextQuestion: 'Q1', endSection: true },
     { id: '281', idQuestion: 'Q54', text: 'Luck Ra', idNextQuestion: 'Q1', endSection: true },
