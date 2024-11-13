@@ -59,6 +59,7 @@ export const PersonalizationForm = ({ answers }) => {
     const handleSubmit = async (e, options) => {
         e.preventDefault();
         console.log("ACA!!", { answersPersonalizationForm });
+        const allAnswers = { ...answers.data, ...answersPersonalizationForm }
         if (options === "Q3") {
             const isNo = answersPersonalizationForm["¿Queres que Regalex le envié estas recomendación a algún familiar o amigo?"];
             if (isNo === 'No') {
@@ -85,7 +86,7 @@ export const PersonalizationForm = ({ answers }) => {
 
         console.log("HANDLE SUBMIT:", personalizationQuestion[index]);
 
-        const allAnswers = { ...answers.data, ...answersPersonalizationForm }
+        
 
 
         if (personalizationQuestion[index].lastQuestionAllForm) {
