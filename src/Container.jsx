@@ -13,6 +13,7 @@ import { Calendar } from "./components/ui/calendar";
 import { Card } from "./components/ui/card";
 import { Checkbox } from "@radix-ui/react-checkbox";
 import { PersonalizationForm } from "./components/PersonalizationForm";
+// import TestGoogleSheets from "./helpers/sheetsTry";
 
 // USERANSWERS es simplemente para almacenar TODAS las respuestas del usuario.
 let userAnswers = [];
@@ -30,6 +31,7 @@ let inputTextFormatted = {
 };
 export const Container = () => {
 
+
   // ID ACTUAL
   const [currentId, setcurrentId] = useState('Q1');
   // NEXT QUESTION ID
@@ -37,28 +39,28 @@ export const Container = () => {
   // TODAS LAS RESPUESTAS DEL USUARIO
   const [answers, setAnswers] = useState([]);
   console.log({ answers });
-
+  
   const [lastQuestion, setLastQuestion] = useState(false);
-
+  
   const [hasImage, setHasImage] = useState(false);
-
+  
   const [disabled, setDisabled] = useState(true);
   const [firstDisabled, setFirstDisabled] = useState(true);
-
+  
   const [displayFirst, setDisplayFirst] = useState(true);
-
+  
   const [currentQuestion, setCurrentQuestion] = useState([]);
   const [currentOptions, setCurrentOptions] = useState([]);
   // console.log({ currentQuestion, currentOptions });
-
-
+  
+  
   // const currentQuestion = ( questions ) => {
-  //   return questions.find((question) => question.id === currentId);
-  // }
-  // const currentQuestion = questions.find((question) => question.id === currentId);
-  // const currentOptions = options.filter((option) => option.idQuestion === currentId);
-  const optionsHaveImage = currentOptions.filter((option) => Object.keys(option).includes('img'));
-
+    //   return questions.find((question) => question.id === currentId);
+    // }
+    // const currentQuestion = questions.find((question) => question.id === currentId);
+    // const currentOptions = options.filter((option) => option.idQuestion === currentId);
+    const optionsHaveImage = currentOptions.filter((option) => Object.keys(option).includes('img'));
+    
   useEffect(() => {
 
     const currentQuestionFn = (questions) => {
@@ -88,7 +90,7 @@ export const Container = () => {
   useEffect(() => {
     userAnswers = [];
     userAnswersWithId = [];
-  }, [currentId])
+  }, [currentId, currentQuestion]);
 
   const handleInputChange = ({ target }, nextQuestionId, multipleChoice, endSection, endSubSection, idPrevQuestion) => {
     const { name, value, checked, type } = target;
@@ -107,13 +109,17 @@ export const Container = () => {
       inputValue = value;
       const key = name.split('[').pop().replace(']', ''); // Extrae la clave del input
 
-      setAnswers((prevAnswers) => ({
-        ...prevAnswers,
-        data: {
-          ...prevAnswers.data,
-          [key]: value
+      setAnswers((prevAnswers) => {
+        console.log({ prevAnswers });
+
+        return {
+          ...prevAnswers,
+          data: {
+            ...prevAnswers.data,
+            [key]: value
+          }
         }
-      }))
+      })
       // console.log({ answers });
       return;
     }
@@ -166,13 +172,20 @@ export const Container = () => {
     // }))
 
     const key = name.split('[').pop().replace(']', ''); // Extrae la clave del input
-    setAnswers((prevAnswers) => ({
-      ...prevAnswers,
-      data: {
-        ...prevAnswers.data,
-        [key]: userAnswers
+    setAnswers((prevAnswers) => {
+      console.log({ key });
+      console.log({ prevAnswers });
+      console.log({ userAnswers });
+      
+      
+      return {
+        ...prevAnswers,
+        data: {
+          ...prevAnswers.data,
+          [key]: userAnswers
+        }
       }
-    }))
+    })
 
     // console.log({ answers });
     // console.log({ nextQuestionId });
@@ -430,10 +443,10 @@ export const Container = () => {
                             </div>
                             :
                             option.img ?
-                            <div className="flex justify-center h-28 w-12/12 bg-center rounded-md overflow-hidden">
-                              <img src={option.img} alt="" className="w-full bg-cover h-full object-cover" />
-                            </div>
-                            : ''
+                              <div className="flex justify-center h-28 w-12/12 bg-center rounded-md overflow-hidden">
+                                <img src={option.img} alt="" className="w-full bg-cover h-full object-cover" />
+                              </div>
+                              : ''
                         }
                         {/* {
                           option.img &&
@@ -500,6 +513,9 @@ export const Container = () => {
             </div>
         }
       </Card>
+      {/* <div>
+        <TestGoogleSheets />
+      </div> */}
     </div>
   )
 }
