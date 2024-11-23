@@ -4,6 +4,7 @@ import { Input } from "./ui/input";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import emailjs from 'emailjs-com';
+import { sendDataToGoogleSheets } from "@/helpers/sendDataToGoogleSheets";
 
 
 const personalizationQuestion = [
@@ -67,6 +68,7 @@ export const PersonalizationForm = ({ answers }) => {
             setMessage('Gracias por confiarnos tu regalo ¡Estamos listos para que te regalen algo que te guste!');
             const isNo = answersPersonalizationForm["¿Queres que Regalex le envié estas recomendación a algún familiar o amigo?"];
             if (isNo === 'No') {
+                await sendDataToGoogleSheets(allAnswers);
                 emailjs.send(
                     'service_4de7s4s',
                     'template_jfawhus',
