@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import emailjs from 'emailjs-com';
 import { sendDataToGoogleSheets } from "@/helpers/sendDataToGoogleSheets";
+import { prepareDataForAppScript } from "@/helpers/prepareDataForAppScript";
 
 
 const personalizationQuestion = [
@@ -68,7 +69,25 @@ export const PersonalizationForm = ({ answers }) => {
             setMessage('Gracias por confiarnos tu regalo ¡Estamos listos para que te regalen algo que te guste!');
             const isNo = answersPersonalizationForm["¿Queres que Regalex le envié estas recomendación a algún familiar o amigo?"];
             if (isNo === 'No') {
-                // await sendDataToGoogleSheets(allAnswers);
+                const dataToSend = prepareDataForAppScript(allAnswers);
+                // const formData = {
+                //     email: 'test@example.com',
+                //     date: new Date().toISOString(),
+                //     '¿Qué categorías/s disfrutás más?': ['Category 1', 'Category 2'],
+                //     '¿Cocinás en tu casa?': ['Yes'],
+                //     '¿Hay alguna razón por la que no cocines?': '',
+                //     '¿Te gustaría aprender más sobre cocina?': ['Yes'],
+                //     '¿Te gustaría ir a alguno de estos lugares?': ['Place 1'],
+                //     '¿Hay algúno de estos artistas que sea tu favorito?': ['Artist 1'],
+                //     '¿Te gustaria intentar alguna de estas opciones?': ['Option 1'],
+                //     '¿Te gusta algo de esto?': 'Yes',
+                //     'Querés...': 'Option A',
+                //     '¿Queres que Regalex le envié estas recomendación a algún familiar o amigo?': 'Yes'
+                // };
+    
+                const result = await sendDataToGoogleSheets(dataToSend);
+                console.log({ result });
+                
                 emailjs.send(
                     'service_4de7s4s',
                     'template_jfawhus',
