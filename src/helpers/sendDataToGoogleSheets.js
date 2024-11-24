@@ -1,6 +1,6 @@
 export const sendDataToGoogleSheets = async (data) => {
     try {
-        const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwUANIc7Gpcfo9_huG76u7msQjnt4H1enu3KTriXhUCRM_Ara6sjADdoGY2CPPNZu8B/exec';
+        const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw9hZ7JpL95852hkUdqZiE6KtBRW1lTkhMjNsNuwVjuhp2i7NKpKrdF0oulFdYf9A_f/exec';
         
         // Send raw JSON instead of form data
         const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {

@@ -39,28 +39,28 @@ export const Container = () => {
   // TODAS LAS RESPUESTAS DEL USUARIO
   const [answers, setAnswers] = useState([]);
   console.log({ answers });
-  
+
   const [lastQuestion, setLastQuestion] = useState(false);
-  
+
   const [hasImage, setHasImage] = useState(false);
-  
+
   const [disabled, setDisabled] = useState(true);
   const [firstDisabled, setFirstDisabled] = useState(true);
-  
+
   const [displayFirst, setDisplayFirst] = useState(true);
-  
+
   const [currentQuestion, setCurrentQuestion] = useState([]);
   const [currentOptions, setCurrentOptions] = useState([]);
   // console.log({ currentQuestion, currentOptions });
-  
-  
+
+
   // const currentQuestion = ( questions ) => {
-    //   return questions.find((question) => question.id === currentId);
-    // }
-    // const currentQuestion = questions.find((question) => question.id === currentId);
-    // const currentOptions = options.filter((option) => option.idQuestion === currentId);
-    const optionsHaveImage = currentOptions.filter((option) => Object.keys(option).includes('img'));
-    
+  //   return questions.find((question) => question.id === currentId);
+  // }
+  // const currentQuestion = questions.find((question) => question.id === currentId);
+  // const currentOptions = options.filter((option) => option.idQuestion === currentId);
+  const optionsHaveImage = currentOptions.filter((option) => Object.keys(option).includes('img'));
+
   useEffect(() => {
 
     const currentQuestionFn = (questions) => {
@@ -176,8 +176,8 @@ export const Container = () => {
       console.log({ key });
       console.log({ prevAnswers });
       console.log({ userAnswers });
-      
-      
+
+
       return {
         ...prevAnswers,
         data: {
@@ -413,7 +413,9 @@ export const Container = () => {
             !displayFirst &&
             <div className={`${hasImage ? 'w-12/12' : ''} mx-auto`}>
               <h4 className={`font-bold px-3 ${hasImage || currentOptions.length > 10 ? 'px-3' : 'w-11/12'}  mx-auto`}> {currentQuestion?.category?.toUpperCase()} </h4>
-              <h3 className="text-center pt-2 pb-3"> {currentQuestion?.text} </h3>
+              <h3 className="text-center pt-2 pb-3">
+                {currentQuestion?.text?.split('(')[0].trim()}
+              </h3>
               <form onSubmit={handleSubmit}>
                 <div
                   style={{
