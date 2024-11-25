@@ -68,14 +68,14 @@ export const PersonalizationForm = ({ answers }) => {
         if (options === "Q3") {
             // setMessage('Gracias por confiarnos tu regalo ¡Estamos listos para que te regalen algo que te guste!');
             const isNo = answersPersonalizationForm["¿Queres que Regalex le envié estas recomendación a algún familiar o amigo?"];
-            console.log({ isNo });
             
             if (isNo === 'No') {
+                setLoading(true);
                 const data = prepareDataForAppScript(allAnswers);
                 const dataToSend = data;
                 const result = await sendDataToGoogleSheets(dataToSend);
                 console.log({ result });
-                
+
                 emailjs.send(
                     'service_4de7s4s',
                     'template_jfawhus',
@@ -87,14 +87,18 @@ export const PersonalizationForm = ({ answers }) => {
                 ).then(response => {
                     console.log('Correo enviado exitosamente', response.status, response.text);
                 }).catch(err => console.error('Error al enviar el correo:', err));
+
+                setMessage('Gracias por confiarnos tu regalo !Estamos listos para que te regalen algo que te guste!');
+                setLoading(false);
+
                 return;
             }
         }
-        console.log({ options });
+        console.log({ loading });
 
         if (!personalizationQuestion[index].lastQuestionAllForm) {
             console.log("no es la ultima");
-            
+
             setIndex(index + 1);
         }
 
@@ -104,12 +108,12 @@ export const PersonalizationForm = ({ answers }) => {
 
 
         if (personalizationQuestion[index].lastQuestionAllForm) {
-
+            setLoading(true);
             const data = prepareDataForAppScript(allAnswers);
             const dataToSend = data;
             const result = await sendDataToGoogleSheets(dataToSend);
             console.log({ result });
-            
+
 
             emailjs.send(
                 'service_4de7s4s',
@@ -122,7 +126,9 @@ export const PersonalizationForm = ({ answers }) => {
             ).then(response => {
                 console.log('Correo enviado exitosamente', response.status, response.text);
                 setMessage('Gracias por confiarnos tu regalo !Estamos listos para que te regalen algo que te guste!')
+                setLoading(false);
             }).catch(err => console.error('Error al enviar el correo:', err));
+            setLoading(false);
             return;
             try {
                 const response = await fetch("https://sheetdb.io/api/v1/55c8yhgkm2d5q", {
@@ -164,7 +170,7 @@ export const PersonalizationForm = ({ answers }) => {
                                 ))}
                             </div>
                             <div className="flex justify-end my-4">
-                                <Button variants="default">Siguiente</Button>
+                                <Button variants="default" disabled={loading}>{loading ? "Enviando..." : "Siguiente"}</Button>
                             </div>
                         </form>
                     </div>
@@ -182,7 +188,7 @@ export const PersonalizationForm = ({ answers }) => {
                                     ))}
                                 </div>
                                 <div className="flex justify-end my-4">
-                                    <Button variants="default">Siguiente</Button>
+                                    <Button variants="default" disabled={loading}>{loading ? "Enviando..." : "Siguiente"}</Button>
                                 </div>
                             </form>
                         </div>
@@ -229,7 +235,7 @@ export const PersonalizationForm = ({ answers }) => {
                                         ))}
                                 </div>
                                 <div className="flex justify-end my-4">
-                                    <Button variants="default">Siguiente</Button>
+                                    <Button variants="default" disabled={loading}>{loading ? "Enviando..." : "Siguiente"}</Button>
                                 </div>
                             </form>
                         </div>
