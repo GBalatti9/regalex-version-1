@@ -14,11 +14,11 @@ export const questions = [
     { id: 'Q9',   type: 'question', text: '¿Cocinás en tu casa?',                                                      category: 'Cocinar' },
     { id: 'Q10',  type: 'question', text: '¿Hay alguna razón por la que no cocines?',                                  category: 'Cocinar' },
     { id: 'Q11',  type: 'question', text: '¿Te faltan materiales relacionados a alguna de las siguientes categorias?', category: 'Cocinar' },
-    { id: 'Q12',  type: 'question', text: '¿Necesitas algunos de estos?',                                              category: 'Bazar/Utensillos básicos'          }, //-- BAZAR
-    { id: 'Q13',  type: 'question', text: '¿Necesitas algunos de estos?',                                              category: 'Herramientas para cocinar'         }, //-- HERRMIENTAS
-    { id: 'Q14',  type: 'question', text: '¿Necesitas algunos de estos?',                                              category: 'Instrumentos de repostería'        }, //-- REPOSTERÍA
+    { id: 'Q12',  type: 'question', text: '¿Necesitas algunos de estos? (Bazar/Utensillos básicos)',                   category: 'Bazar/Utensillos básicos'          }, //-- BAZAR
+    { id: 'Q13',  type: 'question', text: '¿Necesitas algunos de estos? (Herramientas para cocinar)',                  category: 'Herramientas para cocinar'         }, //-- HERRMIENTAS
+    { id: 'Q14',  type: 'question', text: '¿Necesitas algunos de estos? (Instrumentos de repostería)',                 category: 'Instrumentos de repostería'        }, //-- REPOSTERÍA
     { id: 'Q15',  type: 'question', text: '¿Qué tipo de cocina?',                                                      category: 'Accesorios para Cocina Específica' },         //-- COCINA ESPECÍFICA
-    { id: 'Q16',  type: 'question', text: '¿Necesitas algunos de estos?',                                              category: 'Innovación en la cocina'           }, //-- INNOVACIÓN
+    { id: 'Q16',  type: 'question', text: '¿Necesitas algunos de estos? (Innovación en la cocina)',                    category: 'Innovación en la cocina'           }, //-- INNOVACIÓN
     { id: 'Q17',  type: 'question', text: '¿Te gustaría aprender más sobre cocina?',                                   category: 'Cocinar' }, 
     { id: 'Q18',  type: 'question', text: '¿Qué te gustaría aprender a cocinar?',                                      category: 'Cocinar' }, 
     
@@ -47,7 +47,7 @@ export const questions = [
     // LEER - ESCRIBIR
     { id: 'Q39', type: 'question', text: '¿Qué te gusta hacer?',                                      category: 'Leer - Escribir' },
     { id: 'Q40', type: 'question', text: '¿Qué género te gusta más?',                                 category: 'Leer' },
-    { id: 'Q41', type: 'question', text: '¿Te gustaría aprender más?',                                category: 'Escribir' },
+    { id: 'Q41', type: 'question', text: '¿Te gustaría aprender más? (Escribir)',                     category: 'Escribir' },
     { id: 'Q42', type: 'question', text: '¿Sos de leer?',                                             category: 'Leer' },
     { id: 'Q43', type: 'question', text: '¿Sobre qué género?',                                        category: 'Escribir' }, //FIN
     { id: 'Q44', type: 'question', text: '¿Cuándo lees?',                                             category: 'Leer' },
@@ -100,7 +100,7 @@ export const questions = [
     { id: 'Q83', type: 'question', text: '¿Te gustaría seguir aprendiendo?',                    category: 'Pintar' }, 
     { id: 'Q84', type: 'question', text: '¿Qué técnica te gustaría aprender?',                  category: 'Pintar' }, 
     { id: 'Q85', type: 'question', text: '¿Historia sobre qué estilo te gustaria aprender?',    category: 'Pintar' }, 
-    { id: 'Q86', type: 'question', text: '¿Qué te gustaría más?',                               category: 'Fotografía' }, 
+    { id: 'Q86', type: 'question', text: '¿Qué te gustaría más? (Fotografía)',                  category: 'Fotografía' }, 
     { id: 'Q87', type: 'question', text: '¿Qué tipo de cámara tenés?',                          category: 'Fotografía' }, 
     { id: 'Q88', type: 'question', text: '¿Te gustaría aprender más? (Arte)',                   category: 'Manualidades' }, 
     { id: 'Q89', type: 'question', text: '¿Con qué impronta te sentís mas identificado?',       category: 'Manualidades' }, 

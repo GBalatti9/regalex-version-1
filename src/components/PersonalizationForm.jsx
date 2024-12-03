@@ -88,7 +88,7 @@ export const PersonalizationForm = ({ answers }) => {
                     console.log('Correo enviado exitosamente', response.status, response.text);
                 }).catch(err => console.error('Error al enviar el correo:', err));
 
-                setMessage('Gracias por confiarnos tu regalo !Estamos listos para que te regalen algo que te guste!');
+                setMessage('Gracias por confiarnos tu regalo ¡Estamos listos para que te regalen algo que te guste!');
                 setLoading(false);
 
                 return;
@@ -125,7 +125,7 @@ export const PersonalizationForm = ({ answers }) => {
                 '24L6pzMzinjY7EPY9'
             ).then(response => {
                 console.log('Correo enviado exitosamente', response.status, response.text);
-                setMessage('Gracias por confiarnos tu regalo !Estamos listos para que te regalen algo que te guste!')
+                setMessage('Gracias por confiarnos tu regalo ¡Estamos listos para que te regalen algo que te guste!')
                 setLoading(false);
             }).catch(err => console.error('Error al enviar el correo:', err));
             setLoading(false);
@@ -139,7 +139,7 @@ export const PersonalizationForm = ({ answers }) => {
                     body: JSON.stringify({ data: allAnswers }), // Asegúrate de enviar `data` correctamente
                 })
                 console.log({ response });
-                setMessage('Gracias por confiarnos tu regalo !Estamos listos para que te regalen algo que te guste!')
+                setMessage('Gracias por confiarnos tu regalo ¡Estamos listos para que te regalen algo que te guste!')
             } catch (error) {
                 console.log({ error });
             }
